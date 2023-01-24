@@ -29,12 +29,12 @@
               <div class="title-action">
                 <a
                   class="btn btn--primary btn--inversed"
-                  href="page-contact.html"
+                  href="{{ route('contact') }}"
                 >
                   get started<i class="energia-arrow-right"></i></a
                 ><a
                   class="btn btn--bordered btn--white"
-                  href="page-about.html"
+                  href="{{ route('about_us') }}"
                   >explore our plans</a
                 >
               </div>
@@ -44,7 +44,7 @@
             <div class="breadcrumb-wrap">
               <ol class="breadcrumb breadcrumb-light d-flex">
                 <li class="breadcrumb-item">
-                  <a href="index.html">Home</a>
+                  <a href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                   Services
@@ -73,29 +73,24 @@
         </div>
       </div>
       <div class="row">
+          <?php $classServices = ['flaticon-024-energy', 'flaticon-028-greenhouse',
+              'flaticon-026-world', 'flaticon-008-plant', 'flaticon-024-energy','flaticon-004-solar-panel'];
+          ?>
         @foreach ($services as $service)
         <div class="col-12 col-md-6 col-lg-4">
           <div class="service-panel">
             <div class="service-icon">
-              <i class="flaticon-004-solar-panel"></i>
+              <i class="{{ $classServices[rand(0,5)] }}"></i>
             </div>
             <div class="service-content">
               <h4>
-                <a href="page-services.html"
+                <a href="{{ route('service') }}"
                   >{{ $service->title_en }}<br />services</a
                 >
               </h4>
               <p>
                 {{ $service->desc_en }}
               </p>
-              <!-- <ul class="list-unstyled advantages-list">
-                <li>cleaning of inverter</li>
-                <li>perform shading tests</li>
-                <li>90 days repairs warranty</li>
-              </ul>
-              <a class="btn btn--secondary" href="services-turbines.html"
-                >read more <i class="energia-arrow-right"></i
-              ></a> -->
             </div>
           </div>
         </div>
@@ -143,12 +138,12 @@
             <div class="actions-holder">
               <a
                 class="btn btn--primary btn--inversed"
-                href="page-contact.html"
+                href="{{ route('contact') }}"
               >
                 get started<i class="energia-arrow-right"></i></a
               ><a
                 class="btn btn--bordered btn--white"
-                href="page-about.html"
+                href="{{ route('about_us') }}"
                 >explore our plans</a
               >
             </div>
@@ -157,86 +152,23 @@
       </div>
 
       <div class="row">
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="feature-panel-holder" data-hover="">
-            <div class="feature-panel">
-              <div class="feature-icon">
-                <i class="flaticon-024-energy"></i>
+          @foreach($services as $service)
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="feature-panel-holder" data-hover="">
+                      <div class="feature-panel">
+                          <div class="feature-icon">
+                              <i class="{{$classServices[rand(0,5)]}}"></i>
+                          </div>
+                          <div class="feature-content">
+                              <h4>{{ trans_model($service,'title') }}</h4>
+                              <p>
+                                  {{ trans_model($service,'desc') }}
+                              </p>
+                          </div>
+                      </div>
+                  </div>
               </div>
-              <div class="feature-content">
-                <h4>Save Your Money</h4>
-                <p>
-                  Save money on utilities or increase the value of your home
-                  by installing solar panels as a great option.
-                </p>
-              </div>
-              <a href="page-about.html"
-                ><i class="energia-arrow-right"></i>
-                <span>explore more</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="feature-panel-holder" data-hover="">
-            <div class="feature-panel">
-              <div class="feature-icon">
-                <i class="flaticon-028-greenhouse"></i>
-              </div>
-              <div class="feature-content">
-                <h4>Home Is Energy</h4>
-                <p>
-                  Everyday the sun provides us with abundance of free energy
-                  by placing solar panels on your roof.
-                </p>
-              </div>
-              <a href="page-about.html"
-                ><i class="energia-arrow-right"></i>
-                <span>explore more</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="feature-panel-holder" data-hover="">
-            <div class="feature-panel">
-              <div class="feature-icon">
-                <i class="flaticon-026-world"></i>
-              </div>
-              <div class="feature-content">
-                <h4>Consult &amp; Planning</h4>
-                <p>
-                  Our remote industrial solar systems are designed to
-                  reliably power our clients critical.
-                </p>
-              </div>
-              <a href="page-about.html"
-                ><i class="energia-arrow-right"></i>
-                <span>explore more</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="feature-panel-holder" data-hover="">
-            <div class="feature-panel">
-              <div class="feature-icon">
-                <i class="flaticon-008-plant"></i>
-              </div>
-              <div class="feature-content">
-                <h4>Certified Engineers</h4>
-                <p>
-                  Our sales engineers on our staff have experience and can
-                  design any complete solar system.
-                </p>
-              </div>
-              <a href="page-about.html"
-                ><i class="energia-arrow-right"></i>
-                <span>explore more</span>
-              </a>
-            </div>
-          </div>
-        </div>
+          @endforeach
       </div>
 
       <div class="row">
@@ -244,7 +176,7 @@
           <div class="more-features more-features-3">
             <p>
               Sustainable, reliable & affordable energy systems,
-              <a href="page-services.html">Find Your Solution Now! </a>
+              <a href="{{ route('service') }}">Find Your Solution Now! </a>
             </p>
           </div>
         </div>
@@ -265,7 +197,7 @@
                     endeavor provide fast and knowledgeable service, we can
                     get all the materials you need by sea or air.
                   </p>
-                  <a href="page-contact.html"
+                  <a href="{{ route('contact') }}"
                     ><i class="energia-arrow-right"></i>global office map</a
                   >
                 </div>
@@ -293,7 +225,7 @@
                       <p>Mon - Fri: 8:00 am - 7:00 pm</p>
                     </li>
                   </ul>
-                  <a class="btn btn--white" href="page-contact.html"
+                  <a class="btn btn--white" href="{{ route('contact') }}"
                     >contact us <i class="energia-arrow-right"></i
                   ></a>
                 </div>
@@ -310,7 +242,7 @@
                     quality service.
                   </p>
                       <div class="col-12">
-                          <a href="{{ route('quote.index') }}">
+                          <a href="{{ route('quoteIndex') }}">
                         <button class="btn btn--secondary w-100" type="submit">
                           Send Request <i class="energia-arrow-right"></i>
                         </button></a>

@@ -110,7 +110,7 @@
 
 
 
-                <img class="logo logo-dark" src="{{ asset( $settings->logo[0] ) }}"
+                <img class="logo logo-dark" src="{{ asset( $settings->logo ) }}"
                     alt="Energia Logo"/><img class="logo logo-mobile" src="assets/images/logo/logo-mobile.png"
                                             alt="Energia Logo"/>
 
@@ -167,7 +167,7 @@
 {{--                    <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>--}}
 {{--                </div>--}}
                 <div class="module-contact">
-                    <a class="btn btn--primary " href="{{ route('quote.index') }}">
+                    <a class="btn btn--primary " href="{{ route('quoteIndex') }}">
                         request a quote<i class="energia-arrow-right"></i></a>
                 </div>
             </div>

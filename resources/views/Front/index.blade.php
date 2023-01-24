@@ -35,53 +35,21 @@
                 data-loop="true"
                 data-speed="800"
             >
+                    @foreach($settings->sliders as $slider)
                 <div class="slide bg-overlay bg-overlay-dark-slider-2">
                     <div class="bg-section">
-                        <img src="{{ asset('assets/front') }}/assets/images/sliders/3.jpg" alt="Background"/>
+                        <img src="{{ asset($slider) }}" alt="Background"/>
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-7">
-                                <div class="slide-content">
-                                    <h1 class="slide-headline">
-                                        sustainable &amp; reliable energy!
-                                    </h1>
-                                    <p class="slide-desc">
-                                        As a world wide distributor of solar supplies we
-                                        endeavor provide fast and knowledgeable service, we can
-                                        get you materials by sea or air.
-                                    </p>
-                                    <div class="slide-action">
-                                        <a class="btn btn--primary" href="{{ route('service') }}">
-                          <span>our services</span
-                          ><i class="energia-arrow-right"></i></a
-                                        ><a
-                                            class="btn btn--white justify-content-center"
-                                            href="{{ route('about_us') }}"
-                                        >more about us!</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="slide bg-overlay bg-overlay-dark-slider-2">
-                    <div class="bg-section">
-                        <img src="{{ asset('assets/front') }}/assets/images/sliders/6.jpg" alt="Background"/>
-                    </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-lg-7">
                                 <div class="slide-content">
                                     <h1 class="slide-headline">
-                                        shaping future of solar energy!
+                                        {{ trans_model($settings,'title') }}
                                     </h1>
                                     <p class="slide-desc">
-                                        As a world wide distributor of solar supplies we
-                                        endeavor provide fast and knowledgeable service, we can
-                                        get you materials by sea or air.
+                                        {{trans_model($settings,'desc')}}
                                     </p>
                                     <div class="slide-action">
                                         <a class="btn btn--primary" href="{{ route('service') }}">
@@ -98,6 +66,7 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -163,7 +132,7 @@
             <div class="row">
                 <div class="more-features more-features-2">
                     <p>Discover independence through the power of solar</p>
-                    <a class="btn btn--bordered btn--white" href="page-pricing.html"
+                    <a class="btn btn--bordered btn--white" href="{{ route('service') }}"
                     >explore our plans</a
                     >
                 </div>
@@ -190,11 +159,11 @@
                             for every step of production and installation process.
                         </p>
                         <div class="actions-holder">
-                            <a class="btn btn--primary" href="page-about.html">
+                            <a class="btn btn--primary" href="{{ route('about_us') }}">
                                 read more<i class="energia-arrow-right"></i></a
                             ><a
                                 class="btn btn--bordered btn--white"
-                                href="page-services.html"
+                                href="{{ route('service') }}"
                             >find your solution</a
                             >
                         </div>
@@ -354,7 +323,7 @@
                             capital and increasing liquidity.
                         </p>
                         <div class="signature-block">
-                            <a class="btn btn--secondary" href="page-about.html"
+                            <a class="btn btn--secondary" href="{{ route('about_us') }}"
                             >read more <i class="energia-arrow-right"></i
                                 ></a>
                             <div class="signature-body">
@@ -407,31 +376,25 @@
             class="carousel owl-carousel carousel-dots carousel-navs"
             data-slide="4"
             data-slide-rs="1"
-            data-center="data-center"
+            data-center=""
             data-autoplay="true"
             data-nav="true"
             data-dots="true"
-            data-space="30"
+            data-space=""
             data-loop="false"
             data-speed="800"
         >
             @foreach ($products as $product)
-                @foreach ($product->images as $image)
-
-
-
                 <div>
                     <div class="project-panel" data-hover="">
                         <div class="project-panel-holder">
                             <div class="project-img">
                                 <a class="link" href="{{ route('get.product', $product->id) }}"></a
                                 ><img
-                                    src="{{ asset($image) }}"
+                                    src="{{ asset($product->images[0]) }}"
                                     alt="project image"
                                 />
                             </div>
-
-
                             <div class="project-content">
                                 <div class="project-title">
                                     <h4>
@@ -440,23 +403,18 @@
                                         >
                                     </h4>
                                 </div>
-                                <!-- <div class="project-cat">
-                                  <a href="projects-standard.html">finance</a
-                                  ><a href="projects-standard.html">supply chain</a>
-                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
                 @endforeach
-            @endforeach
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="projects-load-more">
-                        <a class="btn btn--secondary" href="shop-products.html"
+                        <a class="btn btn--secondary" href="{{ route('product') }}"
                         >explore all products <i class="energia-arrow-right"></i
                             ></a>
                     </div>
@@ -606,7 +564,7 @@
                                 Our presence ensures timeliness, cost efficiency &
                                 compliance adherence!
                             </p>
-                            <a href="page-contact.html"
+                            <a href="{{ route('contact') }}"
                             >schedule A Visit <i class="energia-arrow-right"></i
                                 ></a>
                         </div>
@@ -617,7 +575,7 @@
     </section>
 
     <section class="contact contact-2" style="margin-top: 250px" id="contact-2">
-        <div class="contact-overlay bg-overlay bg-overlay-theme5">
+        <div class="contact-overlay bg-overlay bg-overlay-theme5" style="top: 25%;">
             <div class="bg-section">
                 <img src="{{ asset('assets/front') }}/assets/images/background/4.jpg" alt="background"/>
             </div>
@@ -635,23 +593,23 @@
                         more sustainable future.
                     </p>
                     <div class="contact-action contact-action-2">
-                        <a class="btn btn--white" href="page-about.html"
+                        <a class="btn btn--white" href="{{ route('about_us') }}"
                         >learn more <i class="energia-arrow-right"></i
                             ></a>
                     </div>
-                    <div class="contact-quote contact-quote-2">
-                        <i class="flaticon-040-green-energy"></i>
-                        <div class="quote-body">
-                            <p>
-                                As a world wide distributor of solar supplies we endeavor
-                                provide fast and knowledgeable service, we can get all the
-                                materials you need by sea or air.
-                            </p>
-                            <a href="page-contact.html"
-                            ><i class="energia-arrow-right"></i>global office map</a
-                            >
-                        </div>
-                    </div>
+{{--                    <div class="contact-quote contact-quote-2">--}}
+{{--                        <i class="flaticon-040-green-energy"></i>--}}
+{{--                        <div class="quote-body">--}}
+{{--                            <p>--}}
+{{--                                As a world wide distributor of solar supplies we endeavor--}}
+{{--                                provide fast and knowledgeable service, we can get all the--}}
+{{--                                materials you need by sea or air.--}}
+{{--                            </p>--}}
+{{--                            <a href="{{ route('contact') }}"--}}
+{{--                            ><i class="energia-arrow-right"></i>global office map</a--}}
+{{--                            >--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
                 <div class="contact-card">
                     <div class="contact-body">
@@ -662,7 +620,7 @@
                             quality service.
                         </p>
                         <div class="col-12">
-                            <a href="{{ route('quote.index') }}">
+                            <a href="{{ route('quoteIndex') }}">
                                 <button class="btn btn--secondary w-100" type="submit">
                                     Send Request <i class="energia-arrow-right"></i>
                                 </button>
