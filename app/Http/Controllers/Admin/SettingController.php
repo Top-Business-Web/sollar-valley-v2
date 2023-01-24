@@ -30,6 +30,12 @@ class SettingController extends Controller
             }
             $inputs['logo'] =  $request->logo != null ? $this->saveImage($request->logo, 'assets/uploads/admins/images') : $inputs['logo'];
         }
+        if($request->has('files')){
+            foreach($request->file('files') as $file)
+            {
+                $inputs['sliders'][] = $this->saveImage($file,'assets/uploads/admins/sliders','photo');
+            }
+        }
 
         if ($settings->update($inputs))
             return response()->json(['status' => 200]);

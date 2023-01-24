@@ -31,6 +31,7 @@ Route::group(
 
         #### Contact ####
         Route::get('/contact', 'ContactController@index')->name('contact');
+        Route::post('/contactStore', 'ContactController@contactStore')->name('contactStore');
 
         #### Service ####
         Route::get('/service', 'ServiceController@index')->name('service');
@@ -46,9 +47,11 @@ Route::group(
         Route::get('/product/{id}', 'SingleController@getProduct')->name('get.product');
 
         #### Quote ####
-        Route::resource('quote', 'QuoteController');
+        Route::get('quote', 'QuoteController@index')->name('quoteIndex');
+        Route::post('quote/store', 'QuoteController@store')->name('quoteStore');
 
         #### Faqs ####
         Route::get('/faqs', 'FaqsController@index')->name('faqs');
+
     }
 );

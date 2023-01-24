@@ -13,7 +13,7 @@ class StoreContact extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class StoreContact extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email|exists:user,email',
+            'email' => 'required|email',
             'phone' => 'required',
             'services' => 'required',
             'message' => 'required',
@@ -38,6 +38,7 @@ class StoreContact extends FormRequest
             'name.required' => 'Please Enter Your Name',
             'email.required' => 'Filed, Email almost be valid',
             'phone.required' => 'phone must be valid number',
+            'services.required' => 'services must be selected',
         ];
     }
 }

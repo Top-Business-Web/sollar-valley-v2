@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="{{ asset('assets/admin/assets/css/jquery.tagsinput.css') }}">
+{{--<link rel="stylesheet" href="{{ asset('assets/admin/assets/css/jquery.tagsinput.css') }}">--}}
 
-<script src="{{ asset('assets/admin/assets/js/jquery.tagsinput.js') }}"></script>
+{{--<script src="{{ asset('assets/admin/assets/js/jquery.tagsinput.js') }}"></script>--}}
 
 {{-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> --}}
 
@@ -52,7 +52,7 @@
                     <div class="form-group">
                         <label class="control-label">Category</label>
                         <select name="category_id" class="form-control">
-                            {{-- <option value="" disabled selected>{{ $product->category->title_en }}</option> --}}
+                            <option value="" disabled>Select Category</option>
                             @foreach ($categoreis as $category)
                                 <option value="{{ $category->id }}" {{ $category->title_en == $product->category->title_en ? 'selected' : '' }}>{{ $category->title_en }}</option>
                             @endforeach
@@ -65,9 +65,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="control-label">Tag</label>
-                    {{-- @foreach ($product as $pro) --}}
-                    <input type="text"  name="tags[]" value="@foreach (json_decode($product->tags,true) as $tag) {{  $tag }} @endforeach" data-role="taginput" id="tags_input" class="form-control">
-                    {{-- @endforeach --}}
+                    <input type="text"  name="tags" value="{{ implode($product->tags,' ') }}" class="form-control">
                 </div>
             </div>
 
@@ -102,7 +100,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="control-label">Image</label>
-                    <input type="file"  name="image"  class="form-control" id="exampleFormControlInput1">
+                    <input type="file"  name="files[]" multiple class="form-control" id="exampleFormControlInput1">
                 </div>
             </div>
         </div>

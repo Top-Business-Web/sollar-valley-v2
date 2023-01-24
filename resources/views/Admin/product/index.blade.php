@@ -22,6 +22,7 @@
                         <thead class="thead-light">
                         <tr>
                             <th>ID</th>
+                            <th>Image</th>
                             <th>Title</th>
                             <th>Category</th>
                             <th>Action</th>
@@ -84,6 +85,7 @@
 
         var columns = [
             {data: 'id', name: 'id'},
+            {data: 'images', name: 'images'},
             {data: 'title_ar', name: 'title_ar'},
             {data: 'category_id', name: 'category_id'},
             {data: 'action', name: 'action', orderable: false, searchable: false},

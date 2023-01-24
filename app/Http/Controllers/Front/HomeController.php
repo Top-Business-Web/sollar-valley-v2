@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $products = Product::get();
+        $products = Product::paginate(8);
         $settings = Setting::first();
         return view('Front.index', compact('products', 'settings'));
     }
