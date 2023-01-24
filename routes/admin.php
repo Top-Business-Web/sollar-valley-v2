@@ -21,9 +21,6 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     #### Service ####
     Route::resource('/service', 'ServiceController');
 
-     #### Quote ####
-     Route::resource('/quote', 'QuoteController');  
-
     #### About Us ####
     Route::resource('/about_us', 'AboutUsController')->except('create','store', 'edit', 'destroy');
 

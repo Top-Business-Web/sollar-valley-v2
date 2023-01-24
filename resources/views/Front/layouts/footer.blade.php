@@ -11,7 +11,7 @@
                 <ul>
                   <li><a href="{{ route('about_us') }}">About Us</a></li>
                   <li><a href="{{ route('product') }}">Our Product</a></li>
-                  <li><a href="{{ route('contact.index') }}">contact</a></li>
+                  <li><a href="{{ route('contact') }}">contact</a></li>
                 </ul>
               </div>
             </div>
@@ -134,7 +134,7 @@
                         >
                     </li>
 
-
+                
 
                 </ul>
               </div>

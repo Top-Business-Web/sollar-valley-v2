@@ -13,7 +13,7 @@ class StoreContact extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -25,10 +25,19 @@ class StoreContact extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|exists:user,email',
             'phone' => 'required',
             'services' => 'required',
             'message' => 'required',
+        ];
+    }
+
+    public function message()
+    {
+        return [
+            'name.required' => 'Please Enter Your Name',
+            'email.required' => 'Filed, Email almost be valid',
+            'phone.required' => 'phone must be valid number',
         ];
     }
 }

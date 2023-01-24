@@ -38,6 +38,7 @@ class StoreQuote extends FormRequest
             'prefer_contact' => 'required',
             'address' => 'required',
             'city' => 'required',
+            'state' => 'required',
             'zip' => 'required',
             'country' => 'required',
         ];

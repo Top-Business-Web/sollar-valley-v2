@@ -27,6 +27,7 @@ class Quote extends Model
         'address',
         'city',
         'zip',
+        'state',
         'country'
 
     ];

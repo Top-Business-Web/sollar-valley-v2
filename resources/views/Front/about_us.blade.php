@@ -322,247 +322,247 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-12 col-lg-4">
-          <div class="more-features">
-            <p>
-              If you have any questions or need help, feel free to contact
-              with our team, or you can call us any time
-              <a href="tel:01061245741">(002) 01061245741</a>
-            </p>
-            <a class="btn btn--bordered btn--white" href="page-about.html">
-              free estimate<i class="energia-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-        <div class="col-12 col-lg-8">
-          <div
-            class="video video-1 bg-overlay bg-overlay-video"
-            id="video-1"
-          >
-            <div class="bg-section">
-              <img src="{{ asset('assets/front') }}/assets/images/video/1.jpg" alt="background" />
-            </div>
-            <a
-              class="popup-video btn-video"
-              href="https://www.youtube.com/watch?v=nrJtHemSPW4"
-            >
-              <i class="fas fa-play"></i><span>watch our video!</span></a
-            >
-          </div>
-        </div>
-      </div>
+{{--      <div class="row">--}}
+{{--        <div class="col-12 col-lg-4">--}}
+{{--          <div class="more-features">--}}
+{{--            <p>--}}
+{{--              If you have any questions or need help, feel free to contact--}}
+{{--              with our team, or you can call us any time--}}
+{{--              <a href="tel:01061245741">(002) 01061245741</a>--}}
+{{--            </p>--}}
+{{--            <a class="btn btn--bordered btn--white" href="page-about.html">--}}
+{{--              free estimate<i class="energia-arrow-right"></i--}}
+{{--            ></a>--}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--        <div class="col-12 col-lg-8">--}}
+{{--          <div--}}
+{{--            class="video video-1 bg-overlay bg-overlay-video"--}}
+{{--            id="video-1"--}}
+{{--          >--}}
+{{--            <div class="bg-section">--}}
+{{--              <img src="{{ asset('assets/front') }}/assets/images/video/1.jpg" alt="background" />--}}
+{{--            </div>--}}
+{{--            <a--}}
+{{--              class="popup-video btn-video"--}}
+{{--              href="https://www.youtube.com/watch?v=nrJtHemSPW4"--}}
+{{--            >--}}
+{{--              <i class="fas fa-play"></i><span>watch our video!</span></a--}}
+{{--            >--}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--      </div>--}}
     </div>
   </section>
 
-  <section
-    class="projects projects-modern projects-modern-2"
-    id="projects-modern-1"
-  >
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-6 offset-lg-3">
-          <div class="heading heading-5 text-center">
-            <p class="heading-subtitle">
-              Innovation, Quality And Continuous Improvement
-            </p>
-            <h2 class="heading-title">
-              Latest Products And Energy Supplies
-            </h2>
-          </div>
-        </div>
-      </div>
+{{--  <section--}}
+{{--    class="projects projects-modern projects-modern-2"--}}
+{{--    id="projects-modern-1"--}}
+{{--  >--}}
+{{--    <div class="container">--}}
+{{--      <div class="row">--}}
+{{--        <div class="col-12 col-lg-6 offset-lg-3">--}}
+{{--          <div class="heading heading-5 text-center">--}}
+{{--            <p class="heading-subtitle">--}}
+{{--              Innovation, Quality And Continuous Improvement--}}
+{{--            </p>--}}
+{{--            <h2 class="heading-title">--}}
+{{--              Latest Products And Energy Supplies--}}
+{{--            </h2>--}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--      </div>--}}
 
-      <div class="row">
-        <div class="col-12">
-          <div
-            class="carousel owl-carousel carousel-dots"
-            data-slide="3"
-            data-slide-rs="1"
-            data-autoplay="true"
-            data-nav="false"
-            data-dots="true"
-            data-space="30"
-            data-loop="false"
-            data-speed="3000"
-          >
-          @foreach ($related as $product)
-          @foreach ($product->images as $image)
-
-
-
-            <div>
-              <div class="project-panel" data-hover="">
-                <div class="project-panel-holder">
-                  <div class="project-img">
-                    <a class="link" href="{{ route('get.product', $product->id) }}"></a
-                    ><img
-                      src="{{ asset($image) }}"
-                      alt="project image"
-                    />
-                  </div>
-
-                  @endforeach
-
-                  <div class="project-content">
-                    <!-- <div class="project-cat">
-                      <a href="projects-standard.html">finance</a
-                      ><a href="projects-standard.html">supply chain</a>
-                    </div> -->
-                    <div class="project-title">
-                      <h4>
-                        <a href="{{ route('get.product', $product->id) }}"
-                          >{{ $product->title_en }}</a
-                        >
-                      </h4>
-                    </div>
-                    <div class="project-desc">
-                      <p>
-                        {{ $product->desc_en }}
-                      </p>
-                    </div>
-                    <div class="project-more">
-                      <a
-                        class="btn btn--bordered btn--white"
-                        href="{{ route('get.product', $product->id) }}"
-                        >explore more <i class="energia-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+{{--      <div class="row">--}}
+{{--        <div class="col-12">--}}
+{{--          <div--}}
+{{--            class="carousel owl-carousel carousel-dots"--}}
+{{--            data-slide="3"--}}
+{{--            data-slide-rs="1"--}}
+{{--            data-autoplay="true"--}}
+{{--            data-nav="false"--}}
+{{--            data-dots="true"--}}
+{{--            data-space="30"--}}
+{{--            data-loop="false"--}}
+{{--            data-speed="3000"--}}
+{{--          >--}}
+{{--          @foreach ($related as $product)--}}
+{{--          @foreach ($product->images as $image)--}}
 
 
-            @endforeach
 
-            {{-- <div>
-              <div class="project-panel" data-hover="">
-                <div class="project-panel-holder">
-                  <div class="project-img">
-                    <a class="link" href="shop-single.html"></a
-                    ><img
-                      src="{{ asset('assets/front') }}/assets/images/projects/modern/2.jpg"
-                      alt="project image"
-                    />
-                  </div>
+{{--            <div>--}}
+{{--              <div class="project-panel" data-hover="">--}}
+{{--                <div class="project-panel-holder">--}}
+{{--                  <div class="project-img">--}}
+{{--                    <a class="link" href="{{ route('get.product', $product->id) }}"></a--}}
+{{--                    ><img--}}
+{{--                      src="{{ asset($image) }}"--}}
+{{--                      alt="project image"--}}
+{{--                    />--}}
+{{--                  </div>--}}
 
-                  <div class="project-content">
-                    <!-- <div class="project-cat">
-                      <a href="projects-standard.html">energy</a
-                      ><a href="projects-standard.html">green energy</a>
-                    </div> -->
-                    <div class="project-title">
-                      <h4>
-                        <a href="shop-single.html"
-                          >Suntree - DC Protections</a
-                        >
-                      </h4>
-                    </div>
-                    <div class="project-desc">
-                      <p>
-                        After 10 years of experience, Suntree has won as many as 40 patents, including 10 invention patents.
-                         During this period, Suntree not only acquired Shenzhen Litto New Energy Co.,Ltd, entered into
-                         Grid inverter market but also was rated as state-level high-tech
-                      </p>
-                    </div>
-                    <div class="project-more">
-                      <a
-                        class="btn btn--bordered btn--white"
-                        href="shop-single.html"
-                        >explore more <i class="energia-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> --}}
-            {{-- <div>
-              <div class="project-panel" data-hover="">
-                <div class="project-panel-holder">
-                  <div class="project-img">
-                    <a class="link" href="shop-single.html"></a
-                    ><img
-                      src="{{ asset('assets/front') }}/assets/images/projects/modern/3.jpg"
-                      alt="project image"
-                    />
-                  </div>
+{{--                  @endforeach--}}
 
-                  <div class="project-content">
-                    <!-- <div class="project-cat">
-                      <a href="projects-standard.html">eco</a
-                      ><a href="projects-standard.html">green energy</a>
-                    </div> -->
-                    <div class="project-title">
-                      <h4>
-                        <a href="shop-single.html"
-                          >NewMax, Batteries</a
-                        >
-                      </h4>
-                    </div>
-                    <div class="project-desc">
-                      <p>
-                        NewMax Battery boasts over 25 years of experience and endless R&D effort to be one of the most innovative battery companies in the world.
-NewMax makes use of state-of-the-art manufacturing and testing facilities to build the most advanced products on the market today
-                      </p>
-                    </div>
-                    <div class="project-more">
-                      <a
-                        class="btn btn--bordered btn--white"
-                        href="shop-single.html"
-                        >explore more <i class="energia-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> --}}
-            {{-- <div>
-              <div class="project-panel" data-hover="">
-                <div class="project-panel-holder">
-                  <div class="project-img">
-                    <a class="link" href="shop-single.html"></a
-                    ><img
-                      src="{{ asset('assets/front') }}/assets/images/projects/modern/4.jpg"
-                      alt="project image"
-                    />
-                  </div>
+{{--                  <div class="project-content">--}}
+{{--                    <!-- <div class="project-cat">--}}
+{{--                      <a href="projects-standard.html">finance</a--}}
+{{--                      ><a href="projects-standard.html">supply chain</a>--}}
+{{--                    </div> -->--}}
+{{--                    <div class="project-title">--}}
+{{--                      <h4>--}}
+{{--                        <a href="{{ route('get.product', $product->id) }}"--}}
+{{--                          >{{ $product->title_en }}</a--}}
+{{--                        >--}}
+{{--                      </h4>--}}
+{{--                    </div>--}}
+{{--                    <div class="project-desc">--}}
+{{--                      <p>--}}
+{{--                        {{ $product->desc_en }}--}}
+{{--                      </p>--}}
+{{--                    </div>--}}
+{{--                    <div class="project-more">--}}
+{{--                      <a--}}
+{{--                        class="btn btn--bordered btn--white"--}}
+{{--                        href="{{ route('get.product', $product->id) }}"--}}
+{{--                        >explore more <i class="energia-arrow-right"></i--}}
+{{--                      ></a>--}}
+{{--                    </div>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--            </div>--}}
 
-                  <div class="project-content">
-                    <!-- <div class="project-cat">
-                      <a href="projects-standard.html">eco</a
-                      ><a href="projects-standard.html">green energy</a>
-                    </div> -->
-                    <div class="project-title">
-                      <h4>
-                        <a href="shop-single.html"
-                          >MUST, Off-Grid Solutions</a
-                        >
-                      </h4>
-                    </div>
-                    <div class="project-desc">
-                      <p>
-                        Must Power, an innovative high technology company, specializes in R&D,
-                        manufacturing and marketing of photovoltaic (PV) inverters, Solar charge controller,
-                        Solar battery and some other related Solar products.Our innovative solutions for all photovoltaic
-                      </p>
-                    </div>
-                    <div class="project-more">
-                      <a
-                        class="btn btn--bordered btn--white"
-                        href="shop-single.html"
-                        >explore more <i class="energia-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> --}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+{{--            @endforeach--}}
+
+{{--            --}}{{-- <div>--}}
+{{--              <div class="project-panel" data-hover="">--}}
+{{--                <div class="project-panel-holder">--}}
+{{--                  <div class="project-img">--}}
+{{--                    <a class="link" href="shop-single.html"></a--}}
+{{--                    ><img--}}
+{{--                      src="{{ asset('assets/front') }}/assets/images/projects/modern/2.jpg"--}}
+{{--                      alt="project image"--}}
+{{--                    />--}}
+{{--                  </div>--}}
+
+{{--                  <div class="project-content">--}}
+{{--                    <!-- <div class="project-cat">--}}
+{{--                      <a href="projects-standard.html">energy</a--}}
+{{--                      ><a href="projects-standard.html">green energy</a>--}}
+{{--                    </div> -->--}}
+{{--                    <div class="project-title">--}}
+{{--                      <h4>--}}
+{{--                        <a href="shop-single.html"--}}
+{{--                          >Suntree - DC Protections</a--}}
+{{--                        >--}}
+{{--                      </h4>--}}
+{{--                    </div>--}}
+{{--                    <div class="project-desc">--}}
+{{--                      <p>--}}
+{{--                        After 10 years of experience, Suntree has won as many as 40 patents, including 10 invention patents.--}}
+{{--                         During this period, Suntree not only acquired Shenzhen Litto New Energy Co.,Ltd, entered into--}}
+{{--                         Grid inverter market but also was rated as state-level high-tech--}}
+{{--                      </p>--}}
+{{--                    </div>--}}
+{{--                    <div class="project-more">--}}
+{{--                      <a--}}
+{{--                        class="btn btn--bordered btn--white"--}}
+{{--                        href="shop-single.html"--}}
+{{--                        >explore more <i class="energia-arrow-right"></i--}}
+{{--                      ></a>--}}
+{{--                    </div>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--            </div> --}}
+{{--            --}}{{-- <div>--}}
+{{--              <div class="project-panel" data-hover="">--}}
+{{--                <div class="project-panel-holder">--}}
+{{--                  <div class="project-img">--}}
+{{--                    <a class="link" href="shop-single.html"></a--}}
+{{--                    ><img--}}
+{{--                      src="{{ asset('assets/front') }}/assets/images/projects/modern/3.jpg"--}}
+{{--                      alt="project image"--}}
+{{--                    />--}}
+{{--                  </div>--}}
+
+{{--                  <div class="project-content">--}}
+{{--                    <!-- <div class="project-cat">--}}
+{{--                      <a href="projects-standard.html">eco</a--}}
+{{--                      ><a href="projects-standard.html">green energy</a>--}}
+{{--                    </div> -->--}}
+{{--                    <div class="project-title">--}}
+{{--                      <h4>--}}
+{{--                        <a href="shop-single.html"--}}
+{{--                          >NewMax, Batteries</a--}}
+{{--                        >--}}
+{{--                      </h4>--}}
+{{--                    </div>--}}
+{{--                    <div class="project-desc">--}}
+{{--                      <p>--}}
+{{--                        NewMax Battery boasts over 25 years of experience and endless R&D effort to be one of the most innovative battery companies in the world.--}}
+{{--NewMax makes use of state-of-the-art manufacturing and testing facilities to build the most advanced products on the market today--}}
+{{--                      </p>--}}
+{{--                    </div>--}}
+{{--                    <div class="project-more">--}}
+{{--                      <a--}}
+{{--                        class="btn btn--bordered btn--white"--}}
+{{--                        href="shop-single.html"--}}
+{{--                        >explore more <i class="energia-arrow-right"></i--}}
+{{--                      ></a>--}}
+{{--                    </div>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--            </div> --}}
+{{--            --}}{{-- <div>--}}
+{{--              <div class="project-panel" data-hover="">--}}
+{{--                <div class="project-panel-holder">--}}
+{{--                  <div class="project-img">--}}
+{{--                    <a class="link" href="shop-single.html"></a--}}
+{{--                    ><img--}}
+{{--                      src="{{ asset('assets/front') }}/assets/images/projects/modern/4.jpg"--}}
+{{--                      alt="project image"--}}
+{{--                    />--}}
+{{--                  </div>--}}
+
+{{--                  <div class="project-content">--}}
+{{--                    <!-- <div class="project-cat">--}}
+{{--                      <a href="projects-standard.html">eco</a--}}
+{{--                      ><a href="projects-standard.html">green energy</a>--}}
+{{--                    </div> -->--}}
+{{--                    <div class="project-title">--}}
+{{--                      <h4>--}}
+{{--                        <a href="shop-single.html"--}}
+{{--                          >MUST, Off-Grid Solutions</a--}}
+{{--                        >--}}
+{{--                      </h4>--}}
+{{--                    </div>--}}
+{{--                    <div class="project-desc">--}}
+{{--                      <p>--}}
+{{--                        Must Power, an innovative high technology company, specializes in R&D,--}}
+{{--                        manufacturing and marketing of photovoltaic (PV) inverters, Solar charge controller,--}}
+{{--                        Solar battery and some other related Solar products.Our innovative solutions for all photovoltaic--}}
+{{--                      </p>--}}
+{{--                    </div>--}}
+{{--                    <div class="project-more">--}}
+{{--                      <a--}}
+{{--                        class="btn btn--bordered btn--white"--}}
+{{--                        href="shop-single.html"--}}
+{{--                        >explore more <i class="energia-arrow-right"></i--}}
+{{--                      ></a>--}}
+{{--                    </div>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--            </div> --}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--      </div>--}}
+{{--    </div>--}}
+{{--  </section>--}}
 
   <section class="clients clients-carousel clients-1" id="clients-1">
     <div class="container">

@@ -159,7 +159,7 @@
                 </li>
                 <li class="nav-item @if (Route::currentRouteName() == 'contact' ) active @endif" id="contact"
                     data-hover="">
-                    <a href="{{ route('contact.index') }}"><span>contact</span></a>
+                    <a href="{{ route('contact') }}"><span>contact</span></a>
                 </li>
             </ul>
             <div class="module-holder">

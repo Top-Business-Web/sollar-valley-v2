@@ -334,130 +334,130 @@
         alt="background"
       />
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-4">
-          <div class="counters-holder">
-            <div class="counter counter-3">
-              <div class="counter-holder">
-                <div class="counter-num">
-                  <span
-                    class="counting"
-                    data-counterup-nums="25"
-                    data-counterup-beginat="12"
-                    >{{ $settings->year_of_experince }}</span
-                  >
-                </div>
-                <div class="counter-img">
-                  <div class="bg-section">
-                    <img src="{{ asset('assets/front') }}/assets/images/counters/1.jpg" alt="image" />
-                  </div>
-                  <i class="flaticon-020-factory"></i>
-                </div>
-              </div>
-              <div class="counter-desc">
-                <p>Years Of Experience In The Solar Industry</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {{-- <div class="col-12 col-lg-7 offset-lg-1">
-          <div class="heading heading-14">
-            <p class="heading-subtitle">Customers Doing it Their Way!</p>
-          </div>
-          <div class="testimonials-holder">
-            <div
-              class="carousel owl-carousel testimonials-carousel"
-              data-slide="1"
-              data-slide-rs="1"
-              data-autoplay="true"
-              data-nav="false"
-              data-dots="false"
-              data-space="0"
-              data-loop="false"
-              data-speed="800"
-            >
-              <div class="testimonial-panel testimonial-panel-2">
-                <div class="testimonial-body">
-                  <div class="testimonial-content">
-                    <p>
-                      Energia has been absolutely the best to work with.
-                      Their attention to detail and customer support was
-                      amazing!! They were fantastic through the entire
-                      purchase process. Had lots of questions and they were
-                      patient. When my system arrived, it was well packed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="testimonial-panel testimonial-panel-2">
-                <div class="testimonial-body">
-                  <div class="testimonial-content">
-                    <p>
-                      Energia has been absolutely the best to work with.
-                      Their attention to detail and customer support was
-                      amazing!! They were fantastic through the entire
-                      purchase process. Had lots of questions and they were
-                      patient. When my system arrived, it was well packed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="testimonial-panel testimonial-panel-2">
-                <div class="testimonial-body">
-                  <div class="testimonial-content">
-                    <p>
-                      Energia has been absolutely the best to work with.
-                      Their attention to detail and customer support was
-                      amazing!! They were fantastic through the entire
-                      purchase process. Had lots of questions and they were
-                      patient. When my system arrived, it was well packed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-thumbs">
-            <div class="testimonial-thumb active" data-hover="">
-              <div class="thumb-img">
-                <img
-                  src="{{ asset('assets/front') }}/assets/images/testimonial/1.jpg"
-                  alt="Testimonial Author"
-                />
-              </div>
-              <div class="thumb-body">
-                <h6>sami wade</h6>
-                <p>promina</p>
-              </div>
-            </div>
-            <div class="testimonial-thumb" data-hover="">
-              <div class="thumb-img">
-                <img
-                  src="{{ asset('assets/front') }}/assets/images/testimonial/2.jpg"
-                  alt="Testimonial Author"
-                />
-              </div>
-              <div class="thumb-body">
-                <h6>john peter</h6>
-                <p>optima inc</p>
-              </div>
-            </div>
-            <div class="testimonial-thumb" data-hover="">
-              <div class="thumb-img">
-                <img
-                  src="{{ asset('assets/front') }}/assets/images/testimonial/3.jpg"
-                  alt="Testimonial Author"
-                />
-              </div>
-              <div class="thumb-body">
-                <h6>sony blake</h6>
-                <p>koira ind</p>
-              </div>
-            </div>
-          </div>
-        </div> --}}
-      </div>
-    </div>
+{{--    <div class="container">--}}
+{{--      <div class="row">--}}
+{{--        <div class="col-12 col-lg-4">--}}
+{{--          <div class="counters-holder">--}}
+{{--            <div class="counter counter-3">--}}
+{{--              <div class="counter-holder">--}}
+{{--                <div class="counter-num">--}}
+{{--                  <span--}}
+{{--                    class="counting"--}}
+{{--                    data-counterup-nums="25"--}}
+{{--                    data-counterup-beginat="12"--}}
+{{--                    >{{ $settings->year_of_experince }}</span--}}
+{{--                  >--}}
+{{--                </div>--}}
+{{--                <div class="counter-img">--}}
+{{--                  <div class="bg-section">--}}
+{{--                    <img src="{{ asset('assets/front') }}/assets/images/counters/1.jpg" alt="image" />--}}
+{{--                  </div>--}}
+{{--                  <i class="flaticon-020-factory"></i>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--              <div class="counter-desc">--}}
+{{--                <p>Years Of Experience In The Solar Industry</p>--}}
+{{--              </div>--}}
+{{--            </div>--}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--        --}}{{-- <div class="col-12 col-lg-7 offset-lg-1">--}}
+{{--          <div class="heading heading-14">--}}
+{{--            <p class="heading-subtitle">Customers Doing it Their Way!</p>--}}
+{{--          </div>--}}
+{{--          <div class="testimonials-holder">--}}
+{{--            <div--}}
+{{--              class="carousel owl-carousel testimonials-carousel"--}}
+{{--              data-slide="1"--}}
+{{--              data-slide-rs="1"--}}
+{{--              data-autoplay="true"--}}
+{{--              data-nav="false"--}}
+{{--              data-dots="false"--}}
+{{--              data-space="0"--}}
+{{--              data-loop="false"--}}
+{{--              data-speed="800"--}}
+{{--            >--}}
+{{--              <div class="testimonial-panel testimonial-panel-2">--}}
+{{--                <div class="testimonial-body">--}}
+{{--                  <div class="testimonial-content">--}}
+{{--                    <p>--}}
+{{--                      Energia has been absolutely the best to work with.--}}
+{{--                      Their attention to detail and customer support was--}}
+{{--                      amazing!! They were fantastic through the entire--}}
+{{--                      purchase process. Had lots of questions and they were--}}
+{{--                      patient. When my system arrived, it was well packed.--}}
+{{--                    </p>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--              <div class="testimonial-panel testimonial-panel-2">--}}
+{{--                <div class="testimonial-body">--}}
+{{--                  <div class="testimonial-content">--}}
+{{--                    <p>--}}
+{{--                      Energia has been absolutely the best to work with.--}}
+{{--                      Their attention to detail and customer support was--}}
+{{--                      amazing!! They were fantastic through the entire--}}
+{{--                      purchase process. Had lots of questions and they were--}}
+{{--                      patient. When my system arrived, it was well packed.--}}
+{{--                    </p>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--              <div class="testimonial-panel testimonial-panel-2">--}}
+{{--                <div class="testimonial-body">--}}
+{{--                  <div class="testimonial-content">--}}
+{{--                    <p>--}}
+{{--                      Energia has been absolutely the best to work with.--}}
+{{--                      Their attention to detail and customer support was--}}
+{{--                      amazing!! They were fantastic through the entire--}}
+{{--                      purchase process. Had lots of questions and they were--}}
+{{--                      patient. When my system arrived, it was well packed.--}}
+{{--                    </p>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--            </div>--}}
+{{--          </div>--}}
+{{--          <div class="testimonial-thumbs">--}}
+{{--            <div class="testimonial-thumb active" data-hover="">--}}
+{{--              <div class="thumb-img">--}}
+{{--                <img--}}
+{{--                  src="{{ asset('assets/front') }}/assets/images/testimonial/1.jpg"--}}
+{{--                  alt="Testimonial Author"--}}
+{{--                />--}}
+{{--              </div>--}}
+{{--              <div class="thumb-body">--}}
+{{--                <h6>sami wade</h6>--}}
+{{--                <p>promina</p>--}}
+{{--              </div>--}}
+{{--            </div>--}}
+{{--            <div class="testimonial-thumb" data-hover="">--}}
+{{--              <div class="thumb-img">--}}
+{{--                <img--}}
+{{--                  src="{{ asset('assets/front') }}/assets/images/testimonial/2.jpg"--}}
+{{--                  alt="Testimonial Author"--}}
+{{--                />--}}
+{{--              </div>--}}
+{{--              <div class="thumb-body">--}}
+{{--                <h6>john peter</h6>--}}
+{{--                <p>optima inc</p>--}}
+{{--              </div>--}}
+{{--            </div>--}}
+{{--            <div class="testimonial-thumb" data-hover="">--}}
+{{--              <div class="thumb-img">--}}
+{{--                <img--}}
+{{--                  src="{{ asset('assets/front') }}/assets/images/testimonial/3.jpg"--}}
+{{--                  alt="Testimonial Author"--}}
+{{--                />--}}
+{{--              </div>--}}
+{{--              <div class="thumb-body">--}}
+{{--                <h6>sony blake</h6>--}}
+{{--                <p>koira ind</p>--}}
+{{--              </div>--}}
+{{--            </div>--}}
+{{--          </div>--}}
+{{--        </div> --}}
+{{--      </div>--}}
+{{--    </div>--}}
   </section>
 @endsection

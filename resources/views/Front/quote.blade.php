@@ -96,7 +96,7 @@
               products allows us to ensure our customers receive the best
               quality service.
             </p>
-            <form id="addForm" class="form-qoute" method="post" action="{{ route('quote.store') }}">
+            <form id="addForm" class="form-qoute" method="post">
                 @csrf
               <div class="mb-20">
                 <div class="row">
@@ -373,7 +373,7 @@
               <div>
                 <div class="row">
                   <div class="col-12">
-                    <button class="btn btn--secondary w-100" btn-submit type="submit">
+                    <button class="btn btn--secondary w-100 submit-btn" type="button">
                       submit request <i class="energia-arrow-right"></i>
                     </button>
                   </div>
@@ -388,7 +388,7 @@
       </div>
     </div>
   </section>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> --}}
 
 
   <script>
@@ -400,10 +400,10 @@ var allChecked = $('#customRadioInline1').data('value')
 
 
     function addScript(){
-        $(document).on('submit', 'Form#addForm', function (e) {
+        $(document).on('.submit-btn', function (e) {
             e.preventDefault();
-            var formData = new FormData(this);
-            var url = $('#addForm').attr('action');
+            var formData = new FormData('#addForm');
+            var url = {{ route('quote.store') }};
             $.ajax({
                 url: url,
                 type: 'POST',
@@ -414,18 +414,26 @@ var allChecked = $('#customRadioInline1').data('value')
                         ' ></span> <span style="margin-left: 4px;">انتظر ..</span>').attr('disabled', true);
                 },
                 success: function (data) {
-                    if (data.status == 200) {
-                        alert('Success')
-                        window.ajax.reload();
+                    alert('data');
+                    // if (data.status == 200) {
+                    //     alert('Success');
+                    //     // window.ajax.reload();
 
-                    } else if(data.status == 405){
-                       alert('Error')
-                    }
-                    else
-                        toastr.error('هناك خطأ ما ..');
-                    $('#addButton').html(`اضافة`).attr('disabled', false);
-                    $('#editOrCreate').modal('hide')
+                    // } else if(data.status == 405){
+                    //    alert('Error')
+                    // }
+                    // else
+                    //     toastr.error('هناك خطأ ما ..');
+                    // $('#addButton').html(`اضافة`).attr('disabled', false);
+                    // $('#editOrCreate').modal('hide')
                 },
+                // error: function (data) {
+                //             //e ewe
+                //     } else {
+                //         //asaa
+                //     }
+
+                // },//end error method
 
                 cache: false,
                 contentType: false,
