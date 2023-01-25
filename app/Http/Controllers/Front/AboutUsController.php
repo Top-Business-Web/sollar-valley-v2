@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\AboutUs;
 use App\Models\Product;
 use App\Models\Setting;
+use App\Models\Slider;
 
 class AboutUsController extends Controller
 {
@@ -18,6 +19,7 @@ class AboutUsController extends Controller
         $data['settings'] = Setting::first();
         $data['services'] = Service::get();
         $data['brands'] = Brand::get();
+        $data['slider'] = Slider::first();
         $data['related'] = Product::latest()->take(6)->get();
         return view('Front.about_us')->with($data);
     }

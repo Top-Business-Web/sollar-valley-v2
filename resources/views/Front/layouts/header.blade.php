@@ -66,7 +66,7 @@
                 <!-- <a href="blog-grid.html">news & media</a
                 ><a href="page-careers.html">careers</a
                 > -->
-                <a href="page-faqs.html">FAQs</a>
+                <a href="{{ route('faqs') }}">FAQs</a>
             </div>
             <div class="module module-language">
                 <div class="selected">

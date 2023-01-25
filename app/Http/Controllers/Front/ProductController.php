@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Setting;
+use App\Models\Slider;
 
 class ProductController extends Controller
 {
@@ -14,9 +15,10 @@ class ProductController extends Controller
     {
         $products = Product::get();
         $settings = Setting::first();
+        $slider = Slider::first();
         $categories = Category::get();
         $related = Product::latest()->take(3)->get();
-        return view('Front.product', compact('products', 'categories', 'related', 'settings'));
+        return view('Front.product', compact('products', 'categories', 'related', 'settings', 'slider'));
     }
 
     public function search(Request $request)
