@@ -65,7 +65,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="control-label">Tag</label>
-                    <input type="text"  name="tags" value="{{ implode(' ' ,$product->tags) }}" class="form-control">
+                    <input type="text"  name="tags" value="{{ implode(' ',$product->tags) }}" class="form-control">
                 </div>
             </div>
 

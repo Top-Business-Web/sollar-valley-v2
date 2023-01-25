@@ -240,13 +240,15 @@
                         data-nav="false"
                         data-dots="false"
                         data-space="0"
-                        data-loop="true"
+                        data-loop="false"
                         data-speed="3000"
                     >
+                        @foreach($brands as $brand)
                         <div class="client">
                             <a href="javascript:void(0)"> </a
-                            ><img src="{{ asset('assets/front') }}/assets/images/clients/1.png" alt="client"/>
+                            ><img src="{{ asset($brand->image) }}" alt="{{$brand->name}}"/>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

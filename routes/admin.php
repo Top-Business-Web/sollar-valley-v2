@@ -21,6 +21,10 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     #### Service ####
     Route::resource('/service', 'ServiceController');
 
+    #### Brands ####
+    Route::resource('/brands', 'BrandController');
+    Route::post('/delete_brands', 'BrandController@delete')->name('delete_brands');;
+
     #### About Us ####
     Route::resource('/about_us', 'AboutUsController')->except('create','store', 'edit', 'destroy');
 

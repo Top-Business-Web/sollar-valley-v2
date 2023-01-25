@@ -120,7 +120,7 @@
                                 </tr>
                                 <tr>
                                     <td class="name">tags:</td>
-                                    <td class="value">{{implode(' , ' , $product->tags)}}</td>
+                                    <td class="value">{{implode(' , ',$product->tags)}}</td>
                                 </tr>
                                 </tbody>
                             </table>
