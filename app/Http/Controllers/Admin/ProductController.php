@@ -77,6 +77,7 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
+//        dd($product);
         $categoreis = Category::get();
         return view('Admin.product.edit', compact('product', 'categoreis'));
     }
