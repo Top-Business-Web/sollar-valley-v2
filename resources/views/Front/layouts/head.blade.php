@@ -26,7 +26,7 @@
 
     <link href="{{ asset('assets/front/') }}/assets/css/vendor.min.css" rel="stylesheet" />
     <link href="{{ asset('assets/front/') }}/assets/css/style.css" rel="stylesheet" />
-
+    @toastr_css
     <link href="{{ asset('assets/front/') }}/assets/css/edit.css" rel="stylesheet" />
 
     <script>

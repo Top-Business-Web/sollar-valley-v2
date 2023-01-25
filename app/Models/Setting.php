@@ -13,10 +13,11 @@ class Setting extends Model
 
     protected  $fillable = [
         'logo',
-        'banner_home',
+        'sliders',
         'title_ar',
         'title_en',
-        'title_es',
+        'desc_ar',
+        'desc_en',
         'year_of_experince',
         'phone',
         'email',
@@ -29,5 +30,9 @@ class Setting extends Model
         'shipping_policy',
         'returns',
         'work_date'
+    ];
+
+    protected $casts = [
+        'sliders' => 'array',
     ];
 }

@@ -27,6 +27,12 @@ class ProductController extends Controller
                             </button>
                        ';
                 })
+                ->editColumn('images', function ($products){
+                    return '<img style="width:60px;border-radius:30px" onclick="window.open(this.src)" src="'.asset($products->images[0]).'"/>';
+                })
+                ->editColumn('category_id', function ($products){
+                    return $products->category->title_en;
+                })
                 ->escapeColumns([])
                 ->make(true);
         } else {
@@ -53,16 +59,14 @@ class ProductController extends Controller
                 $inputs['images'][] = $this->saveImage($file,'assets/uploads/products','photo');
             }
         }
-        unset($inputs['files']);
+//        unset($inputs['files']);
 //        dd($inputs);
 
-        $tags = [];
         if ($request->has('tags') && $request->tags != null) {
-            foreach ($request->tags as $tag) {
-                $tags[] = $tag;
-            }
+            $tags_array = explode(' ',$inputs['tags']);
+
+            $inputs['tags'] = $tags_array;
         }
-        $inputs['tags'] = json_encode($tags);
 
         if (Product::create($inputs)) {
             return response()->json(['status' => 200]);
@@ -79,30 +83,23 @@ class ProductController extends Controller
 
     public function update(StoreProduct $request)
     {
+
         $product = Product::findOrFail($request->id);
 
         $inputs = $request->all();
 
-        if ($request->has('image')) {
-
-            if (file_exists(public_path('assets/uploads/admins/images/') . $product->image)) {
-                unlink(('assets/uploads/admins/images/') . $product->image);
+        if($request->has('files')){
+            foreach($request->file('files') as $file)
+            {
+                $inputs['images'][] = $this->saveImage($file,'assets/uploads/products','photo');
             }
-            $inputs['image'] = $request->image != null ? $this->saveImage($request->image, 'assets/uploads/admins/images') : $inputs['image'];
         }
 
-        $tags = [];
         if ($request->has('tags') && $request->tags != null) {
+            $tags_array = explode(' ',$inputs['tags']);
 
-            foreach ($request->tags as $tag) {
-
-                $tags = $tag;
-
-            }
+            $inputs['tags'] = $tags_array;
         }
-
-
-        $inputs['tags'] = $request->tags != null ? json_encode($tags) : $product->tags;
 
         if ($product->update($inputs))
             return response()->json(['status' => 200]);

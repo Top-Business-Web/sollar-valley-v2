@@ -120,7 +120,7 @@
                                 </tr>
                                 <tr>
                                     <td class="name">tags:</td>
-                                    <td class="value">{{ $product->tags }}</td>
+                                    <td class="value">{{implode(' , ' , $product->tags)}}</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -195,10 +195,6 @@
                                         <tr>
                                             <td>Item model number</td>
                                             <td>{{ $product->model_number }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Batteries Required?</td>
-                                            <td></td>
                                         </tr>
                                         </tbody>
                                     </table>

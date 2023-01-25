@@ -55,7 +55,7 @@
             <div class="form-group">
                 <label class="control-label">Category</label>
                 <select name="category_id" id="" class="form-control">
-                    <option class="form-control" value="" hidde selected>{{ @$product->category->id }}</option>
+                    <option class="form-control" value="" selected>Select Category</option>
                     @foreach ($categoreis as $category)
                         <option class="form-control" value="{{ $category->id }}">{{ $category->title_ar }}</option>
                     @endforeach
@@ -68,7 +68,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Tag</label>
-                <input type="text" name="tags[]" data-role="tagsinput" id="tags_input" class="form-control">
+                <input type="text" name="tags" class="form-control">
             </div>
         </div>
 
@@ -128,3 +128,4 @@
         <button type="submit" class="btn bg-gradient-primary" id="addButton">create</button>
     </div>
 </form>
+

@@ -207,9 +207,11 @@
                     } else if (data.status === 422) {
                         var errors = $.parseJSON(data.responseText);
                         $.each(errors, function (key, value) {
+                            // alert(value);
                             if ($.isPlainObject(value)) {
                                 $.each(value, function (key, value) {
-                                    toastr.error(value, 'خطأ');
+                                    toastr.error(''+value);
+                                    // alert(value);
                                 });
                             }
                         });

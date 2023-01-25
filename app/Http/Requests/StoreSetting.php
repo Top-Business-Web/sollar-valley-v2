@@ -25,10 +25,12 @@ class StoreSetting extends FormRequest
     public function rules()
     {
         return [
-            'logo' => 'required',
-            'banner_home' => 'required',
+            'logo' => 'nullable',
+            'files' => 'nullable|array',
             'title_ar' => 'required',
             'title_en' => 'required',
+            'desc_ar' => 'required',
+            'desc_en' => 'required',
             'year_of_experince' => 'required',
             'phone' => 'required',
             'email' => 'required',

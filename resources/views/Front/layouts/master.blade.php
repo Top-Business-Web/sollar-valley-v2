@@ -53,6 +53,17 @@
       </div>
     </div>
 
+
+
+
+
+
+
+
+
+
+    @toastr_js
+    @toastr_render
     <script
       data-cfasync="false"
       src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
@@ -65,27 +76,5 @@
     <script src="{{ asset('assets/front/') }}/assets/js/plugin.js"></script>
 
     <script src="{{ asset('assets/front/') }}/assets/js/main.js"></script>
-
-  <script>
-      $('.search').on('keyup', function () {
-          $value = $(this).val();
-
-          $.ajax({
-              type: 'get',
-              url: '{{ route('product-search') }}',
-              data: {'search': $value},
-              beforeSend: function (data) {
-                  $('.product-search').html('<h4 class="error">LOADING...</h4>');
-              },
-              success: function (data) {
-                  // alert(data)
-                  $('.product-search').html(data);
-              },
-              error: function (data) {
-                  $('.product-search').html('<h2 class="error">NO PRODUCT FOUND</h2>');
-              }
-          });
-      });
-  </script>
   </body>
 </html>

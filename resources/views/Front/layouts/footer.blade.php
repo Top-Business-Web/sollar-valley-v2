@@ -30,7 +30,7 @@
                 @foreach ($services as $service)
 
                     <ul>
-                    <li><a href="services-turbines.html">{{ $service->title_en }}</a></li>
+                    <li><a href="{{ route('service') }}">{{ $service->title_en }}</a></li>
                     </ul>
 
                 @endforeach
@@ -46,11 +46,11 @@
               <div class="widget-content">
                 <ul>
                   <li>
-                    <a href="page-contact.html">Terms & Conditions</a>
+                    <a href="{{ route('contact') }}">Terms & Conditions</a>
                   </li>
-                  <li><a href="page-contact.html">Shipping Policy</a></li>
-                  <li><a href="page-contact.html">Delivery Tips</a></li>
-                  <li><a href="page-contact.html">Returns</a></li>
+                  <li><a href="{{ route('contact') }}">Shipping Policy</a></li>
+                  <li><a href="{{ route('contact') }}">Delivery Tips</a></li>
+                  <li><a href="{{ route('contact') }}">Returns</a></li>
                 </ul>
               </div>
             </div>
@@ -74,7 +74,7 @@
 
                         Email:
                         <a
-                        href="../cdn-cgi/l/email-protection.html#4f262129200f2a212a3d28262e612c2022"
+                        href="#"
                         ><span
                             class="__cf_email__"
                             data-cfemail="e1888f878ea1848f8493868880cf828e8c"
@@ -92,7 +92,7 @@
 
                   </li>
                   <li class="directions">
-                    <a href="page-contact.html"
+                    <a href="{{ route('contact') }}"
                       ><i class="energia-location-Icon"></i>get
                       directions</a
                     >
@@ -113,7 +113,7 @@
               <div class="copyright">
                 <span
                   >&copy; 2021 energia by
-                  <a href="https://1.envato.market/kP9BV"> Zytheme.com</a>.
+                  <a href="https://topbusiness.io/contact3.html"> Top business</a>.
                   all rights reserved.
                 </span>
                 <ul class="list-unstyled social-icons">
@@ -134,7 +134,7 @@
                         >
                     </li>
 
-                
+
 
                 </ul>
               </div>

@@ -33,6 +33,11 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     #### Settings ####
     Route::resource('/settings', 'SettingController');
 
+    #### Slider ####
+    Route::resource('/slider', 'SliderController')->except('update');
+
+    Route::post('/sliderUpdate', 'SliderController@sliderUpdate')->name('sliderUpdate');
+
     #### Menu ####
 
 
