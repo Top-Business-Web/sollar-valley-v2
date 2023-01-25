@@ -25,7 +25,7 @@
   <section class="page-title page-title-6" id="page-title">
     <div class="page-title-wrap bg-overlay bg-overlay-dark-3">
       <div class="bg-section">
-        <img src="{{ asset('assets/front/') }}/assets/images/page-titles/6.jpg" alt="Background" />
+        <img src="{{ asset($slider->image_faqs) }}" />
       </div>
       <div class="container">
         <div class="row">

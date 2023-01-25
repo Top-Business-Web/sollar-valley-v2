@@ -7,7 +7,7 @@
     <section class="page-title page-title-9" id="page-title">
         <div class="page-title-wrap bg-overlay bg-overlay-dark-2">
             <div class="bg-section">
-                <img src="{{ asset('assets/front') }}/assets/images/page-titles/9.jpg" alt="Background"/>
+                <img src="{{ asset($slider->image_product) }}"/>
             </div>
             <div class="container">
                 <div class="row">
@@ -190,7 +190,7 @@
         //         }
         //     });
         // })
-        
+
 
 
         // $('#btn-search').on('click', function(){

@@ -83,6 +83,7 @@ class ProductController extends Controller
 
     public function update(StoreProduct $request)
     {
+
         $product = Product::findOrFail($request->id);
 
         $inputs = $request->all();
