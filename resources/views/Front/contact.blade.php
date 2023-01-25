@@ -88,7 +88,7 @@
                       <p>Mon - Fri: 8:00 am - 7:00 pm</p>
                     </li>
                   </ul>
-                  <a class="btn btn--white" href="{{ route('about_us') }}"
+                  <a class="btn btn--white" href="page-about.html"
                     >About us <i class="energia-arrow-right"></i
                   ></a>
                 </div>
@@ -99,12 +99,72 @@
             <div class="contact-card">
               <div class="contact-body">
                 <h5 class="card-heading">get in touch</h5>
+                <p class="card-desc">
+                  We take great pride in everything that we do, control over
+                  products allows us to ensure our customers receive the
+                  best quality service.
+                </p>
+                <form class="contactForm" id="addForm" method="post" action="{{ route('contact.store') }}">
+                    @csrf
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="contact-name"
+                        name="name"
+                        placeholder="Name"
+                        required=""
+                      />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="contact-email"
+                        placeholder="Email"
+                        name="email"
+                        required=""
+                      />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="contact-phone"
+                        placeholder="Phone"
+                        name="phone"
+                        required=""
+                      />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <select class="form-control" id="select-1" name="service">
+                        <option value="default">
+                          select your services
+                        </option>
+
+                        @foreach ($services as $service)
+
+                        <option value="{{ $service->id }}">{{ $service->title_en }}</option>
+
+                        @endforeach
+
+                      </select>
+                    </div>
                     <div class="col-12">
-                        <a href="{{ route('quote') }}">
-                            <button class="btn btn--secondary">
-                                submit request <i class="energia-arrow-right"></i>
-                            </button>
-                        </a>
+                      <textarea
+                        class="form-control"
+                        id="contact-infos"
+                        placeholder="additional information"
+                        name="message"
+                        cols="30"
+                        rows="10"
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn--secondary w-100" btn-submit type="submit">
+                            submit request <i class="energia-arrow-right"></i>
+                          </button>
                     </div>
                     <div class="col-12">
                       <div class="contact-result"></div>
@@ -127,7 +187,7 @@
                     class="counting"
                     data-counterup-nums="25"
                     data-counterup-beginat="12"
-                    >{{ $settings->year_of_experince }}</span
+                    >25</span
                   >
                 </div>
                 <div class="counter-img">
@@ -242,5 +302,42 @@
       </div>
     </div>
   </section>
+
+  <script>
+        function addScript(){
+            $(document).on('submit', 'Form#addForm', function (e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                var url = $('#addForm').attr('action');
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    data: formData,
+                    method : 'POST',
+                    beforeSend: function () {
+                        $('#addButton').html('<span class="spinner-border spinner-border-sm mr-2" ' +
+                            ' ></span> <span style="margin-left: 4px;">انتظر ..</span>').attr('disabled', true);
+                    },
+                    success: function (data) {
+                        if (data.status == 200) {
+                            alert('Success')
+                            window.ajax.reload();
+
+                        } else if(data.status == 405){
+                           alert('Error')
+                        }
+                        else
+                            toastr.error('هناك خطأ ما ..');
+                        $('#addButton').html(`اضافة`).attr('disabled', false);
+                        $('#editOrCreate').modal('hide')
+                    },
+
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                });
+            });
+        }
+      </script>
 
 @endsection

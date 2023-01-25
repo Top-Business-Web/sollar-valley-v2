@@ -676,7 +676,7 @@ NewMax makes use of state-of-the-art manufacturing and testing facilities to bui
                 quality service.
               </p>
                   <div class="col-12">
-                      <a href="{{ route('quote') }}">
+                      <a href="{{ route('quote.index') }}">
                     <button class="btn btn--secondary w-100" type="submit">
                       Send Request <i class="energia-arrow-right"></i>
                     </button></a>

@@ -96,7 +96,7 @@
               products allows us to ensure our customers receive the best
               quality service.
             </p>
-            <form id="addForm" class="form-qoute" method="post" action="{{ route('') }}">
+            <form id="addForm" class="form-qoute" method="post" action="{{ route('quote.store') }}">
                 @csrf
               <div class="mb-20">
                 <div class="row">
@@ -426,13 +426,6 @@ var allChecked = $('#customRadioInline1').data('value')
                     $('#addButton').html(`اضافة`).attr('disabled', false);
                     $('#editOrCreate').modal('hide')
                 },
-                // error: function (data) {
-                //             //e ewe
-                //     } else {
-                //         //asaa
-                //     }
-
-                // },//end error method
 
                 cache: false,
                 contentType: false,

@@ -159,7 +159,7 @@
                 </li>
                 <li class="nav-item @if (Route::currentRouteName() == 'contact' ) active @endif" id="contact"
                     data-hover="">
-                    <a href="{{ route('contact') }}"><span>contact</span></a>
+                    <a href="{{ route('contact.index') }}"><span>contact</span></a>
                 </li>
             </ul>
             <div class="module-holder">
@@ -167,7 +167,7 @@
 {{--                    <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>--}}
 {{--                </div>--}}
                 <div class="module-contact">
-                    <a class="btn btn--primary " href="{{ route('quote') }}">
+                    <a class="btn btn--primary " href="{{ route('quote.index') }}">
                         request a quote<i class="energia-arrow-right"></i></a>
                 </div>
             </div>

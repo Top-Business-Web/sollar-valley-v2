@@ -30,7 +30,7 @@ Route::group(
     Route::get('/about_us', 'AboutUsController@index')->name('about_us');
 
     #### Contact ####
-    Route::get('/contact', 'ContactController@index')->name('contact');
+    Route::resource('contact', 'ContactController');
 
     #### Service ####
     Route::get('/service', 'ServiceController@index')->name('service');
@@ -46,7 +46,7 @@ Route::group(
     Route::get('/product/{id}', 'SingleController@getProduct')->name('get.product');
 
     #### Quote ####
-        Route::resource('/quote', 'QuoteController');
+        Route::resource('quote', 'QuoteController');
 
     #### Faqs ####
     Route::get('/faqs', 'FaqsController@index')->name('faqs');
