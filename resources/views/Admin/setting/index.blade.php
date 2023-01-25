@@ -20,9 +20,10 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Logo :</label>
-                                <input type="file" name="logo" data-value="{{ $settings->logo }}"
+                                <input type="file" name="logo" class="dropify" data-default-file="{{ asset($settings->logo) }}" />
+                                {{-- <input type="file" name="logo" data-value="{{ $settings->logo }}"
                                        value="{{ $settings->logo }}"
-                                       class="form-control"/>
+                                       class="form-control"/> --}}
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -161,6 +162,9 @@
 @section('js')
     @include('Admin.layouts.myAjaxHelper')
     <script>
+
+$('.dropify').dropify();
+
         editScript();
     </script>
 @stop

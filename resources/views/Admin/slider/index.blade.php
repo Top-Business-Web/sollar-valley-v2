@@ -18,48 +18,32 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Image Service :</label>
-                                <input type="file" name="image_about" value=""
-                                    class="form-control image" id="image" />
+                                <input type="file" name="image_about" class="dropify" data-default-file="{{ asset($slider->image_about) }}" />
                             </div>
-                            <div class="col-md-12 mb-2">
-                                <img id="preview-image-before-upload" src="https://www.riobeauty.co.uk/images/product_image_not_found.gif"
-                                    alt="preview image" class="preview-image-before-upload" style="max-height: 250px;">
-                            </div>
+
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Image Service :</label>
-                                <input type="file" name="image_service" value=""
-                                    class="form-control image" id="image1" />
+                                <input type="file" name="image_services" class="dropify" data-default-file="{{ asset($slider->image_services) }}" />
                             </div>
-                            <div class="col-md-12 mb-2">
-                                <img id="preview-image-before-upload1" src="https://www.riobeauty.co.uk/images/product_image_not_found.gif"
-                                    alt="preview image" class="preview-image-before-upload1" style="max-height: 250px;">
-                            </div>
+
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Image Product :</label>
-                                <input type="file" name="image_product" value=""
-                                    class="form-control image" id="image" />
+                                <input type="file" name="image_product" class="dropify" data-default-file="{{ asset($slider->image_product) }}" />
                             </div>
-                            <div class="col-md-12 mb-2">
-                                <img id="preview-image-before-upload" src="https://www.riobeauty.co.uk/images/product_image_not_found.gif"
-                                    alt="preview image" style="max-height: 250px;">
-                            </div>
+
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Image Faqs :</label>
-                                <input class="form-control image" name="image_faqs" value=""
-                                    type="file" id="image">
+                                <input type="file" name="image_faqs" class="dropify" data-default-file="{{ asset($slider->image_faqs) }}" />
                             </div>
-                            <div class="col-md-12 mb-2">
-                                <img id="preview-image-before-upload" src="https://www.riobeauty.co.uk/images/product_image_not_found.gif"
-                                    alt="preview image" style="max-height: 250px;">
-                            </div>
+
                         </div>
                     </div>
                     <div>
@@ -84,16 +68,7 @@
 
 
 
-$(document).ready(function () {
-            $('.image-abdo').change(function () {
-                let reader = new FileReader();
-
-                reader.onload = (e) => {
-                    $('#preview-image-before-upload').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(this.files[0]);
-            });
-        });
+$('.dropify').dropify();
 
 
 
