@@ -22,7 +22,7 @@ class SliderController extends Controller
     {
 
         // dd($request->all());
-        // $inputs = $request->all();
+        // $inputs = $request->all(); aadads
 
             $sliders = Slider::find($request->id);
             $inputs = $request->except('id');
