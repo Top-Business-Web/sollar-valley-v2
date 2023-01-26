@@ -119,11 +119,11 @@
                 <ul class="list-unstyled social-icons">
 
                     <li>
-                        <a class="share-facebook" href="{{ $settings->facebook }}"
+                        <a class="share-facebook" href="{{ $settings->linked_in }}"
                         ><i class="energia-facebook"></i>facebook
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a class="share-twitter" href="{{ $settings->twitter }}"
                         ><i class="energia-twitter"></i>twitter</a
                         >
@@ -132,7 +132,7 @@
                         <a class="share-youtube" href="{{ $settings->youtube }}"
                         ><i class="energia-youtube"></i>youtube</a
                         >
-                    </li>
+                    </li> --}}
 
 
 

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Setting;
 use App\Http\Requests\StoreQuote;
 use App\Models\Quote;
+use App\Models\Product;
 
 class QuoteController extends Controller
 {
@@ -28,5 +29,12 @@ class QuoteController extends Controller
         {
             return response()->json(['status' => 405]);
         }
+    }
+
+    public function getProduct($id)
+    {
+        $product = Product::find($id);
+        $settings = Setting::first();
+        return view('Front.quote', compact('product', 'settings'))->with($id);
     }
 }

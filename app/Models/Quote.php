@@ -12,23 +12,29 @@ class Quote extends Model
     protected $table = 'quotes';
 
     protected $fillable = [
-        'who_install',
-        'system_complete',
-        'usage',
-        'system_type',
-        'panels_place',
-        'your_roof',
-        'message',
+        'product_id',
+        // 'system_complete',
+        // 'usage',
+        // 'system_type',
+        // 'panels_place',
+        // 'your_roof',
+        // 'message',
         'first_name',
         'last_name',
         'phone',
         'email',
-        'prefer_contact',
+        // 'prefer_contact',
         'address',
-        'city',
-        'zip',
-        'state',
-        'country'
+        // 'city',
+        // 'zip',
+        // 'state',
+        // 'country'
 
     ];
+
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'product_id', 'id');
+    }
 }

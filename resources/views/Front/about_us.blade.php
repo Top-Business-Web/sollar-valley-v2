@@ -70,7 +70,7 @@
                     <div class="about-img">
                         <div class="about-img-holder bg-overlay">
                             <div class="bg-section">
-                                <img src="{{ asset('assets/front') }}/assets/images/about/1.jpg" alt="about Image"/>
+                                <img src="{{ asset($about_us->image) }}"/>
                             </div>
                         </div>
                         <div>
@@ -93,9 +93,9 @@
                 </div>
                 <div class="col-12 col-lg-7">
                     <div class="heading heading-1">
-                        <p class="heading-subtitle heading-subtitle-bg">
+                        {{-- <p class="heading-subtitle heading-subtitle-bg">
                             {{ $about_us->hash_en }}
-                        </p>
+                        </p> --}}
                         <h2 class="heading-title">
                             {{ $about_us->title_en }}
                         </h2>
@@ -105,10 +105,10 @@
                             <div class="col-12 col-lg-7">
                                 <div class="block-left">
                                     <p class="paragraph">
-                                        {{ $about_us->sub_title_en }}
+                                        {{ trans_model($about_us,'sub_title') }}
                                     </p>
                                     <p>
-                                        {{ $about_us->desc_en }}
+                                        {!! trans_model($about_us,'desc') !!}
                                     </p>
                                 </div>
                             </div>

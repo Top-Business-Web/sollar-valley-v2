@@ -398,7 +398,7 @@
                             <div class="project-content">
                                 <div class="project-title">
                                     <h4>
-                                        <a href="{{ route('single') . $product->id }}"
+                                        <a href="{{ route('get.product', $product->id) }}"
                                         >{{ $product->title_en }}</a
                                         >
                                     </h4>

@@ -86,7 +86,7 @@
         var columns = [
             {data: 'id', name: 'id'},
             {data: 'images', name: 'images'},
-            {data: 'title_ar', name: 'title_ar'},
+            {data: 'title_en', name: 'title_en'},
             {data: 'category_id', name: 'category_id'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]

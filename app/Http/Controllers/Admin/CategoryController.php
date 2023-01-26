@@ -67,7 +67,7 @@ class CategoryController extends Controller
         }
     }
 
-    public function delete(Request $request)
+    public function destroy(Request $request)
     {
         $categories = Category::where('id', $request->id)->first();
         $categories->delete();

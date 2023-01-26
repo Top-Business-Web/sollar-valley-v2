@@ -42,6 +42,11 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
 
     Route::post('/sliderUpdate', 'SliderController@sliderUpdate')->name('sliderUpdate');
 
+    #### Quote ####
+    Route::resource('/quote', 'QuoteController');
+
+    Route::post('/quoteDelete', 'QuoteController@quoteDelete')->name('quoteDelete');
+
     #### Menu ####
 
 

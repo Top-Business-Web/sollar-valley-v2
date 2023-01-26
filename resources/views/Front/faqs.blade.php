@@ -73,7 +73,7 @@
       </div>
       <div class="accordion accordion-2" id="accordion03">
         <div class="row">
-          <div class="col-12 col-lg-6">
+          {{-- <div class="col-12 col-lg-6">
             <div>
               <div class="card">
                 <div class="card-heading">
@@ -101,8 +101,8 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-6">
+          </div> --}}
+          <div class="col-12 col-lg-12">
             <div>
               <div class="card">
                 <div class="card-heading">
@@ -114,7 +114,7 @@
                     aria-expanded="false"
                     aria-controls="collapse01-2"
                     href="#collapse01-2"
-                    >What are my payment options?
+                    >Cost/Quality
                   </a>
                 </div>
                 <div
@@ -123,9 +123,7 @@
                   data-bs-parent="#accordion03"
                 >
                   <div class="card-body">
-                    With any financial product that you buy, it is important
-                    that you know you are getting the best advice from a
-                    reputable company as often you will have to
+                    Optimized cost with highest quality, ensuring solid end-user service experience.
                   </div>
                 </div>
               </div>

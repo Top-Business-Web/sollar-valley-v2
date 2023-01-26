@@ -138,6 +138,11 @@
                                 ></a>
                         </div>
                     </div>
+                    <div class="container mt-5">
+                        <a href="{{ route('get.quote', $product->id) }}">
+                            <button class="btn btn-primary">Make Request</button>
+                        </a>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-10 offset-lg-1">
                     <div class="product-tabs">

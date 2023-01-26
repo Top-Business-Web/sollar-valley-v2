@@ -48,7 +48,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Title En :</label>
+                                <label for="">Happy Client :</label>
                                 <input class="form-control" name="client_count" value="{{ $about_us->client_count }}"
                                     type="text">
                             </div>
@@ -65,6 +65,13 @@
                                 <label for="">Hash En :</label>
                                 <input type="text" name="hash_en" value="{{ $about_us->hash_en }}"
                                     class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="">Image :</label>
+                                <input type="file" name="image" class="dropify" data-default-file="{{ asset($about_us->image) }}" />
+
                             </div>
                         </div>
                     </div>
@@ -106,6 +113,9 @@
     <script src="{{ asset('assets/admin/js/tinymce.min.js') }}" referrerpolicy="origin"></script>
 
     <script>
+
+$('.dropify').dropify();
+
         tinymce.init({
             selector: '#mytextarea'
         });
