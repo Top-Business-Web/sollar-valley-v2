@@ -43,12 +43,12 @@ Route::group(
         Route::get('/categorySort', 'ProductController@categorySort')->name('categorySort');
 
         #### Single ####
-        Route::get('/single', 'SingleController@index')->name('single');
         Route::get('/product/{id}', 'SingleController@getProduct')->name('get.product');
 
         #### Quote ####
         Route::get('quote', 'QuoteController@index')->name('quoteIndex');
         Route::post('quote/store', 'QuoteController@store')->name('quoteStore');
+        Route::get('quote/{id}', 'QuoteController@getProduct')->name('get.quote');
 
         #### Faqs ####
         Route::get('/faqs', 'FaqsController@index')->name('faqs');

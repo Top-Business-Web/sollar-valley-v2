@@ -21,10 +21,11 @@ class CreateSettingsTable extends Migration
             $table->string('title_ar')->nullable();
             $table->string('title_en')->nullable();
             $table->bigInteger('year_of_experince')->nullable();
-            $table->bigInteger('phone')->nullable();
+            $table->text('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('address_ar')->nullable();
             $table->string('address_en')->nullable();
+            $table->text('linked_in')->nullable();
             $table->text('youtube')->nullable();
             $table->text('facebook')->nullable();
             $table->text('twitter')->nullable();

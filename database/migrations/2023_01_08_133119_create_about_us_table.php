@@ -15,7 +15,7 @@ class CreateAboutUSTable extends Migration
     {
         Schema::create('about_us', function (Blueprint $table) {
             $table->id();
-
+            $table->text('image')->nullable();
             $table->string('title_ar');
             $table->string('title_en');
             $table->string('sub_title_ar');

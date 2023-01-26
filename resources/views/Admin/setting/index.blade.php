@@ -40,20 +40,20 @@
                                        class="form-control"/>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        {{-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">sub Title Ar :</label>
-                                <textarea type="text" name="desc_ar"
-                                          class="form-control">{{ $settings->desc_ar }}</textarea>
+                                <textarea type="text" name="sub_title_ar"
+                                          class="form-control">{{ $settings->sub_title_ar }}</textarea>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">sub Title En :</label>
-                                <textarea type="text" name="desc_en"
-                                          class="form-control">{{ $settings->desc_en }}</textarea>
+                                <textarea type="text" name="sub_title_en"
+                                          class="form-control">{{ $settings->sub_title_en }}</textarea>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="row">
                         <div class="col-md-4">
@@ -101,6 +101,13 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
+                                <label for="">Linked In :</label>
+                                <input type="text" name="linked_in" value="{{ $settings->youtube }}"
+                                       class="form-control"/>
+                            </div>
+                        </div>
+                        {{-- <div class="col-md-4">
+                            <div class="form-group">
                                 <label for="">Youtube :</label>
                                 <input type="text" name="youtube" value="{{ $settings->youtube }}"
                                        class="form-control"/>
@@ -119,7 +126,7 @@
                                 <input type="text" name="twitter" value="{{ $settings->twitter }}"
                                        class="form-control"/>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Terms Conditions :</label>

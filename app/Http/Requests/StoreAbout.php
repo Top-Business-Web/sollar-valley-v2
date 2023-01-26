@@ -26,6 +26,7 @@ class StoreAbout extends FormRequest
     {
 
         return [
+            'image' => 'nullable',
             'title_ar' => 'required',
             'title_en' => 'required',
             'sub_title_ar' => 'required',

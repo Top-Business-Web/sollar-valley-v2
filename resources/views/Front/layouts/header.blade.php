@@ -51,13 +51,14 @@
 
 
                 <div class="social-links">
-                    <a class="share-facebook" href="{{ $settings->facebook }}"
+                    <a class="share-facebook" href="{{ $settings->linked_in }}"
                     ><i class="energia-facebook"></i></a
-                    ><a class="share-twitter" href="{{ $settings->twitter }}"
+                    >
+                    {{-- <a class="share-twitter" href="{{ $settings->twitter }}"
                     ><i class="energia-twitter"></i></a
                     ><a class="share-youtube" href="{{ $settings->youtube }}"
                     ><i class="energia-youtube"></i
-                        ></a>
+                        ></a> --}}
                 </div>
 
 

@@ -4,14 +4,14 @@
             <div class="col-md-12">
                 <div class="card" style="padding: 13px">
                     <div class="row">
-                        <div class="col-md-4">
+                        {{-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Who will be install system :</label>
                                 <input type="text" name="title_ar" disabled value="{{ $quote->who_install }}"
                                     class="form-control" />
                             </div>
-                        </div>
-                        <div class="col-md-4">
+                        </div> --}}
+                        {{-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">System completed by :</label>
                                 <input type="text" name="sub_title_ar" disabled value="{{ $quote->system_complete }}"
@@ -54,7 +54,7 @@
                                 <input type="text" name="hash_en" disabled value="{{ $quote->message }}"
                                     class="form-control" />
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Name :</label>
@@ -83,13 +83,13 @@
                                     class="form-control" />
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        {{-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Preferred Contact  :</label>
                                 <input type="text" name="hash_en" disabled value="{{ $quote->prefer_contact }}"
                                     class="form-control" />
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Address :</label>
@@ -97,14 +97,14 @@
                                     class="form-control" />
                             </div>
                         </div>
-                        <div class="col-md-4">
+                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">State :</label>
-                                <input type="text" name="hash_en" disabled value="{{ $quote->state }}"
+                                <label for="">Product Id :</label>
+                                <input type="text" name="hash_en" disabled value="{{ $quote->product_id }}"
                                     class="form-control" />
                             </div>
                         </div>
-                        <div class="col-md-4">
+                       {{-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">City :</label>
                                 <input type="text" name="hash_en" disabled value="{{ $quote->city }}"
@@ -124,7 +124,7 @@
                                 <input type="text" name="hash_en" disabled value="{{ $quote->country }}"
                                     class="form-control" />
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

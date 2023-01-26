@@ -87,7 +87,7 @@
         showAddModal('{{route('category.create')}}');
         addScript();
         // deleteModel
-        deleteScript('{{route('category.destroy',':id')}}');
+        destroyScript('{{route('category.destroy',':id')}}');
 
 
         showEditModal('{{route('category.edit',':id')}}');
