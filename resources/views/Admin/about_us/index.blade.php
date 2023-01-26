@@ -8,7 +8,7 @@
 
 
 
-    <form method="POST" id="updateForm" class="updateForm" action="{{ route('about_us.update', $about_us->id) }}">
+    <form method="POST" id="updateForm" class="updateForm" action="{{ route('about_us.update', $about_us->id) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <input type="hidden" name="id" value="{{ $about_us->id }}">

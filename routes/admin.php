@@ -44,6 +44,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
 
     #### Quote ####
     Route::resource('/quote', 'QuoteController');
+    Route::get('/getOneProduct/{id}', 'QuoteController@getOneProduct')->name('getOneProduct');;
 
     Route::post('/quoteDelete', 'QuoteController@quoteDelete')->name('quoteDelete');
 

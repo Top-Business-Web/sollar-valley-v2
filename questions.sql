@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 25, 2023 at 07:36 AM
+-- Generation Time: Jan 26, 2023 at 12:16 PM
 -- Server version: 8.0.30
 -- PHP Version: 7.4.33
 
@@ -24,15 +24,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sliders`
+-- Table structure for table `questions`
 --
 
-CREATE TABLE `sliders` (
+CREATE TABLE `questions` (
   `id` bigint NOT NULL,
-  `image_about` text COLLATE utf8mb3_unicode_ci,
-  `image_services` text COLLATE utf8mb3_unicode_ci,
-  `image_product` text COLLATE utf8mb3_unicode_ci,
-  `image_faqs` text COLLATE utf8mb3_unicode_ci
+  `title_ar` text COLLATE utf8mb3_unicode_ci NOT NULL,
+  `tite_en` text COLLATE utf8mb3_unicode_ci NOT NULL,
+  `desc_ar` text COLLATE utf8mb3_unicode_ci NOT NULL,
+  `desc_en` text COLLATE utf8mb3_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
@@ -40,9 +40,9 @@ CREATE TABLE `sliders` (
 --
 
 --
--- Indexes for table `sliders`
+-- Indexes for table `questions`
 --
-ALTER TABLE `sliders`
+ALTER TABLE `questions`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -50,9 +50,9 @@ ALTER TABLE `sliders`
 --
 
 --
--- AUTO_INCREMENT for table `sliders`
+-- AUTO_INCREMENT for table `questions`
 --
-ALTER TABLE `sliders`
+ALTER TABLE `questions`
   MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
 COMMIT;
 

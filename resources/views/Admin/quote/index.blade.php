@@ -90,8 +90,8 @@
     //    add Model
         // showAddModal('{{route('quote.create')}}');
         // addScript();
-        // // deleteModel
-        // destroyScript('{{route('product.destroy',':id')}}');
+            // deleteModel
+            destroyScript('{{route('quote.destroy',':id')}}');
 
 
         showEditModal('{{route('quote.edit',':id')}}');
