@@ -1,10 +1,12 @@
-<form id="addForm" class="addForm" method="POST" enctype="multipart/form-data" action="{{route('brands.store')}}" >
-@csrf
+<!-- Start Form -->
+<form id="addForm" class="addForm" method="POST" enctype="multipart/form-data" action="{{ route('brands.store') }}">
+    @csrf
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
                 <label class="control-label">Name</label>
-                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror " id="exampleFormControlInput1" placeholder="name">
+                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror "
+                    id="exampleFormControlInput1" placeholder="name">
             </div>
         </div>
     </div>
@@ -21,7 +23,8 @@
         <button type="submit" class="btn bg-gradient-primary" id="addButton">create</button>
     </div>
 </form>
-
+<!-- End Form -->
 <script>
-$('.dropify').dropify();
+    // Package TextArea
+    $('.dropify').dropify();
 </script>

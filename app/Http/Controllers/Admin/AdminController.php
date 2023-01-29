@@ -23,7 +23,7 @@ class AdminController extends Controller
 
     public function index(request $request)
     {
-        if($request->ajax()) {
+        if ($request->ajax()) {
             $admins = Admin::select('*');
             return DataTables::of($admins)
                 ->addColumn('action', function ($admins) {
@@ -37,7 +37,7 @@ class AdminController extends Controller
                 })
                 ->escapeColumns([])
                 ->make(true);
-        }else{
+        } else {
             return view('Admin.admin.index');
         }
     }
@@ -61,7 +61,7 @@ class AdminController extends Controller
     {
         $admin = auth()->guard('admin')->user();
         return view('Admin/admin/profile', compact('admin'));
-    }//end fun
+    } //end fun
 
 
     public function create()

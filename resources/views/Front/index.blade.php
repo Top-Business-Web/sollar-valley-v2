@@ -1,18 +1,13 @@
 @extends('Front.layouts.master')
 
 @section('content')
-
     <div class="module-content module-search-warp">
         <div class="pos-vertical-center">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                         <form class="form-search">
-                            <input
-                                class="form-control"
-                                type="text"
-                                placeholder="type words then enter"
-                            />
+                            <input class="form-control" type="text" placeholder="type words then enter" />
                             <button></button>
                         </form>
                     </div>
@@ -24,59 +19,43 @@
 
     <section class="slider slider-2" id="slider-2">
         <div class="container-fluid pe-0 ps-0">
-            <div
-                class="slider-carousel owl-carousel carousel-navs carousel-dots"
-                data-slide="1"
-                data-slide-rs="1"
-                data-autoplay="true"
-                data-nav="true"
-                data-dots="true"
-                data-space="0"
-                data-loop="true"
-                data-speed="800"
-            >
-                    @foreach($settings->sliders as $slider)
-                <div class="slide bg-overlay bg-overlay-dark-slider-2">
-                    <div class="bg-section">
-                        <img src="{{ asset($slider) }}" alt="Background"/>
-                    </div>
+            <div class="slider-carousel owl-carousel carousel-navs carousel-dots" data-slide="1" data-slide-rs="1"
+                data-autoplay="true" data-nav="true" data-dots="true" data-space="0" data-loop="true" data-speed="800">
+                @foreach ($settings->sliders as $slider)
+                    <div class="slide bg-overlay bg-overlay-dark-slider-2">
+                        <div class="bg-section">
+                            <img src="{{ asset($slider) }}" alt="Background" />
+                        </div>
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-7">
-                                <div class="slide-content">
-                                    <h1 class="slide-headline">
-                                        {{ trans_model($settings,'title') }}
-                                    </h1>
-                                    <p class="slide-desc">
-                                        {{trans_model($settings,'desc')}}
-                                    </p>
-                                    <div class="slide-action">
-                                        <a class="btn btn--primary" href="{{ route('service') }}">
-                          <span>our services</span
-                          ><i class="energia-arrow-right"></i></a
-                                        ><a
-                                            class="btn btn--white justify-content-center"
-                                            href="{{ route('about_us') }}"
-                                        >more about us!</a
-                                        >
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-lg-7">
+                                    <div class="slide-content">
+                                        <h1 class="slide-headline">
+                                            {{ trans_model($settings, 'title') }}
+                                        </h1>
+                                        <p class="slide-desc">
+                                            {{ trans_model($settings, 'desc') }}
+                                        </p>
+                                        <div class="slide-action">
+                                            <a class="btn btn--primary" href="{{ route('service') }}">
+                                                <span>our services</span><i class="energia-arrow-right"></i></a><a
+                                                class="btn btn--white justify-content-center"
+                                                href="{{ route('about_us') }}">more about us!</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
     </section>
 
-    <section
-        class="features-bar bg-overlay bg-overlay-theme3"
-        id="featuresBar-1"
-    >
+    <section class="features-bar bg-overlay bg-overlay-theme3" id="featuresBar-1">
         <div class="bg-section">
-            <img src="{{ asset('assets/front') }}/assets/images/background/3.jpg" alt="background"/>
+            <img src="{{ asset('assets/front') }}/assets/images/background/3.jpg" alt="background" />
         </div>
         <div class="container">
             <div class="row g-0 features-holder">
@@ -132,9 +111,7 @@
             <div class="row">
                 <div class="more-features more-features-2">
                     <p>Discover independence through the power of solar</p>
-                    <a class="btn btn--bordered btn--white" href="{{ route('service') }}"
-                    >explore our plans</a
-                    >
+                    <a class="btn btn--bordered btn--white" href="{{ route('service') }}">explore our plans</a>
                 </div>
             </div>
         </div>
@@ -160,126 +137,18 @@
                         </p>
                         <div class="actions-holder">
                             <a class="btn btn--primary" href="{{ route('about_us') }}">
-                                read more<i class="energia-arrow-right"></i></a
-                            ><a
-                                class="btn btn--bordered btn--white"
-                                href="{{ route('service') }}"
-                            >find your solution</a
-                            >
+                                read more<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
+                                href="{{ route('service') }}">find your solution</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div
-              class="carousel owl-carousel carousel-dots"
-              data-slide="3"
-              data-slide-rs="1"
-              data-autoplay="true"
-              data-nav="false"
-              data-dots="true"
-              data-space="30"
-              data-loop="true"
-              data-speed="800"
-            >
-              <div>
-                <div class="service-panel services-panel-2">
-                  <div class="service-icon">
-                    <i class="flaticon-004-solar-panel"></i>
-                  </div>
-                  <div class="service-content">
-                    <h4>
-                      <a href="services-turbines.html">solar panels<br />services</a>
-                    </h4>
-                    <p>
-                      The great thing about solar panels is that they do not
-                      require a lot of maintenance. However, still important to
-                      get them checked regularly
-                    </p>
-                    <ul class="list-unstyled advantages-list"></ul>
-                    <a class="btn btn--secondary" href="services-turbines.html"
-                      >read more <i class="energia-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="service-panel services-panel-2">
-                  <div class="service-icon">
-                    <i class="flaticon-039-wind-mill"></i>
-                  </div>
-                  <div class="service-content">
-                    <h4>
-                      <a href="services-turbines.html"
-                        >wind turbines<br />services</a
-                      >
-                    </h4>
-                    <p>
-                      Wind turbine is an expensive machine, we know very well how
-                      important it is that your wind turbine is always up whenever
-                      there is wind.
-                    </p>
-                    <ul class="list-unstyled advantages-list"></ul>
-                    <a class="btn btn--secondary" href="services-turbines.html"
-                      >read more <i class="energia-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="service-panel services-panel-2">
-                  <div class="service-icon">
-                    <i class="flaticon-013-hydro-power"></i>
-                  </div>
-                  <div class="service-content">
-                    <h4>
-                      <a href="services-turbines.html"
-                        >hydropower plants<br />services</a
-                      >
-                    </h4>
-                    <p>
-                      Hydropower systems are capital intensive assets can produce
-                      a significant income provided operated and maintained on
-                      high standard.
-                    </p>
-                    <ul class="list-unstyled advantages-list"></ul>
-                    <a class="btn btn--secondary" href="services-turbines.html"
-                      >read more <i class="energia-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="service-panel services-panel-2">
-                  <div class="service-icon">
-                    <i class="flaticon-004-solar-panel"></i>
-                  </div>
-                  <div class="service-content">
-                    <h4>
-                      <a href="services-turbines.html"
-                        >solar panels<br />services</a
-                      >
-                    </h4>
-                    <p>
-                      The great thing about solar panels is that they do not
-                      require a lot of maintenance. However, still important to
-                      get them checked regularly
-                    </p>
-                    <ul class="list-unstyled advantages-list"></ul>
-                    <a class="btn btn--secondary" href="services-turbines.html"
-                      >read more <i class="energia-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
             <div class="row">
                 <div class="col-12 col-lg-5 offset-lg-7">
                     <div class="more-services more-services-2">
                         <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i
-                            ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                            ><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                         <p>
                             <a href="javascript:void(0)">99.9% customer satisfaction</a>
@@ -296,14 +165,8 @@
             <div class="video-wrapper">
                 <div class="video video-2" id="video-2">
                     <div class="bg-section">
-                        <img src="{{ asset('assets/front') }}/assets/images/sliders/3.jpg" alt="background"/>
+                        <img src="{{ asset('assets/front') }}/assets/images/sliders/3.jpg" alt="background" />
                     </div>
-                    <!-- <a
-                      class="popup-video btn-video btn-video-2"
-                      href="https://www.youtube.com/watch?v=nrJtHemSPW4"
-                    >
-                      <i class="fas fa-play"></i
-                    ></a> -->
                 </div>
             </div>
 
@@ -323,17 +186,13 @@
                             capital and increasing liquidity.
                         </p>
                         <div class="signature-block">
-                            <a class="btn btn--secondary" href="{{ route('about_us') }}"
-                            >read more <i class="energia-arrow-right"></i
-                                ></a>
+                            <a class="btn btn--secondary" href="{{ route('about_us') }}">read more <i
+                                    class="energia-arrow-right"></i></a>
                             <div class="signature-body">
                                 <h6>michael brian</h6>
                                 <p>co founder</p>
-                                <img
-                                    class="signature-img"
-                                    src="{{ asset('assets/front') }}/assets/images/signature/1.png"
-                                    alt="signature"
-                                />
+                                <img class="signature-img"
+                                    src="{{ asset('assets/front') }}/assets/images/signature/1.png" alt="signature" />
                             </div>
                         </div>
                         <div class="advantages-list-holder">
@@ -372,66 +231,44 @@
             </div>
         </div>
 
-        <div
-            class="carousel owl-carousel carousel-dots carousel-navs"
-            data-slide="4"
-            data-slide-rs="1"
-            data-center=""
-            data-autoplay="true"
-            data-nav="true"
-            data-dots="true"
-            data-space=""
-            data-loop="false"
-            data-speed="800"
-        >
+        <div class="carousel owl-carousel carousel-dots carousel-navs" data-slide="4" data-slide-rs="1" data-center=""
+            data-autoplay="true" data-nav="true" data-dots="true" data-space="" data-loop="false" data-speed="800">
             @foreach ($products as $product)
                 <div>
                     <div class="project-panel" data-hover="">
                         <div class="project-panel-holder">
                             <div class="project-img">
-                                <a class="link" href="{{ route('get.product', $product->id) }}"></a
-                                ><img
-                                    src="{{ asset($product->images[0]) }}"
-                                    alt="project image"
-                                />
+                                <a class="link" href="{{ route('get.product', $product->id) }}"></a><img
+                                    src="{{ asset($product->images[0]) }}" alt="project image" />
                             </div>
                             <div class="project-content">
                                 <div class="project-title">
                                     <h4>
-                                        <a href="{{ route('get.product', $product->id) }}"
-                                        >{{ $product->title_en }}</a
-                                        >
+                                        <a href="{{ route('get.product', $product->id) }}">{{ $product->title_en }}</a>
                                     </h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                @endforeach
+            @endforeach
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="projects-load-more">
-                        <a class="btn btn--secondary" href="{{ route('product') }}"
-                        >explore all products <i class="energia-arrow-right"></i
-                            ></a>
+                        <a class="btn btn--secondary" href="{{ route('product') }}">explore all products <i
+                                class="energia-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section
-        class="processes processes-1 bg-overlay bg-overlay-theme4"
-        id="processes-1"
-    >
+    <section class="processes processes-1 bg-overlay bg-overlay-theme4" id="processes-1">
         <div class="bg-section">
-            <img
-                src="{{ asset('assets/front') }}/assets/images/background/wavy-pattern.png"
-                alt="Background"
-            />
+            <img src="{{ asset('assets/front') }}/assets/images/background/wavy-pattern.png" alt="Background" />
         </div>
         <div class="row">
             <div class="col-12 col-lg-6">
@@ -449,19 +286,15 @@
                                     <!-- Loop to get Years of  Experience-->
 
 
-                            <span
-                                class="counting"
-                                data-counterup-nums="25"
-                                data-counterup-beginat="12"
-                            >{{ $settings->year_of_experince }}</span
-                            >
+                                    <span class="counting" data-counterup-nums="25"
+                                        data-counterup-beginat="12">{{ $settings->year_of_experince }}</span>
 
 
                                 </div>
                                 <div class="counter-img">
                                     <div class="bg-section">
                                         <img src="{{ asset('assets/front') }}/assets/images/counters/1.jpg"
-                                             alt="image"/>
+                                            alt="image" />
                                     </div>
                                     <i class="flaticon-020-factory"></i>
                                 </div>
@@ -475,17 +308,9 @@
             </div>
             <div class="col-12 col-lg-6">
                 <div class="processes-holder">
-                    <div
-                        class="carousel owl-carousel carousel-dots process-content-carousel"
-                        data-slide="1"
-                        data-slide-rs="1"
-                        data-autoplay="true"
-                        data-nav="false"
-                        data-dots="true"
-                        data-space="0"
-                        data-loop="false"
-                        data-speed="800"
-                    >
+                    <div class="carousel owl-carousel carousel-dots process-content-carousel" data-slide="1"
+                        data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0"
+                        data-loop="false" data-speed="800">
                         <div>
                             <div class="process-panel">
                                 <p class="process-number">01.</p>
@@ -539,22 +364,12 @@
                         </div>
                     </div>
                     <div class="images-holder">
-                        <div
-                            class="carousel owl-carousel process-image-carousel"
-                            data-slide="1"
-                            data-slide-rs="1"
-                            data-autoplay="true"
-                            data-drag="false"
-                            data-nav="false"
-                            data-dots="false"
-                            data-space="0"
-                            data-loop="false"
-                            data-speed="800"
-                        >
-                            <img src="{{ asset('assets/front') }}/assets/images/processes/1.jpg" alt="process"/><img
-                                src="assets/images/processes/2.jpg"
-                                alt="process"
-                            /><img src="{{ asset('assets/front') }}/assets/images/processes/3.jpg" alt="process"/>
+                        <div class="carousel owl-carousel process-image-carousel" data-slide="1" data-slide-rs="1"
+                            data-autoplay="true" data-drag="false" data-nav="false" data-dots="false" data-space="0"
+                            data-loop="false" data-speed="800">
+                            <img src="{{ asset('assets/front') }}/assets/images/processes/1.jpg" alt="process" /><img
+                                src="assets/images/processes/2.jpg" alt="process" /><img
+                                src="{{ asset('assets/front') }}/assets/images/processes/3.jpg" alt="process" />
                         </div>
                         <div class="processes-panel">
                             <h3 class="panel-title">
@@ -564,9 +379,7 @@
                                 Our presence ensures timeliness, cost efficiency &
                                 compliance adherence!
                             </p>
-                            <a href="{{ route('contact') }}"
-                            >schedule A Visit <i class="energia-arrow-right"></i
-                                ></a>
+                            <a href="{{ route('contact') }}">schedule A Visit <i class="energia-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -577,7 +390,7 @@
     <section class="contact contact-2" style="margin-top: 250px" id="contact-2">
         <div class="contact-overlay bg-overlay bg-overlay-theme5" style="top: 25%;">
             <div class="bg-section">
-                <img src="{{ asset('assets/front') }}/assets/images/background/4.jpg" alt="background"/>
+                <img src="{{ asset('assets/front') }}/assets/images/background/4.jpg" alt="background" />
             </div>
         </div>
         <div class="container">
@@ -593,23 +406,10 @@
                         more sustainable future.
                     </p>
                     <div class="contact-action contact-action-2">
-                        <a class="btn btn--white" href="{{ route('about_us') }}"
-                        >learn more <i class="energia-arrow-right"></i
-                            ></a>
+                        <a class="btn btn--white" href="{{ route('about_us') }}">learn more <i
+                                class="energia-arrow-right"></i></a>
                     </div>
-{{--                    <div class="contact-quote contact-quote-2">--}}
-{{--                        <i class="flaticon-040-green-energy"></i>--}}
-{{--                        <div class="quote-body">--}}
-{{--                            <p>--}}
-{{--                                As a world wide distributor of solar supplies we endeavor--}}
-{{--                                provide fast and knowledgeable service, we can get all the--}}
-{{--                                materials you need by sea or air.--}}
-{{--                            </p>--}}
-{{--                            <a href="{{ route('contact') }}"--}}
-{{--                            ><i class="energia-arrow-right"></i>global office map</a--}}
-{{--                            >--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+
                 </div>
                 <div class="contact-card">
                     <div class="contact-body">
@@ -636,5 +436,4 @@
         </div>
         </div>
     </section>
-
 @endsection

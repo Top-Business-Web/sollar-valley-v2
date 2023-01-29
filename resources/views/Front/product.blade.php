@@ -1,13 +1,12 @@
 @extends('Front.layouts.master')
 
 @section('content')
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <section class="page-title page-title-9" id="page-title">
         <div class="page-title-wrap bg-overlay bg-overlay-dark-2">
             <div class="bg-section">
-                <img src="{{ asset($slider->image_product) }}" alt="Background"/>
+                <img src="{{ asset($slider->image_product) }}" alt="Background" />
             </div>
             <div class="container">
                 <div class="row">
@@ -49,7 +48,7 @@
                                             <option value="old">oldest Products</option>
                                         </select>
                                         <button style="width: 100px;height: 60px;" class="btn btn-sm btn-primary"
-                                                type="button" id="sort-btn">filter
+                                            type="button" id="sort-btn">filter
                                         </button>
                                     </div>
                                 </div>
@@ -59,15 +58,11 @@
                     <div class="row product-search">
 
                         @foreach ($products as $product)
-
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="product-item" data-hover="">
                                     <div class="product-img-wrap">
                                         <div class="product-img">
-                                            <img
-                                                src="{{ asset($product->images[0]) }}"
-                                                alt="Product"
-                                            />
+                                            <img src="{{ asset($product->images[0]) }}" alt="Product" />
                                         </div>
                                     </div>
 
@@ -80,15 +75,6 @@
                             </div>
                         @endforeach
                     </div>
-
-                    {{--                    <button type="button" class="btn btn-sm btn-primary" id="load-more">load more</button>--}}
-                    {{--                    <div class="row">--}}
-                    {{--                        <div class="col-12 clearfix text--center mt-3">--}}
-                    {{--                            <ul class="pagination">--}}
-                    {{--                                <li>{{ $products->links() }}</li>--}}
-                    {{--                            </ul>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
                 </div>
 
                 <div class="col-12 col-lg-3">
@@ -108,18 +94,16 @@
                                 </ul>
                             </div>
                             @foreach ($categories as $category)
-
                                 <div class="widget-content">
                                     <ul class="list-unstyled">
                                         <li>
                                             <a data-id="{{ $category->id }}" class="category-sort">
-                                                {{ trans_model($category,'title') }}
+                                                {{ trans_model($category, 'title') }}
                                             </a>
                                             <span>{{ $category->product->count() }}</span>
                                         </li>
                                     </ul>
                                 </div>
-
                             @endforeach
                         </div>
 
@@ -130,16 +114,11 @@
                             <div class="widget-content">
                                 <form class="form-search">
                                     <div class="input-group">
-                                        <input
-                                            class="form-control search"
-                                            type="text"
-                                            placeholder="Search for products or SKU"
-                                            name="search"
-                                            id="search"
-                                        /><span class="input-group-btn">
-                      <button class="btn" id="btn-search" type="button">
-                        <i class="energia-search-Icon"></i></button
-                      ></span>
+                                        <input class="form-control search" type="text"
+                                            placeholder="Search for products or SKU" name="search" id="search" /><span
+                                            class="input-group-btn">
+                                            <button class="btn" id="btn-search" type="button">
+                                                <i class="energia-search-Icon"></i></button></span>
                                     </div>
                                 </form>
                             </div>
@@ -148,20 +127,20 @@
                         <div class="widget widget-recent-products">
                             <div class="widget-title">
                                 <h5>recent products</h5>
-                                <?php $recents = \App\Models\Product::latest()->take(3)->get(); ?>
+                                <?php $recents = \App\Models\Product::latest()
+                                    ->take(3)
+                                    ->get(); ?>
                             </div>
                             <div class="widget-content">
-                                @foreach($recents as $recent)
+                                @foreach ($recents as $recent)
                                     <div class="product">
                                         <div class="product-img">
-                                            <img
-                                                src="{{ asset($recent->images[0]) }}"
-                                                alt="product"
-                                            />
+                                            <img src="{{ asset($recent->images[0]) }}" alt="product" />
                                         </div>
                                         <div class="product-desc">
                                             <div class="product-title">
-                                                <a href="{{ route('get.product', $recent->id) }}">{{ trans_model($recent,'title') }}</a>
+                                                <a
+                                                    href="{{ route('get.product', $recent->id) }}">{{ trans_model($recent, 'title') }}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -175,70 +154,52 @@
     </section>
 
     <script type="text/javascript">
-
-        // $(document).ready(function () {
-        //     $(".product-search").slice(0,1);
-        //     if ($(".block-none:hidden").length != 0) {
-        //         $("#load-more").show();
-        //     }
-        //     $("#load-more").on("click", function (e) {
-        //         e.preventDefault();
-        //         $(".block-none:hidden").slice(0,50).slideDown();
-        //         if ($(".block-none:hidden").length == 0) {
-        //             $("#load-more").text("No More to view")
-        //                 .fadOut("slow");
-        //         }
-        //     });
-        // })
-
-
-
-        // $('#btn-search').on('click', function(){
-        //     var data = $('#search').val();
-        // })
-
-        $('.search').on('keyup', function () {
+        $('.search').on('keyup', function() {
             $value = $(this).val();
 
             $.ajax({
                 type: 'get',
                 url: '{{ route('product-search') }}',
-                data: {'search': $value},
-                beforeSend: function (data) {
+                data: {
+                    'search': $value
+                },
+                beforeSend: function(data) {
                     $('.product-search').html('<h4 class="error">LOADING...</h4>');
                 },
-                success: function (data) {
+                success: function(data) {
                     // alert(data)
                     $('.product-search').html(data);
                 },
-                error: function (data) {
+                error: function(data) {
                     $('.product-search').html('<h2 class="error">NO PRODUCT FOUND</h2>');
                 }
             });
         });
 
-        $('#sort-btn').on('click', function (e) {
+        $('#sort-btn').on('click', function(e) {
             e.preventDefault();
             // alert($('#product-sort option:selected').val());
             var filter = $('#product-sort option:selected').val();
             $.ajax({
                 type: 'get',
                 url: '{{ route('product-filter') }}',
-                data: {'filter': filter},
-                beforeSend: function (data) {
+                data: {
+                    'filter': filter
+                },
+                beforeSend: function(data) {
                     $('.product-search').html('<h4 class="error">LOADING...</h4>');
                 },
-                success: function (data) {
+                success: function(data) {
                     // alert(data)
                     $('.product-search').html(data);
                 },
-                error: function (data) {
+                error: function(data) {
                     $('.product-search').html('<h2 class="error">NO PRODUCT FOUND</h2>');
                 }
             });
         });
 
-        $('.category-sort').on('click', function (e) {
+        $('.category-sort').on('click', function(e) {
             e.preventDefault();
 
             var id = $(this).data('id');
@@ -247,36 +208,36 @@
             $.ajax({
                 type: 'get',
                 url: '{{ route('categorySort') }}',
-                data: {'id': id},
-                beforeSend: function (data) {
+                data: {
+                    'id': id
+                },
+                beforeSend: function(data) {
                     $('.product-search').html('<h4 class="error">LOADING...</h4>');
                 },
-                success: function (data) {
+                success: function(data) {
                     // alert(data)
                     $('.product-search').html(data);
                 },
-                error: function (data) {
+                error: function(data) {
                     $('.product-search').html('<h2 class="error">NO PRODUCT FOUND</h2>');
                 }
             });
         });
 
-        {{--$.ajax({--}}
-        {{--    type: 'get',--}}
-        {{--    url: '{{ route('product-search') }}',--}}
-        {{--    data: {'search': $value},--}}
-        {{--    beforeSend: function (data) {--}}
-        {{--        $('.product-search').html('<h4 class="error">LOADING...</h4>');--}}
-        {{--    },--}}
-        {{--    success: function (data) {--}}
-        {{--        // alert(data)--}}
-        {{--        $('.product-search').html(data);--}}
-        {{--    },--}}
-        {{--    error: function (data) {--}}
-        {{--        $('.product-search').html('<h2 class="error">NO PRODUCT FOUND</h2>');--}}
-        {{--    }--}}
-        {{--});--}}
-
+        {{-- $.ajax({ --}}
+        {{--    type: 'get', --}}
+        {{--    url: '{{ route('product-search') }}', --}}
+        {{--    data: {'search': $value}, --}}
+        {{--    beforeSend: function (data) { --}}
+        {{--        $('.product-search').html('<h4 class="error">LOADING...</h4>'); --}}
+        {{--    }, --}}
+        {{--    success: function (data) { --}}
+        {{--        // alert(data) --}}
+        {{--        $('.product-search').html(data); --}}
+        {{--    }, --}}
+        {{--    error: function (data) { --}}
+        {{--        $('.product-search').html('<h2 class="error">NO PRODUCT FOUND</h2>'); --}}
+        {{--    } --}}
+        {{-- }); --}}
     </script>
-
 @endsection

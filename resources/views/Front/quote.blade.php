@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                         <form class="form-search">
-                            <input class="form-control" type="text" placeholder="type words then enter"/>
+                            <input class="form-control" type="text" placeholder="type words then enter" />
                             <button></button>
                         </form>
                     </div>
@@ -20,7 +20,7 @@
     <section class="page-title page-title-14" id="page-title">
         <div class="page-title-wrap bg-overlay bg-overlay-dark-3">
             <div class="bg-section">
-                <img src="{{ asset('assets/front') }}/assets/images/page-titles/14.jpg" alt="Background"/>
+                <img src="{{ asset('assets/front') }}/assets/images/page-titles/14.jpg" alt="Background" />
             </div>
             <div class="container">
                 <div class="row">
@@ -70,10 +70,10 @@
                     <div class="contact-action">
                         <a class="btn btn--primary" href="page-about.html">learn more <i
                                 class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                                                       href="page-faqs.html">our core values</a>
+                            href="page-faqs.html">our core values</a>
                     </div>
                     <div class="contact-quote contact-quote-3">
-                        <img src="{{ asset('assets/front') }}/assets/images/icons/noteicon-2.png" alt="icon"/>
+                        <img src="{{ asset('assets/front') }}/assets/images/icons/noteicon-2.png" alt="icon" />
                         <p>
                             Receive an accurate quote within 3-5 days when you fill out
                             this form. Or, give us a call:
@@ -99,22 +99,22 @@
                                             <div class="col-12 col-md-6">
                                                 <label class="form-label" for="contact-first-name">First name</label>
                                                 <input class="form-control" type="text" id="contact-first-name"
-                                                       name="first_name" placeholder="Mahmoud" required=""/>
+                                                    name="first_name" placeholder="Mahmoud" required="" />
                                             </div>
                                             <div class="col-12 col-md-6">
                                                 <label class="form-label" for="contact-last-name">Last name</label>
                                                 <input class="form-control" type="text" id="contact-last-name"
-                                                       name="last_name" placeholder="Adel" required=""/>
+                                                    name="last_name" placeholder="Adel" required="" />
                                             </div>
                                             <div class="col-12 col-md-6">
                                                 <label class="form-label" for="contact-phone">Phone</label>
                                                 <input class="form-control" type="text" id="contact-phone" name="phone"
-                                                       placeholder="Phone" required=""/>
+                                                    placeholder="Phone" required="" />
                                             </div>
                                             <div class="col-12 col-md-6">
                                                 <label class="form-label" for="contact-email">Email</label>
                                                 <input class="form-control" type="email" id="contact-email" name="email"
-                                                       placeholder="Email" required=""/>
+                                                    placeholder="Email" required="" />
                                             </div>
                                         </div>
                                     </div>
@@ -123,7 +123,7 @@
                                             <div class="col-12">
                                                 <label class="form-label" for="contact-address">Street address</label>
                                                 <input class="form-control" type="text" id="contact-address"
-                                                       name="address" placeholder="write street address" required=""/>
+                                                    name="address" placeholder="write street address" required="" />
                                             </div>
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
                                                 <div class="product" style="display: flex;margin-bottom: 15px;">
                                                     <div class="product-img">
                                                         <img src="{{ asset($product->images[0]) }}"
-                                                             style="width: 130px;border-radius: 25px;" alt="product"/>
+                                                            style="width: 130px;border-radius: 25px;" alt="product" />
                                                     </div>
                                                     <div class="product-desc">
                                                         <div class="product-title">
@@ -165,12 +165,9 @@
             </div>
         </div>
     </section>
-    {{-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> --}}
-
 
     <script>
-
-        $('#quote-btn').on('click', function (e) {
+        $('#quote-btn').on('click', function(e) {
             e.preventDefault();
             // var form = $('#contact-form');
             var formData = new FormData(document.getElementById("quoteForm"));
@@ -181,36 +178,36 @@
                 'data': formData,
                 '_token': "{{ csrf_token() }}",
                 'url': "{{ route('quoteStore') }}",
-                beforeSend: function (data) {
+                beforeSend: function(data) {
                     $('.load-contact').html('Loading ... ');
                 },
-                success: function (data) {
+                success: function(data) {
                     if (data.status === 200) {
                         toastr.success('Quote send success');
                         $('.load-contact').html('');
                         $('#quoteForm input').val('');
                     }
                 },
-                error: function (data) {
-                    if (data.status === 500) {
-                        toastr.error('error sending message !!');
-                    } else if (data.status === 422) {
-                        var errors = $.parseJSON(data.responseText);
-                        $.each(errors, function (key, value) {
-                            // alert(value);
-                            if ($.isPlainObject(value)) {
-                                $.each(value, function (key, value) {
-                                    toastr.error('' + value);
-                                    // alert(value);
-                                });
-                            }
+                error: function(data) {
+                        if (data.status === 500) {
+                            toastr.error('error sending message !!');
+                        } else if (data.status === 422) {
+                            var errors = $.parseJSON(data.responseText);
+                            $.each(errors, function(key, value) {
+                                // alert(value);
+                                if ($.isPlainObject(value)) {
+                                    $.each(value, function(key, value) {
+                                        toastr.error('' + value);
+                                        // alert(value);
+                                    });
+                                }
+                                $('.load-contact').html('error');
+                            });
                             $('.load-contact').html('error');
-                        });
-                        $('.load-contact').html('error');
+                        }
                     }
-                }
 
-                ,
+                    ,
                 cache: false,
                 processData: false,
                 contentType: false

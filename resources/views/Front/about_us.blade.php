@@ -1,18 +1,13 @@
 @extends('Front.layouts.master')
 
 @section('content')
-
     <div class="module-content module-search-warp">
         <div class="pos-vertical-center">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                         <form class="form-search">
-                            <input
-                                class="form-control"
-                                type="text"
-                                placeholder="type words then enter"
-                            />
+                            <input class="form-control" type="text" placeholder="type words then enter" />
                             <button></button>
                         </form>
                     </div>
@@ -25,7 +20,7 @@
     <section class="page-title page-title-1" id="page-title">
         <div class="page-title-wrap bg-overlay bg-overlay-dark-2">
             <div class="bg-section">
-                <img src="{{ asset($slider->image_about) }}"/>
+                <img src="{{ asset($slider->image_about) }}" />
             </div>
             <div class="container">
                 <div class="row">
@@ -39,10 +34,9 @@
                             </p>
                             <div class="title-action">
                                 <a class="btn btn--primary" href="{{ route('service') }}">
-                  <span>our services</span
-                  ><i class="energia-arrow-right"></i
-                                    ></a>
-                                <!-- <a class="btn-video btn-video-2 popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i></a> -->
+                                    <span>our services</span><i class="energia-arrow-right"></i></a>
+                                <a class="btn-video btn-video-2" href="https://www.youtube.com/watch?v=qLFzFy_FHBk&t=73s">
+                                    <i class="fas fa-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -70,7 +64,7 @@
                     <div class="about-img">
                         <div class="about-img-holder bg-overlay">
                             <div class="bg-section">
-                                <img src="{{ asset($about_us->image) }}"/>
+                                <img src="{{ asset($about_us->image) }}" />
                             </div>
                         </div>
                         <div>
@@ -79,9 +73,8 @@
                                     <i class="flaticon-033-plug"></i>
                                 </div>
                                 <div class="counter-num">
-                  <span class="counting" data-counterup-nums="{{ $about_us->client_count }}"
-                  >{{ $about_us->client_count }}</span
-                  >
+                                    <span class="counting"
+                                        data-counterup-nums="{{ $about_us->client_count }}">{{ $about_us->client_count }}</span>
                                     <p></p>
                                 </div>
                                 <div class="counter-name">
@@ -93,9 +86,7 @@
                 </div>
                 <div class="col-12 col-lg-7">
                     <div class="heading heading-1">
-                        {{-- <p class="heading-subtitle heading-subtitle-bg">
-                            {{ $about_us->hash_en }}
-                        </p> --}}
+
                         <h2 class="heading-title">
                             {{ $about_us->title_en }}
                         </h2>
@@ -105,10 +96,10 @@
                             <div class="col-12 col-lg-7">
                                 <div class="block-left">
                                     <p class="paragraph">
-                                        {{ trans_model($about_us,'sub_title') }}
+                                        {{ trans_model($about_us, 'sub_title') }}
                                     </p>
                                     <p>
-                                        {!! trans_model($about_us,'desc') !!}
+                                        {!! trans_model($about_us, 'desc') !!}
                                     </p>
                                 </div>
                             </div>
@@ -137,12 +128,9 @@
         </div>
     </section>
 
-    <section
-        class="features features-1 bg-overlay bg-overlay-theme2"
-        id="features-1"
-    >
+    <section class="features features-1 bg-overlay bg-overlay-theme2" id="features-1">
         <div class="bg-section">
-            <img src="{{ asset('assets/front') }}/assets/images/background/2.jpg" alt="Background"/>
+            <img src="{{ asset('assets/front') }}/assets/images/background/2.jpg" alt="Background" />
         </div>
         <div class="container">
             <div class="heading heading-2 heading-light heading-light2">
@@ -173,54 +161,33 @@
                             ingot.
                         </p>
                         <div class="actions-holder">
-                            <a
-                                class="btn btn--primary btn--inversed"
-                                href="{{ route('contact') }}"
-                            >
-                                get started<i class="energia-arrow-right"></i></a
-                            ><a
-                                class="btn btn--bordered btn--white"
-                                href="{{ route('about_us') }}"
-                            >explore our plans</a
-                            >
+                            <a class="btn btn--primary btn--inversed" href="{{ route('contact') }}">
+                                get started<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
+                                href="{{ route('about_us') }}">explore our plans</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div
-                class="carousel owl-carousel carousel-dots"
-                data-slide="4"
-                data-slide-rs="2"
-                data-autoplay="true"
-                data-nav="false"
-                data-dots="true"
-                data-space="25"
-{{--                data-loop="true"--}}
-                data-speed="800"
-            >
-                <?php $classServices = ['flaticon-024-energy', 'flaticon-028-greenhouse',
-                    'flaticon-026-world', 'flaticon-008-plant', 'flaticon-024-energy','flaticon-004-solar-panel'];
+            <div class="carousel owl-carousel carousel-dots" data-slide="4" data-slide-rs="2" data-autoplay="true"
+                data-nav="false" data-dots="true" data-space="25" {{--                data-loop="true" --}} data-speed="800">
+                <?php $classServices = ['flaticon-024-energy', 'flaticon-028-greenhouse', 'flaticon-026-world', 'flaticon-008-plant', 'flaticon-024-energy', 'flaticon-004-solar-panel'];
                 ?>
-                @foreach($services as $service)
-                <div>
-                    <div class="feature-panel-holder" data-hover="">
-                        <div class="feature-panel">
-                            <div class="feature-icon">
-                                <i class="{{$classServices[rand(0,5)]}}"></i>
+                @foreach ($services as $service)
+                    <div>
+                        <div class="feature-panel-holder" data-hover="">
+                            <div class="feature-panel">
+                                <div class="feature-icon">
+                                    <i class="{{ $classServices[rand(0, 5)] }}"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>{{ trans_model($service, 'title') }}</h4>
+                                    <p>
+                                        {{ trans_model($service, 'desc') }}
+                                    </p>
+                                </div>
                             </div>
-                            <div class="feature-content">
-                                <h4>{{ trans_model($service,'title') }}</h4>
-                                <p>
-                                    {{ trans_model($service,'desc') }}
-                                </p>
-                            </div>
-{{--                            <a href="page-about.html"--}}
-{{--                            ><i class="energia-arrow-right"></i>--}}
-{{--                                <span>explore more</span>--}}
-{{--                            </a>--}}
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
@@ -232,22 +199,13 @@
                     <h3 class="d-none">Our Clients</h3>
                 </div>
                 <div class="col-12">
-                    <div
-                        class="carousel owl-carousel"
-                        data-slide="6"
-                        data-slide-rs="2"
-                        data-autoplay="true"
-                        data-nav="false"
-                        data-dots="false"
-                        data-space="0"
-                        data-loop="false"
-                        data-speed="3000"
-                    >
-                        @foreach($brands as $brand)
-                        <div class="client">
-                            <a href="javascript:void(0)"> </a
-                            ><img src="{{ asset($brand->image) }}" alt="{{$brand->name}}"/>
-                        </div>
+                    <div class="carousel owl-carousel" data-slide="6" data-slide-rs="2" data-autoplay="true"
+                        data-nav="false" data-dots="false" data-space="0" data-loop="false" data-speed="3000">
+                        @foreach ($brands as $brand)
+                            <div class="client">
+                                <a href="javascript:void(0)"> </a><img src="{{ asset($brand->image) }}"
+                                    alt="{{ $brand->name }}" />
+                            </div>
                         @endforeach
                     </div>
                 </div>
@@ -255,12 +213,9 @@
         </div>
     </section>
 
-    <section
-        class="contact contact-1 bg-overlay bg-overlay-theme"
-        id="contact-1"
-    >
+    <section class="contact contact-1 bg-overlay bg-overlay-theme" id="contact-1">
         <div class="bg-section">
-            <img src="{{ asset('assets/front') }}/assets/images/background/3.jpg" alt="background"/>
+            <img src="{{ asset('assets/front') }}/assets/images/background/3.jpg" alt="background" />
         </div>
         <div class="container">
             <div class="contact-panel contact-panel-3">
@@ -277,36 +232,10 @@
                         more sustainable future – no matter how far along the journey to
                         energize society with affordable energy systems.
                     </p>
-{{--                    <div class="advantages-list-holder">--}}
-{{--                        <div class="row">--}}
-{{--                            <div class="col-12 col-lg-6">--}}
-{{--                                <ul class="list-unstyled advantages-list advantages-list-2">--}}
-{{--                                    <li>Reliabe and performance</li>--}}
-{{--                                    <li>Solar material financing</li>--}}
-{{--                                    <li>In-time manufacturing</li>--}}
-{{--                                </ul>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-12 col-lg-6">--}}
-{{--                                <ul class="list-unstyled advantages-list advantages-list-2">--}}
-{{--                                    <li>50% more energy output</li>--}}
-{{--                                    <li>Built using ntype mono</li>--}}
-{{--                                </ul>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
                     <div class="contact-action">
-                        <a class="btn btn--white" href="{{ route('about_us') }}"
-                        >learn more <i class="energia-arrow-right"></i></a
-                        >
+                        <a class="btn btn--white" href="{{ route('about_us') }}">learn more <i
+                                class="energia-arrow-right"></i></a>
                     </div>
-{{--                    <div class="contact-quote">--}}
-{{--                        <img src="{{ asset('assets/front') }}/assets/images/icons/noteicon.png" alt="icon"/>--}}
-{{--                        <p>--}}
-{{--                            Receive an accurate quote within 3-5 days when you fill out--}}
-{{--                            this form. Or, give us a call:--}}
-{{--                            <a href="tel:01061245741">(002) 01061245741</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
                 </div>
                 <div class="contact-card">
                     <div class="contact-body">
