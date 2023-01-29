@@ -1,3 +1,4 @@
+<!-- Start Form -->
 <form id="updateForm" class="updateForm" method="POST">
     @csrf
     <div class="row mt-4">
@@ -56,3 +57,4 @@
         </div>
     </div>
 </form>
+<!-- End Form -->

@@ -1,14 +1,10 @@
 @extends('Admin.layouts.master')
 
 @section('content')
-    {{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" /> --}}
-    {{--    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"> --}}
-{{--    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">--}}
 
-
-
-
-    <form method="POST" id="updateForm" class="updateForm" action="{{ route('about_us.update', $about_us->id) }}" enctype="multipart/form-data">
+    <!-- Form Start -->
+    <form method="POST" id="updateForm" class="updateForm" action="{{ route('about_us.update', $about_us->id) }}"
+        enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <input type="hidden" name="id" value="{{ $about_us->id }}">
@@ -70,7 +66,8 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Image :</label>
-                                <input type="file" name="image" class="dropify" data-default-file="{{ asset($about_us->image) }}" />
+                                <input type="file" name="image" class="dropify"
+                                    data-default-file="{{ asset($about_us->image) }}" />
                             </div>
                         </div>
                     </div>
@@ -78,7 +75,7 @@
             </div>
         </div>
 
-        <!-- about_us -->
+        <!-- About Us -->
         <div class="row mt-4">
             <div class="col-12">
                 <div class="card" style="padding: 13px">
@@ -101,20 +98,22 @@
                 </div>
             </div>
         </div>
+        <!-- End About Us -->
     </form>
-    <!-- End about_us -->
+    <!-- End Form -->
 
 
 @endsection
 @section('js')
     @include('Admin.layouts.myAjaxHelper')
 
+    <!-- Start Js -->
     <script>
+        // Package for edit TextArae
+        $('.dropify').dropify();
 
-$('.dropify').dropify();
-
-    CKEDITOR.replace( 'desc_ar' );
-    CKEDITOR.replace( 'desc_en' );
+        CKEDITOR.replace('desc_ar');
+        CKEDITOR.replace('desc_en');
 
 
         // deleteModel
@@ -124,4 +123,5 @@ $('.dropify').dropify();
         showEditModal('{{ route('about_us.index', ':id') }}');
         editScript();
     </script>
+    <!-- Start Js -->
 @stop

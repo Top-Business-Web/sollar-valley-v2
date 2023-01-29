@@ -1,11 +1,9 @@
 @extends('Admin.layouts.master')
 
 @section('content')
-    {{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" /> --}}
-    {{--    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"> --}}
+    <!-- Datatable CDN -->
     <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-
+    <!-- Start Row-->
     <div class="row mt-4">
         <div class="col-12">
             <div class="card" style="padding: 13px">
@@ -71,11 +69,9 @@
                 </div>
             </div>
             <!-- End Delete -->
-
         </div>
     </div>
-
-
+    <!-- End Row -->
 @endsection
 @section('js')
     @include('Admin.layouts.myAjaxHelper')
@@ -104,10 +100,11 @@
                 searchable: false
             },
         ]
+        // Show Data Modal
         showData('{{ route('contact.index') }}', columns);
-
+        // Delete Modal
         destroyScript('{{ route('contact.destroy', ':id') }}');
-
+        //Edit Modal
         showEditModal('{{ route('contact.edit', ':id') }}');
     </script>
 @stop

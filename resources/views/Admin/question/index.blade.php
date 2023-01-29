@@ -1,11 +1,9 @@
 @extends('Admin.layouts.master')
 
 @section('content')
-{{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />--}}
-{{--    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">--}}
+    <!-- Datatable CDN -->
     <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-
+    <!-- Start Row -->
     <div class="row mt-4">
         <div class="col-12">
             <div class="card" style="padding: 13px">
@@ -18,20 +16,21 @@
                     </div>
                 </div>
                 <div class="table">
-                    <table class="table table-responsive data-table YAJRA" id="dataTable" style=" width: 100% !important;" >
+                    <table class="table table-responsive data-table YAJRA" id="dataTable" style=" width: 100% !important;">
                         <thead class="thead-light">
-                        <tr>
-                            <th>ID</th>
-                            <th>Title AR</th>
-                            <th>Title EN</th>
-                            <th>Action</th>
-                        </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title AR</th>
+                                <th>Title EN</th>
+                                <th>Action</th>
+                            </tr>
                         </thead>
                     </table>
                 </div>
             </div>
             <!--   edit and create modal   -->
-            <div class="modal fade bd-example-modal-lg" id="editOrCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade bd-example-modal-lg" id="editOrCreate" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -48,7 +47,8 @@
             </div>
             <!--   edit and create modal   -->
             <!--  delete Modal -->
-            <div class="modal fade" id="delete_modal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="delete_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -62,37 +62,49 @@
                             <p>Do You Want to Delete <span id="title" class="text-danger"></span>؟</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal" id="dismiss_delete_modal">Close</button>
-                            <button type="button" class="btn bg-gradient-primary dismiss_delete_modal" id="delete_btn">Delete</button>
+                            <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal"
+                                id="dismiss_delete_modal">Close</button>
+                            <button type="button" class="btn bg-gradient-primary dismiss_delete_modal"
+                                id="delete_btn">Delete</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
+    <!-- End Raw -->
 @endsection
 @section('js')
     @include('Admin.layouts.myAjaxHelper')
 
     <script>
-
-        var columns = [
-            {data: 'id', name: 'id'},
-            {data: 'title_en', name: 'title_en'},
-            {data: 'title_ar', name: 'title_ar'},
-            {data: 'action', name: 'action', orderable: false, searchable: false},
+        var columns = [{
+                data: 'id',
+                name: 'id'
+            },
+            {
+                data: 'title_en',
+                name: 'title_en'
+            },
+            {
+                data: 'title_ar',
+                name: 'title_ar'
+            },
+            {
+                data: 'action',
+                name: 'action',
+                orderable: false,
+                searchable: false
+            },
         ]
-        showData('{{route('question.index')}}', columns);
-    //    add Model
-        showAddModal('{{route('question.create')}}');
+        showData('{{ route('question.index') }}', columns);
+        //    add Model
+        showAddModal('{{ route('question.create') }}');
         addScript();
         // deleteModel
-        destroyScript('{{route('question.destroy',':id')}}');
-
-
-        showEditModal('{{route('question.edit',':id')}}');
+        destroyScript('{{ route('question.destroy', ':id') }}');
+        // Edit Modal
+        showEditModal('{{ route('question.edit', ':id') }}');
         editScript();
     </script>
 @stop

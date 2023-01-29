@@ -1,12 +1,15 @@
-<form id="updateForm" class="updateForm" method="POST" enctype="multipart/form-data" action="{{route('brands.update',$brand->id)}}" >
-@csrf
+<!-- Start Form -->
+<form id="updateForm" class="updateForm" method="POST" enctype="multipart/form-data"
+    action="{{ route('brands.update', $brand->id) }}">
+    @csrf
     @method('PUT')
     <input type="hidden" name="id" value="{{ $brand->id }}">
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
                 <label class="control-label">Name</label>
-                <input type="text" name="name" value="{{ $brand->name }}" class="form-control" id="exampleFormControlInput1" placeholder="name">
+                <input type="text" name="name" value="{{ $brand->name }}" class="form-control"
+                    id="exampleFormControlInput1" placeholder="name">
             </div>
         </div>
     </div>
@@ -23,7 +26,8 @@
         <button type="submit" class="btn bg-gradient-primary" id="updateButton">update</button>
     </div>
 </form>
-
+<!-- End Form -->
 <script>
+    // Package TextArea
     $('.dropify').dropify();
 </script>

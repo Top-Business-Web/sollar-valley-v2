@@ -5,10 +5,11 @@
         height: 60px !important;
     }
 </style>
+<!-- Start Form -->
 <form id="addForm" class="addForm" method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data">
     @csrf
-
     @foreach ($products as $product)
+        <!-- This Input Hidden for send id to save cause i use ajax -->
         <input type="hidden" name="id" value="{{ $product->id ?? '' }}">
     @endforeach
     <div class="row">
@@ -31,7 +32,7 @@
             <div class="form-group">
                 <label class="control-label">Sku</label>
                 <input type="text" name="sku" readonly value="{{ $sku }}" class="form-control"
-                       id="exampleFormControlInput1">
+                    id="exampleFormControlInput1">
             </div>
         </div>
     </div>
@@ -103,8 +104,10 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Image</label>
-                <input type="file" name="files[]" class="form-control" id="exampleFormControlInput1" multiple="multiple">
-                <span class="form-text text-danger text-center">مسموح فقط بالصيغ التالية : png, gif, jpeg, jpg,webp</span>
+                <input type="file" name="files[]" class="form-control" id="exampleFormControlInput1"
+                    multiple="multiple">
+                <span class="form-text text-danger text-center">مسموح فقط بالصيغ التالية : png, gif, jpeg,
+                    jpg,webp</span>
             </div>
         </div>
     </div>
@@ -128,4 +131,4 @@
         <button type="submit" class="btn bg-gradient-primary" id="addButton">create</button>
     </div>
 </form>
-
+<!-- End Form -->
