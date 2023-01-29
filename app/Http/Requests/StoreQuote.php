@@ -24,7 +24,7 @@ class StoreQuote extends FormRequest
     public function rules()
     {
         return [
-            'product_id' => 'required',
+                'product_id' => 'required',
             // 'system_complete' => 'required',
             // 'usage' => 'required',
             // 'system_type' => 'required',

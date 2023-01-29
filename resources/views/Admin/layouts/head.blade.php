@@ -13,6 +13,12 @@
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="{{ asset('assets/admin/assets/css/nucleo-svg.css') }}" rel="stylesheet"/>
 
+    {{--  ckeditor  --}}
+    <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+
+    {{--  ckeditor  --}}
+
+
     {{--   dropify  --}}
     <link href="{{ asset('assets/admin/dist/css/dropify.min.css')}}" rel="stylesheet">
     <script src="{{ asset('assets/admin/dist/js/dropify.min.js')}}" crossorigin="anonymous"></script>

@@ -46,11 +46,11 @@
               <div class="widget-content">
                 <ul>
                   <li>
-                    <a href="{{ route('contact') }}">Terms & Conditions</a>
+                    <a href="{{ route('faqs') }}">Terms & Conditions</a>
                   </li>
-                  <li><a href="{{ route('contact') }}">Shipping Policy</a></li>
-                  <li><a href="{{ route('contact') }}">Delivery Tips</a></li>
-                  <li><a href="{{ route('contact') }}">Returns</a></li>
+                  <li><a href="{{ route('faqs') }}">Shipping Policy</a></li>
+                  <li><a href="{{ route('faqs') }}">Delivery Tips</a></li>
+                  <li><a href="{{ route('faqs') }}">Returns</a></li>
                 </ul>
               </div>
             </div>
