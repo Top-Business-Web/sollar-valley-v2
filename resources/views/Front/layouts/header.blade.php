@@ -151,16 +151,39 @@
                 </li>
             </ul>
             <div class="module-holder">
-                {{--                <div class="module module-search"> --}}
-                {{--                    <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div> --}}
-                {{--                </div> --}}
+                @if (Route::currentRouteName() !== 'product')
                 <div class="module-contact">
-                    <a class="btn btn--primary " href="{{ route('quoteIndex') }}">
+                    <a class="btn btn--primary " href="{{ route('product') }}" id="request">
                         request a quote<i class="energia-arrow-right"></i></a>
                 </div>
+                @endif
             </div>
 
         </div>
 
     </nav>
 </header>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $('#request').on('click', function(e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        // alert(url);
+        $.ajax({
+            type: 'get',
+            url: url,
+            beforeSend: function(data) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Oops...',
+                    showCancelButton: true,
+                    text: 'Please Choose Product First!',
+                    confirmButtonText: '<a style="color:white;" href="{{ route('product') }}"><i class="fa fa-thumbs-up"></i> OK!</a>',
+                })
+            },
+            success: function(data) {
+                uploadUrl: '{{ route('product') }}';
+            }
+        });
+    });
+</script>

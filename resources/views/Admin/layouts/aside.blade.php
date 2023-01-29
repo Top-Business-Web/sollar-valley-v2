@@ -200,7 +200,7 @@
                                 <g transform="translate(-2020.000000, -442.000000)" fill="#FFFFFF"
                                     fill-rule="nonzero">
                                     <g transform="translate(1716.000000, 291.000000)">
-                                        <g transform="translate(304.000000, 151.000000)">
+                                        <g   transform="translate(304.000000, 151.000000)">
                                             <polygon class="color-background" opacity="0.596981957"
                                                 points="18.0883333 15.7316667 11.1783333 8.82166667 13.3333333 6.66666667 6.66666667 0 0 6.66666667 6.66666667 13.3333333 8.82166667 11.1783333 15.315 17.6716667">
                                             </polygon>
