@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Quote;
+use App\Models\Product;
+use App\Models\Category;
 use Yajra\DataTables\Facades\DataTables;
 
 class QuoteController extends Controller
@@ -34,4 +36,20 @@ class QuoteController extends Controller
     {
         return view('Admin.quote.show', compact('quote'));
     }
+
+
+    public function destroy(Request $request)
+    {
+        $quote = Quote::where('id', $request->id)->first();
+        $quote->delete();
+        return response(['message' => 'تم الحذف بنجاح', 'status' => 200], 200);
+    }
+
+    public function getOneProduct($id)
+    {
+        $product = Product::find($id);
+        $categoreis = Category::get();
+        return view('Admin.quote.quote_product', compact('product', 'categoreis'));
+    }
+
 }

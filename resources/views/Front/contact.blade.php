@@ -31,7 +31,7 @@
             </div>
         </div>
         <iframe
-            src="https://maps.google.com/maps?q=Pioneer%20Works&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27484.12527638175!2d30.99115536303867!3d30.562985431983233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7d68b68933ea3%3A0x77434af2db2fa06f!2sShebeen%20El-Kom%2C%20Qism%20Shebeen%20El-Kom%2C%20Shibin%20el%20Kom%2C%20Menofia%20Governorate!5e0!3m2!1sen!2seg!4v1674978308584!5m2!1sen!2seg"
             width="600"
             height="450"
             style="border: 0"
@@ -88,7 +88,7 @@
                                             <p>Mon - Fri: 8:00 am - 7:00 pm</p>
                                         </li>
                                     </ul>
-                                    <a class="btn btn--white" href="page-about.html"
+                                    <a class="btn btn--white" href="{{ route('about_us') }}"
                                     >About us <i class="energia-arrow-right"></i
                                         ></a>
                                 </div>

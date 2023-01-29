@@ -109,8 +109,8 @@ class ProductController extends Controller
 
     public function destroy(Request $request)
     {
-        $categories = Product::where('id', $request->id)->first();
-        $categories->delete();
+        $product = Product::where('id', $request->id)->first();
+        $product->delete();
         return response(['message' => 'تم الحذف بنجاح', 'status' => 200], 200);
     }
 }
