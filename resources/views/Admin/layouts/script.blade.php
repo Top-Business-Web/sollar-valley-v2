@@ -25,13 +25,23 @@
 <link href="{{ asset('assets/admin/dist/css/dropify.min.css')}}" rel="stylesheet">
 <script src="{{ asset('assets/admin/dist/js/dropify.min.js')}}" crossorigin="anonymous"></script>
 {{--   dropify  --}}
+{{--tinymce--}}
+<script src="{{ asset('assets/admin/js/tinymce.min.js') }}" referrerpolicy="origin"></script>
+{{--tinymce--}}
+
 <script>
-    $(document).ready(function() {
+    tinymce.init({
+        selector: '.mytextarea'
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
         toastr.options.timeOut = 10000;
         @if (Session::has('error'))
         toastr.error('{{ Session::get('error') }}');
         @elseif(Session::has('success'))
-            $('#successToast').show();
+        $('#successToast').show();
         toastr.success('{{ Session::get('success') }}');
         @endif
     });
@@ -55,7 +65,7 @@
                 backgroundColor: "#fff",
                 data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
                 maxBarThickness: 6
-            }, ],
+            },],
         },
         options: {
             responsive: true,
@@ -298,6 +308,7 @@
                 requestAnimationFrame(animate);
                 renderer.render(scene, camera);
             }
+
             animate();
         }
 
@@ -323,6 +334,7 @@
                     });
             }
         }
+
         init();
     })();
 </script>

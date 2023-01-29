@@ -5,10 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreAbout;
 use App\Traits\PhotoTrait;
-use Illuminate\Http\Request;
 use App\Models\AboutUs;
-use Throwable;
-use Yajra\DataTables\Facades\DataTables;
+
 
 class AboutUsController extends Controller
 {
@@ -17,7 +15,7 @@ class AboutUsController extends Controller
 
     public function index()
     {
-        $about_us = AboutUs::find(1);
+        $about_us = AboutUs::first();
         return view('Admin.about_us.index', compact('about_us'));
     }
 

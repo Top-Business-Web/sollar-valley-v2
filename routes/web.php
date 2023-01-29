@@ -51,7 +51,7 @@ Route::group(
         Route::get('quote/{id}', 'QuoteController@getProduct')->name('get.quote');
 
         #### Faqs ####
-        Route::get('/faqs', 'FaqsController@index')->name('faqs');
+        Route::get('/faqs', 'QuestionController@index')->name('faqs');
 
     }
 );
