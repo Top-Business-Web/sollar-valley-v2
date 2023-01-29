@@ -31,7 +31,7 @@
                 <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
                 <li class="breadcrumb-item text-sm text-dark active" aria-current="page">   <?php
                     $name = Route::currentRouteName();
-                    $trim_name = trim($name, '_us.index');
+                    $trim_name = strstr($name, '.', true);
                     $full_name = ucfirst($trim_name);
                     echo $full_name;
                         ?></li>
@@ -39,7 +39,7 @@
             <h6 class="font-weight-bolder mb-0">
                 <?php
                 $name = Route::currentRouteName();
-                $trim_name = trim($name, '_us.index');
+                $trim_name = strstr($name, '.', true);
                 $full_name = ucfirst($trim_name);
                 echo $full_name;
                     ?>
