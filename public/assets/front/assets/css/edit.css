@@ -52,12 +52,10 @@
   .page-title.page-title-12 .page-title-wrap{
     background-position: center !important;
   }
-  .pdf{
+  .pdf, .pdf:hover{
     color: black;
-    margin-left: 10px;
-    cursor: pointer;
   }
- 
+  
   /* slick slider */
 .slick-prev::before,
 .slick-next::before{
