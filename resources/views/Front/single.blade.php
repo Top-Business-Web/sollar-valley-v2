@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="main-slider">
-                        @foreach ($product->images as $image)
+                            @foreach ($product->images as $image)
                             <div class="product-img">
                                 <img class="img-fluid" src="{{ asset($image) }}" alt="product image" />
                                 <a class="img-popup" src="{{ asset($image) }}" alt="product image"></a>
@@ -110,9 +110,11 @@
                         </div>
                     </div>
                     <div class="container mt-5">
-                        <a href="{{ route('get.quote', $product->id) }}">
-                            <button class="btn btn-primary">Make Request</button>
-                        </a>
+                        <form action="{{ route('quoteIndex') }}" method="get">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $product->id }}">
+                            <button type="submit" class="btn btn-primary">order this</button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-12 col-lg-10 offset-lg-1">

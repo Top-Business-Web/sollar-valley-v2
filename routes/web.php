@@ -48,7 +48,8 @@ Route::group(
         #### Quote ####
         Route::get('quote', 'QuoteController@index')->name('quoteIndex');
         Route::post('quote/store', 'QuoteController@store')->name('quoteStore');
-        Route::get('quote/{id}', 'QuoteController@getProduct')->name('get.quote');
+        Route::get('/quote/search', 'QuoteController@search')->name('quoteSearch');
+//        Route::get('quote/{id}', 'QuoteController@getProduct')->name('get.quote');
 
         #### Faqs ####
         Route::get('/faqs', 'QuestionController@index')->name('faqs');
