@@ -54,5 +54,8 @@ Route::group(
         #### Faqs ####
         Route::get('/faqs', 'QuestionController@index')->name('faqs');
 
+        #### Projects ####
+        Route::get('/projects','ProjectController@index')->name('projects');
+
     }
 );

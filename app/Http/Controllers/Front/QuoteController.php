@@ -51,17 +51,17 @@ class QuoteController extends Controller
                 foreach ($products as $key => $product) {
                     $output .=
                         '<div class="product" style="display: flex;margin-bottom: 15px;">
-                            <div class="product-img">
+                            <label class="product-img" for="checkQoute'. $product->id .'">
                                 <img src="' . asset($product->images[0]) . '"
                                      style="width: 130px;border-radius: 25px;" alt="product"/>
-                            </div>
+                            </label>
                             <div class="product-desc">
                                 <div class="product-title">
                                     <h5 style="position: absolute;margin: 30px 0px 0px 38px">
                                     ' . trans_model($product, 'title') . '</h5>
                                 </div>
                             </div>
-                                <input style="width: 60px;height: 60px;position: absolute;right: 0px;" type="checkbox" name="product_id" value="'. $product->id .'" class="form-check-input">
+                                <input style="width: 60px;height: 60px;position: absolute;right: 0px;" type="checkbox" name="product_id" value="'. $product->id .'" class="form-check-input" id="checkQoute'. $product->id .'">
                         </div>
                     ';
                 }
