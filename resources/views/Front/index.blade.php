@@ -20,7 +20,7 @@
     <section class="slider slider-2" id="slider-2">
         <div class="container-fluid pe-0 ps-0">
             <div class="slider-carousel owl-carousel carousel-navs carousel-dots" data-slide="1" data-slide-rs="1"
-                data-autoplay="true" data-nav="true" data-dots="true" data-space="0" data-loop="true" data-speed="800">
+                 data-autoplay="true" data-nav="true" data-dots="true" data-space="0" data-loop="true" data-speed="800">
                 @foreach ($settings->sliders as $slider)
                     <div class="slide bg-overlay bg-overlay-dark-slider-2">
                         <div class="bg-section">
@@ -138,7 +138,7 @@
                         <div class="actions-holder">
                             <a class="btn btn--primary" href="{{ route('about_us') }}">
                                 read more<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                href="{{ route('service') }}">find your solution</a>
+                                                                                   href="{{ route('service') }}">find your solution</a>
                         </div>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                                 <h6>michael brian</h6>
                                 <p>co founder</p>
                                 <img class="signature-img"
-                                    src="{{ asset('assets/front') }}/assets/images/signature/1.png" alt="signature" />
+                                     src="{{ asset('assets/front') }}/assets/images/signature/1.png" alt="signature" />
                             </div>
                         </div>
                         <div class="advantages-list-holder">
@@ -224,7 +224,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-5">
                         <h2 class="heading-title">
-                            Latest Products And Energy Supplies
+                            @lang('site.Latest Products And Energy Supplies')
                         </h2>
                     </div>
                 </div>
@@ -232,7 +232,7 @@
         </div>
 
         <div class="carousel owl-carousel carousel-dots carousel-navs" data-slide="4" data-slide-rs="1" data-center=""
-            data-autoplay="true" data-nav="true" data-dots="true" data-space="" data-loop="false" data-speed="800">
+             data-autoplay="true" data-nav="true" data-dots="true" data-space="" data-loop="false" data-speed="800">
             @foreach ($products as $product)
                 <div>
                     <div class="project-panel" data-hover="">
@@ -258,7 +258,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="projects-load-more">
-                        <a class="btn btn--secondary" href="{{ route('product') }}">explore all products <i
+                        <a class="btn btn--secondary" href="{{ route('product') }}">@lang('site.explore all products') <i
                                 class="energia-arrow-right"></i></a>
                     </div>
                 </div>
@@ -287,14 +287,14 @@
 
 
                                     <span class="counting" data-counterup-nums="25"
-                                        data-counterup-beginat="12">{{ $settings->year_of_experince }}</span>
+                                          data-counterup-beginat="12">{{ $settings->year_of_experince }}</span>
 
 
                                 </div>
                                 <div class="counter-img">
                                     <div class="bg-section">
                                         <img src="{{ asset('assets/front') }}/assets/images/counters/1.jpg"
-                                            alt="image" />
+                                             alt="image" />
                                     </div>
                                     <i class="flaticon-020-factory"></i>
                                 </div>
@@ -309,8 +309,8 @@
             <div class="col-12 col-lg-6">
                 <div class="processes-holder">
                     <div class="carousel owl-carousel carousel-dots process-content-carousel" data-slide="1"
-                        data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0"
-                        data-loop="false" data-speed="800">
+                         data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0"
+                         data-loop="false" data-speed="800">
                         <div>
                             <div class="process-panel">
                                 <p class="process-number">01.</p>
@@ -365,8 +365,8 @@
                     </div>
                     <div class="images-holder">
                         <div class="carousel owl-carousel process-image-carousel" data-slide="1" data-slide-rs="1"
-                            data-autoplay="true" data-drag="false" data-nav="false" data-dots="false" data-space="0"
-                            data-loop="false" data-speed="800">
+                             data-autoplay="true" data-drag="false" data-nav="false" data-dots="false" data-space="0"
+                             data-loop="false" data-speed="800">
                             <img src="{{ asset('assets/front') }}/assets/images/processes/1.jpg" alt="process" /><img
                                 src="assets/images/processes/2.jpg" alt="process" /><img
                                 src="{{ asset('assets/front') }}/assets/images/processes/3.jpg" alt="process" />

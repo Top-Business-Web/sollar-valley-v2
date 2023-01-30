@@ -3,6 +3,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
+
+
+
+
+
 if (!function_exists('get_file')) {
     function getFile($image): string
     {
@@ -53,6 +58,14 @@ if (!function_exists('trans_model')) {
     function trans_model($model,$word){
 
         return $model->{$word.'_'. app()->getlocale()};
+    }
+
+}
+
+if (!function_exists('transGo')) {
+
+    function transGo($word){;
+        return \Stichoza\GoogleTranslate\GoogleTranslate::trans($word,App::getLocale());
     }
 
 }

@@ -7,7 +7,7 @@
                     <div class="contact-body">
 
 
-                        <p>phone: <a href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a></p>
+                        <p>@lang('site.phone') : <a href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a></p>
                     </div>
 
 
@@ -18,7 +18,7 @@
                     <div class="contact-body">
 
                         <p>
-                            email:
+                            @lang('site.email') :
                             <a href="../cdn-cgi/l/email-protection.html#254c4b434a65404b4057424c440b464a48"><span
                                     class="__cf_email__"
                                     data-cfemail="b5dcdbd3daf5d0dbd0c7d2dcd49bd6dad8">{{ $settings->email }}</span>
@@ -58,14 +58,14 @@
                 <!-- <a href="blog-grid.html">news & media</a
                 ><a href="page-careers.html">careers</a
                 > -->
-                <a href="{{ route('faqs') }}">FAQs</a>
+                <a href="{{ route('faqs') }}">@lang('site.faqs')</a>
             </div>
             <div class="module module-language">
                 <div class="selected">
                     <img @if (lang() == 'en') src="{{ asset('assets/front/') }}/assets/images/module-language/en.png"
                          @else
                              src="{{ asset('assets/front/') }}/assets/images/module-language/ar.png" @endif
-                        alt="En Language" /><span>{{ lang() == 'en' ? 'english' : 'العربية' }}</span><i
+                         alt="En Language" /><span>{{ lang() == 'en' ? 'english' : 'العربية' }}</span><i
                         class="fas fa-chevron-down"></i>
                 </div>
                 <div class="lang-list">
@@ -73,7 +73,7 @@
                         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                             <li>
                                 <a rel="alternate" hreflang="{{ $localeCode }}"
-                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                                     {{ $properties['native'] }}
                                 </a>
                             </li>
@@ -113,47 +113,47 @@
             {{--            </div> --}}
             <div class="module module-language">
                 <div class="selected"><img src="{{ asset('assets/front/') }}/assets/images/module-language/en.png"
-                        alt="En Language" /><span>english</span><i class="fas fa-chevron-down"></i>
+                                           alt="En Language" /><span>@lang('site.english')</span><i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="lang-list">
                     <ul>
                         <li><img src="{{ asset('assets/front/') }}/assets/images/module-language/en.png"
-                                alt="En Language" /><a href="#">english</a></li>
+                                 alt="En Language" /><a href="#">@lang('site.english')</a></li>
                         <li><img src="{{ asset('assets/front/') }}/assets/images/module-language/ar.png"
-                                alt="AR Language" /><a href="#">arabic</a></li>
+                                 alt="AR Language" /><a href="#">@lang('site.arabic')</a></li>
                     </ul>
                 </div>
             </div>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         </div>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'home') active @endif"
                     data-hover="">
-                    <a class="dropdown-toggle" href="{{ route('home') }}"><span>home</span></a>
+                    <a class="dropdown-toggle" href="{{ route('home') }}"><span>@lang('site.home')</span></a>
                 </li>
                 <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'about_us') active @endif"
                     data-hover="">
-                    <a class="dropdown-toggle" href="{{ route('about_us') }}"><span>about us</span></a>
+                    <a class="dropdown-toggle" href="{{ route('about_us') }}"><span>@lang('site.about us')</span></a>
                 </li>
                 <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'service') active @endif"
                     data-hover="">
-                    <a class="dropdown-toggle" href="{{ route('service') }}"><span>services</span></a>
+                    <a class="dropdown-toggle" href="{{ route('service') }}"><span>@lang('site.services')</span></a>
                 </li>
                 <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'product') active @endif"
                     data-hover="">
-                    <a class="dropdown-toggle" href="{{ route('product') }}"><span>products</span></a>
+                    <a class="dropdown-toggle" href="{{ route('product') }}"><span>@lang('site.products')</span></a>
                 </li>
                 <li class="nav-item @if (Route::currentRouteName() == 'contact') active @endif" id="contact" data-hover="">
-                    <a href="{{ route('contact') }}"><span>contact</span></a>
+                    <a href="{{ route('contact') }}"><span>@lang('site.contact')</span></a>
                 </li>
             </ul>
             <div class="module-holder">
                 <div class="module-contact">
                     <a class="btn btn--primary " href="{{ route('quoteIndex') }}" id="request">
-                        request a quote<i class="energia-arrow-right"></i></a>
+                        @lang('site.request a quote')<i class="energia-arrow-right"></i></a>
                 </div>
             </div>
 
