@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="ar">
+<html>
   @include('Front.layouts.head')
   <body>
     <div class="preloader">
@@ -69,6 +69,7 @@
       src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
     <script src="{{ asset('assets/front/') }}/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="{{ asset('dist/js/select2.min.js') }}"></script>
     <script src="{{ asset('assets/front/') }}/assets/js/vendor.js"></script>
     <script src="{{ asset('assets/front/') }}/assets/js/functions.js"></script>
     <!-- slick plugin -->

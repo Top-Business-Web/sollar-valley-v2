@@ -125,7 +125,7 @@
                         <div class="actions-holder">
                             <a class="btn btn--primary btn--inversed" href="{{ route('contact') }}">
                                 get started<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                href="{{ route('about_us') }}">explore our plans</a>
+                                                                                     href="{{ route('about_us') }}">explore our plans</a>
                         </div>
                     </div>
                 </div>

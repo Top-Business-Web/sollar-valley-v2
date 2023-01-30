@@ -26,15 +26,16 @@
                 <div class="row">
                     <div class="col-12 col-lg-5">
                         <div class="title">
-                            <h1 class="title-heading">About Us</h1>
+                            <h1 class="title-heading">@lang('site.About Us')</h1>
                             <p class="title-desc">
-                                We offer products, solutions, and services across the entire
+                                {{ lang() == 'ar' ? 'نحن نقدم المنتجات والحلول والخدمات في جميع أنحاء
+                                 سلسلة قيمة الطاقة. نحن ندعم عملائنا في طريقهم إلى مستقبل أكثر استدامة.' : 'We offer products, solutions, and services across the entire
                                 energy value chain. We support our customers on their way to
-                                a more sustainable future.
+                                a more sustainable future.' }}
                             </p>
                             <div class="title-action">
                                 <a class="btn btn--primary" href="{{ route('service') }}">
-                                    <span>our services</span><i class="energia-arrow-right"></i></a>
+                                    <span>@lang('site.our services')</span><i class="energia-arrow-right"></i></a>
                                 <a class="btn-video btn-video-2" href="https://www.youtube.com/watch?v=qLFzFy_FHBk&t=73s">
                                     <i class="fas fa-play"></i></a>
                             </div>
@@ -46,10 +47,10 @@
         <div class="breadcrumb-wrap">
             <div class="container">
                 <ol class="breadcrumb d-flex">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="">company</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">@lang('site.home')</a></li>
+                    <li class="breadcrumb-item"><a href="">@lang('site.company')</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        About Us
+                        @lang('site.About Us')
                     </li>
                 </ol>
             </div>
@@ -74,11 +75,11 @@
                                 </div>
                                 <div class="counter-num">
                                     <span class="counting"
-                                        data-counterup-nums="{{ $about_us->client_count }}">{{ $about_us->client_count }}</span>
+                                          data-counterup-nums="{{ $about_us->client_count }}">{{ $about_us->client_count }}</span>
                                     <p></p>
                                 </div>
                                 <div class="counter-name">
-                                    <h6>happy clients</h6>
+                                    <h6>@lang('site.happy clients')</h6>
                                 </div>
                             </div>
                         </div>
@@ -107,14 +108,14 @@
                                 <div class="block-right">
                                     <div class="prief-set">
                                         <p>
-                                            How can we meet the growing demand for electricity
+                                            {{ lang() == 'ar' ? 'كيف يمكننا تلبية الطلب المتزايد على الكهرباء مع حماية مناخنا وجعل كوكبنا مكانًا أفضل؟' : 'How can we meet the growing demand for electricity
                                             while protecting our climate & make planet a better
-                                            place?
+                                            place?' }}
                                         </p>
                                         <ul class="list-unstyled advantages-list">
-                                            <li>Reliability and performance</li>
-                                            <li>Just-in-time manufacturing</li>
-                                            <li>solar material financing</li>
+                                            <li>{{ lang() == 'ar' ? 'الموثوقية والأداء': 'Reliability and performance' }}</li>
+                                            <li>{{ lang() == 'ar' ? 'التصنيع في الوقت المناسب': 'Just-in-time manufacturing' }}</li>
+                                            <li>{{ lang() == 'ar' ? 'تمويل المواد الشمسية': 'solar material financing' }}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -137,39 +138,42 @@
                 <div class="row">
                     <div class="col-12 col-lg-5">
                         <p class="heading-subtitle">
-                            Sustainable, Reliable & Affordable Energy!
+                            {{ lang() == 'ar' ? 'طاقة مستدامة وموثوقة وبأسعار معقولة!' : 'Sustainable, Reliable & Affordable Energy!' }}
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-lg-5">
                         <h2 class="heading-title">
-                            Providing Value To Our ClientsThrough Ongoing Product &
-                            Innovation.
+                            {{ lang() == 'ar' ? 'تقديم قيمة لعملائنا من خلال المنتج المستمر و
+                             التعاون.' : 'Providing Value To Our ClientsThrough Ongoing Product &
+                            Innovation.' }}
                         </h2>
                     </div>
                     <div class="col-12 col-lg-6 offset-lg-1">
                         <p class="heading-desc">
-                            While improving the yield and performance of solar energy
+                            {{ lang() == 'ar' ? 'مع تحسين إنتاجية وأداء الطاقة الشمسية
+                             المنتجات ، تتيح لنا خبرتنا في مجال الصناعة الكهروضوئية توفيرها
+                             مصادر متعمقة للمواد والتمويل وسلسلة التوريد
+                             خبرة في كل خطوة.' : 'While improving the yield and performance of solar energy
                             products, our PV industry experience enables us to provide
                             in-depth material sourcing, financing and supply chain
-                            expertise for every step.
+                            expertise for every step.' }}
                         </p>
                         <p class="heading-desc">
-                            Raw polycrystalline silicon for PV manufacturing. Offered in
-                            various grades and formats including chunks, chips, powder and
-                            ingot.
+                            {{ lang() == 'ar' ? 'السيليكون الخام متعدد الكريستالات لتصنيع الخلايا الكهروضوئية. متوفر بدرجات وأشكال مختلفة بما في ذلك القطع والرقائق والمسحوق والسبيكة.' : 'Raw polycrystalline silicon for PV manufacturing. Offered in
+                            various grades and formats including chunks, chips, powder and ingot.' }}
                         </p>
                         <div class="actions-holder">
                             <a class="btn btn--primary btn--inversed" href="{{ route('contact') }}">
-                                get started<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                href="{{ route('about_us') }}">explore our plans</a>
+                                @lang('site.get started')<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
+                                                                                     href="{{ route('about_us') }}">@lang('site.explore_our_plane')</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="carousel owl-carousel carousel-dots" data-slide="4" data-slide-rs="2" data-autoplay="true"
-                data-nav="false" data-dots="true" data-space="25" {{--                data-loop="true" --}} data-speed="800">
+                 data-nav="false" data-dots="true" data-space="25" {{--                data-loop="true" --}} data-speed="800">
                 <?php $classServices = ['flaticon-024-energy', 'flaticon-028-greenhouse', 'flaticon-026-world', 'flaticon-008-plant', 'flaticon-024-energy', 'flaticon-004-solar-panel'];
                 ?>
                 @foreach ($services as $service)
@@ -196,15 +200,15 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3 class="d-none">Our Clients</h3>
+                    <h3 class="d-none">@lang('site.Our Clients')</h3>
                 </div>
                 <div class="col-12">
                     <div class="carousel owl-carousel" data-slide="6" data-slide-rs="2" data-autoplay="true"
-                        data-nav="false" data-dots="false" data-space="0" data-loop="false" data-speed="3000">
+                         data-nav="false" data-dots="false" data-space="0" data-loop="false" data-speed="3000">
                         @foreach ($brands as $brand)
                             <div class="client">
                                 <a href="javascript:void(0)"> </a><img src="{{ asset($brand->image) }}"
-                                    alt="{{ $brand->name }}" />
+                                                                       alt="{{ $brand->name }}" />
                             </div>
                         @endforeach
                     </div>
