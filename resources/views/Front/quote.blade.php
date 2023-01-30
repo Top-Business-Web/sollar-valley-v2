@@ -1,6 +1,7 @@
 @extends('Front.layouts.master')
 
 @section('content')
+
     <div class="module-content module-search-warp">
         <div class="pos-vertical-center">
             <div class="container">
@@ -146,21 +147,22 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        @else
+                                    @else
                                     <div>
                                         <div class="row">
                                             <div class="widget-title">
-                                                <h5>search</h5>
+                                                <h5>select product</h5>
                                             </div>
                                             <div class="widget-content">
-                                                <form class="form-search">
-                                                    <div class="input-group">
-                                                        <input class="form-control search" type="text"
-                                                               placeholder="Search for products or SKU" name="search"
-                                                               id="search"/><span
-                                                            class="input-group-btn"></span>
-                                                    </div>
-                                                </form>
+                                                <select class="form-control" name="product_id" id="select-product">
+                                                   @foreach($products as $product)
+                                                       <option value="{{ $product->id }}">
+                                                           <div>
+                                                                {{ trans_model($product,'title') }}
+                                                           </div>
+                                                       </option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -201,27 +203,29 @@
     </section>
 
     <script>
-        $('.search').on('keyup', function () {
-            $value = $(this).val();
 
-            $.ajax({
-                type: 'get',
-                url: '{{ route('quoteSearch') }}',
-                data: {
-                    'search': $value
-                },
-                beforeSend: function (data) {
-                    $('.product-qoute').html('<h5>loading ...</h5>');
-                },
-                success: function (data) {
-                    // alert(data)
-                    $('.product-qoute').html(data);
-                },
-                error: function (data) {
-                    $('.product-qoute').html('<h2 class="error">NO PRODUCT FOUND</h2>');
-                }
-            });
-        });
+        {{--$('#select-product').on('change', function () {--}}
+
+        {{--    // var selectVal = $("#selectId option:selected").val();--}}
+        {{--    console.log('aaa');--}}
+        {{--    $.ajax({--}}
+        {{--        type: 'get',--}}
+        {{--        url: '{{ route('quoteSearch') }}',--}}
+        {{--        data: {--}}
+        {{--            'search': $value--}}
+        {{--        },--}}
+        {{--        beforeSend: function (data) {--}}
+        {{--            $('.product-qoute').html('<h5>loading ...</h5>');--}}
+        {{--        },--}}
+        {{--        success: function (data) {--}}
+        {{--            // alert(data)--}}
+        {{--            $('.product-qoute').html(data);--}}
+        {{--        },--}}
+        {{--        error: function (data) {--}}
+        {{--            $('.product-qoute').html('<h2 class="error">NO PRODUCT FOUND</h2>');--}}
+        {{--        }--}}
+        {{--    });--}}
+        {{--});--}}
 
         $('#quote-btn').on('click', function (e) {
             e.preventDefault();

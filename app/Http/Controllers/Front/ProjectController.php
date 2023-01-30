@@ -10,7 +10,6 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        $settings = Setting::first();
-        return view('Front.project',compact('settings'));
+        return view('Front.project');
     }
 }

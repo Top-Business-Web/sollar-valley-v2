@@ -23,6 +23,9 @@
     <link href="{{ asset('assets/front/') }}/assets/css/slick.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link href="{{ asset('dist/css/select2.min.css') }}" rel="stylesheet" />
+{{--    <script src="{{ asset('dist/js/select2.min.js') }}"></script>--}}
+{{--    <script src="{{ asset('assets/front/assets/custom/custom.js') }}"></script>--}}
 
     <link href="{{ asset('assets/front/') }}/assets/css/vendor.min.css" rel="stylesheet" />
     <link href="{{ asset('assets/front/') }}/assets/css/style.css" rel="stylesheet" />
