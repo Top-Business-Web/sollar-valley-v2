@@ -20,8 +20,9 @@ class QuoteController extends Controller
         } else {
             $product = null;
         }
+        $products = Product::get();
         $settings = Setting::first();
-        return view('Front.quote', compact('settings','product'));
+        return view('Front.quote', compact('settings','product','products'));
     }
 
     public function store(StoreQuote $storeQuote)

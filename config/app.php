@@ -239,6 +239,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'Webp' => Buglinjo\LaravelWebp\Facades\Webp::class,
+        'GoogleTranslate' => Stichoza\GoogleTranslate\GoogleTranslate::class,
+
 
     ],
 

@@ -48,7 +48,7 @@
                                             <option value="old">oldest Products</option>
                                         </select>
                                         <button style="width: 100px;height: 60px;" class="btn btn-sm btn-primary"
-                                            type="button" id="sort-btn">filter
+                                                type="button" id="sort-btn">filter
                                         </button>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
                                 <form class="form-search">
                                     <div class="input-group">
                                         <input class="form-control search" type="text"
-                                            placeholder="Search for products or SKU" name="search" id="search" /><span
+                                               placeholder="Search for products or SKU" name="search" id="search" /><span
                                             class="input-group-btn">
                                             <button class="btn" id="btn-search" type="button">
                                                 <i class="energia-search-Icon"></i></button></span>
