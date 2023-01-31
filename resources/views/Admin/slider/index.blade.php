@@ -22,7 +22,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Image Service :</label>
-                                <input type="file" name="image_service" class="dropify"
+                                <input type="file" name="image_services" class="dropify"
                                     data-default-file="{{ asset($slider->image_services) }}" />
                             </div>
 

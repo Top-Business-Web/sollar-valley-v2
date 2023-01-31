@@ -34,11 +34,11 @@ class SliderController extends Controller
                     $inputs['image_about'] = $this->saveImage($request->image_about, 'assets/uploads/sliders', 'photo');
                 }
 
-                if ($request->has('image_service')) {
-                    if (file_exists($sliders->image_service)) {
-                        unlink($sliders->image_service);
+                if ($request->has('image_services')) {
+                    if (file_exists($sliders->image_services)) {
+                        unlink($sliders->image_services);
                     }
-                    $inputs['image_service'] = $this->saveImage($request->image_service, 'assets/uploads/sliders', 'photo');
+                    $inputs['image_services'] = $this->saveImage($request->image_services, 'assets/uploads/sliders', 'photo');
                 }
 
                 if ($request->has('image_product')) {
