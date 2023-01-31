@@ -80,7 +80,6 @@ return [
     'all' => 'الكل',
     'our office map' => 'خريطة مكتبنا',
     'Emergency Line' => 'خط الطوارئ',
-    'Location' => 'موقع',
     'contact_desc' => 'نحن نفخر في كل ما نقوم به ، والتحكم فيه
                                      تسمح لنا المنتجات بضمان حصول عملائنا على
                                      أفضل خدمة ذات جودة.',
@@ -111,10 +110,20 @@ return [
     'default' => 'إفتراضي',
     'Newest Products' => 'أحدث المنتجات',
     'oldest Products' => 'أقدم المنتجات',
-    'filter' => 'منقي',
+    'filter' => 'فلتر',
     'categories' => 'التصنيفات',
     'All products' => 'جميع المنتجات',
     'search' => 'بحث',
     'recent products' => 'المنتجات الأخيرة',
 
+
+
+
+    //// lol
+
+
+    'the overview' => 'نظرة عامة!',
+    'client' => 'عميل',
+    'related Projects' => 'مشاريع ذات صلة',
+    'explore all projects' => 'استكشاف جميع المشاريع',
 ];

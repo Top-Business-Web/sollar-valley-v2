@@ -184,12 +184,12 @@
                             <a class="btn btn--secondary" href="{{ route('about_us') }}">
                                 @lang('site.read_more')<i
                                     class="energia-arrow-right"></i></a>
-                            <div class="signature-body">
-                                <h6>michael brian</h6>
-                                <p>co founder</p>
-                                <img class="signature-img"
-                                     src="{{ asset('assets/front') }}/assets/images/signature/1.png" alt="signature"/>
-                            </div>
+{{--                            <div class="signature-body">--}}
+{{--                                <h6>michael brian</h6>--}}
+{{--                                <p>co founder</p>--}}
+{{--                                <img class="signature-img"--}}
+{{--                                     src="{{ asset('assets/front') }}/assets/images/signature/1.png" alt="signature"/>--}}
+{{--                            </div>--}}
                         </div>
                         <div class="advantages-list-holder">
                             <div class="row">

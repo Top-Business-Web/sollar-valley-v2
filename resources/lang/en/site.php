@@ -120,5 +120,9 @@ return [
 
 
 
-
+ ///// lol
+    'the overview' => 'the overview!',
+    'client' => 'client',
+    'related Projects' => 'related Projects',
+    'explore all projects' => 'explore all projects',
 ];

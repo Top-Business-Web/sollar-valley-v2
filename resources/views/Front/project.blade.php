@@ -117,14 +117,14 @@
                     'id': id
                 },
                 beforeSend: function (data) {
-                    $('.product-search').html('<h4 class="error">LOADING...</h4>');
+                    $('.product-search').html('<h4 class="error">{{ lang() == 'ar' ? 'جاري التحميل' : 'LOADING...' }}</h4>');
                 },
                 success: function (data) {
                     // alert(data)
                     $('#project-content').html(data);
                 },
                 error: function (data) {
-                    $('.product-search').html('<h2 class="error">NO PRODUCT FOUND</h2>');
+                    $('.product-search').html('<h2 class="error">{{ lang() == 'ar' ? 'لا يوجد مشاريع' : 'NO PROJECT FOUND' }}</h2>');
                 }
             });
         });
