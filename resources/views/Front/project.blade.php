@@ -5,7 +5,7 @@
     <section class="page-title page-title-12" id="page-title">
         <div class="page-title-wrap bg-overlay bg-overlay-dark-3">
             <div class="bg-section">
-                <img src="assets/images/page-titles/14.jpg" alt="Background" />
+                <img src="{{ asset($sliders->image_project) }}" alt="Background" />
             </div>
             <div class="container">
                 <div class="row">
@@ -45,61 +45,38 @@
                         <ul class="list-inline mb-0">
                             <li>
                                 <a
-                                    class="active-filter"
-                                    href="javascript:void(0)"
-                                    data-filter="*"
+                                    class="category-sort"
+                                    href=""
+                                    data-id="all"
                                 >All</a
                                 >
                             </li>
+                            @foreach ($services as $service)
+
                             <li>
-                                <a href="javascript:void(0)" data-filter=".filter-finance"
-                                >finance</a
+                                <span>{{ $service->project->count() }}</span>
+                                <a href="" class="category-sort" data-id="{{ $service->id }}"
+                                >{{ $service->title_en }}</a
                                 >
                             </li>
-                            <li>
-                                <a href="javascript:void(0)" data-filter=".filter-supply"
-                                >supply chain</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="javascript:void(0)"
-                                    data-filter=".filter-inovations"
-                                >inovations</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="javascript:void(0)"
-                                    data-filter=".filter-infrastructure"
-                                >infrastructure</a
-                                >
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" data-filter=".filter-green"
-                                >green energy</a
-                                >
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" data-filter=".filter-eco"
-                                >ECO</a
-                                >
-                            </li>
+
+                            @endforeach
+
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="row" id="projects-all">
-                <div
-                    class="col-12 col-md-6 col-lg-4 project-item filter-finance filter-supply"
-                >
+            <div class="row product-search" id="project-content">
+                @foreach ($projects as $project)
+                <div class="col-12 col-md-6 col-lg-4 project-item filter-finance filter-supply">
                     <div class="project-panel" data-hover="">
-                        <div class="project-panel-holder">
+                        <div class="project-panel-holder projects-all load-more" id="load">
+
                             <div class="project-img">
-                                <a class="link" href="projects-single.html"></a
+                                <a class="link" href="{{ route('project', $project->id) }}"></a
                                 ><img
-                                    src="assets/images/projects/modern/1.jpg"
+                                    src="{{ asset($project->image) }}"
                                     alt="project image"
                                     class="w-100"
                                 />
@@ -108,176 +85,29 @@
                             <div class="project-content">
                                 <div class="project-title">
                                     <h4>
-                                        <a href="projects-single.html"
-                                        >expanding The Solar Supply Chain Finance Program</a
+                                        <a href="{{ route('project', $project->id) }}"
+                                        >{{ $project->desc_en }}</a
                                         >
                                     </h4>
                                 </div>
                                 <div class="project-cat">
-                                    <a href="projects-standard.html">finance</a
-                                    ><a href="projects-standard.html">supply chain</a>
+                                    <a href="projects-standard.html">{{ $project->service->title_en }}</a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 project-item filter-green">
-                    <div class="project-panel" data-hover="">
-                        <div class="project-panel-holder">
-                            <div class="project-img">
-                                <a class="link" href="projects-single.html"></a
-                                ><img
-                                    src="assets/images/projects/modern/2.jpg"
-                                    alt="project image"
-                                    class="w-100"
-                                />
                             </div>
 
-                            <div class="project-content">
-                                <div class="project-title">
-                                    <h4>
-                                        <a href="projects-single.html"
-                                        >Addressing Wind Energy Innovation Challenges</a
-                                        >
-                                    </h4>
-                                </div>
-                                <div class="project-cat">
-                                    <a href="projects-standard.html">energy</a
-                                    ><a href="projects-standard.html">green energy</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                </div>
-                <div
-                    class="col-12 col-md-6 col-lg-4 project-item filter-infrastructure"
-                >
-                    <div class="project-panel" data-hover="">
-                        <div class="project-panel-holder">
-                            <div class="project-img">
-                                <a class="link" href="projects-single.html"></a
-                                ><img
-                                    src="assets/images/projects/modern/3.jpg"
-                                    alt="project image"
-                                    class="w-100"
-                                />
-                            </div>
 
-                            <div class="project-content">
-                                <div class="project-title">
-                                    <h4>
-                                        <a href="projects-single.html"
-                                        >Smarter Ways to Manage EV Charging Infrastructures</a
-                                        >
-                                    </h4>
-                                </div>
-                                <div class="project-cat">
-                                    <a href="projects-standard.html">electric vehicle</a
-                                    ><a href="projects-standard.html">infrastructure</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div
-                    class="col-12 col-md-6 col-lg-4 project-item filter-green filter-eco"
-                >
-                    <div class="project-panel" data-hover="">
-                        <div class="project-panel-holder">
-                            <div class="project-img">
-                                <a class="link" href="projects-single.html"></a
-                                ><img
-                                    src="assets/images/projects/modern/4.jpg"
-                                    alt="project image"
-                                    class="w-100"
-                                />
-                            </div>
-
-                            <div class="project-content">
-                                <div class="project-title">
-                                    <h4>
-                                        <a href="projects-single.html"
-                                        >New Public Attitude Tracker Towards Renewable
-                                            Energy</a
-                                        >
-                                    </h4>
-                                </div>
-                                <div class="project-cat">
-                                    <a href="projects-standard.html">green energy</a
-                                    ><a href="projects-standard.html">eco</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="col-12 col-md-6 col-lg-4 project-item filter-inovations"
-                >
-                    <div class="project-panel" data-hover="">
-                        <div class="project-panel-holder">
-                            <div class="project-img">
-                                <a class="link" href="projects-single.html"></a
-                                ><img
-                                    src="assets/images/projects/modern/5.jpg"
-                                    alt="project image"
-                                    class="w-100"
-                                />
-                            </div>
-
-                            <div class="project-content">
-                                <div class="project-title">
-                                    <h4>
-                                        <a href="projects-single.html"
-                                        >Dangerous Environmental Impacts of Natural Gas</a
-                                        >
-                                    </h4>
-                                </div>
-                                <div class="project-cat">
-                                    <a href="projects-standard.html">energy</a
-                                    ><a href="projects-standard.html">inovation</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="col-12 col-md-6 col-lg-4 project-item filter-eco filter-supply"
-                >
-                    <div class="project-panel" data-hover="">
-                        <div class="project-panel-holder">
-                            <div class="project-img">
-                                <a class="link" href="projects-single.html"></a
-                                ><img
-                                    src="assets/images/projects/modern/6.jpg"
-                                    alt="project image"
-                                    class="w-100"
-                                />
-                            </div>
-
-                            <div class="project-content">
-                                <div class="project-title">
-                                    <h4>
-                                        <a href="projects-single.html"
-                                        >What Does the Future Hold for Renewable Energy?</a
-                                        >
-                                    </h4>
-                                </div>
-                                <div class="project-cat">
-                                    <a href="projects-standard.html">eco</a
-                                    ><a href="projects-standard.html">supply chain</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
             <div class="row">
                 <div class="col-12 text-center">
                     <a
-                        class="btn btn--primary"
-                        id="load-more"
-                        href="javascript:void(0)"
+                        class="btn btn--primary load-more"
+                        data-id="load-project"
+                        href=""
                     >load more <i class="fas fa-plus"></i
                         ></a>
                 </div>
@@ -286,5 +116,55 @@
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+    $('.category-sort').on('click', function(e) {
+            e.preventDefault();
+
+            var id = $(this).data('id');
+            // alert(id);
+
+            $.ajax({
+                type: 'get',
+                url: '{{ route('category_Sort') }}',
+                data: {
+                    'id': id
+                },
+                beforeSend: function(data) {
+                    $('.product-search').html('<h4 class="error">LOADING...</h4>');
+                },
+                success: function(data) {
+                    // alert(data)
+                    $('#project-content').html(data);
+                },
+                error: function(data) {
+                    $('.product-search').html('<h2 class="error">NO PRODUCT FOUND</h2>');
+                }
+            });
+        });
+
+        $('.load-more').on('click', function(e) {
+            e.preventDefault();
+
+            var id = $(this).data('id');
+
+            $.ajax({
+                type: 'get',
+                url: '{{ route('loadMore') }}',
+                data: {
+                    'id': id
+                },
+                beforeSend: function(data) {
+                    $('.product-search').html('<h4 class="error">LOADING...</h4>');
+                },
+                success: function(data) {
+                    // alert(data)
+                    $('#load').html(data);
+                },
+                error: function(data) {
+                    $('.product-search').html('<h2 class="error">NO PRODUCT FOUND</h2>');
+                }
+            });
+        });
+    </script>
 
 @endsection

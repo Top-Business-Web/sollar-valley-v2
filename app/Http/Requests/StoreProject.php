@@ -24,15 +24,14 @@ class StoreProject extends FormRequest
     public function rules()
     {
         return [
-            'image'      => 'required|required_without:id|image',
-            'service_id' => 'required|exists:services,id'
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'image.required' => 'يرجي رفع صورة او فيديو للمشروع'
+            'title_ar' => 'required',
+            'title_en' => 'required',
+            'desc_ar' => 'required',
+            'desc_en' => 'required',
+            'client' => 'required',
+            'location' => 'required',
+            'image'      => 'nullable',
+            'service_id' => 'required'
         ];
     }
 }

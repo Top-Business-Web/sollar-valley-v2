@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Project;
 
 class Service extends Model
 {
@@ -17,4 +18,9 @@ class Service extends Model
         'desc_ar',
         'desc_en',
     ];
+
+    public function project()
+    {
+        return $this->hasMany(Project::class);
+    }
 }

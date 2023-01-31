@@ -17,7 +17,7 @@ class CreateSettingsTable extends Migration
             $table->id();
 
             $table->text('logo')->nullable();
-            $table->json('banner_home')->nullable();
+            $table->text('sliders')->nullable();
             $table->string('title_ar')->nullable();
             $table->string('title_en')->nullable();
             $table->bigInteger('year_of_experince')->nullable();

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Question;
+use App\Models\Questions;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\StoreQuestion;
 
@@ -13,7 +13,7 @@ class QuestionController extends Controller
     public function index(Request $request)
     {
         if($request->ajax()) {
-            $questions = Question::select('*');
+            $questions = Questions::select('*');
             return DataTables::of( $questions)
                 ->addColumn('action', function ( $questions) {
                     return '
@@ -40,7 +40,7 @@ class QuestionController extends Controller
     {
         $inputs = $request->all();
 
-        if(question::create($inputs))
+        if(Questions::create($inputs))
         {
             return response()->json(['status' => 200]);
         }
@@ -50,12 +50,12 @@ class QuestionController extends Controller
         }
     }
 
-    public function edit(Question $question)
+    public function edit(Questions $question)
     {
         return view('Admin.question.edit', compact('question'));
     }
 
-    public function update(StoreQuestion $request, Question $question)
+    public function update(StoreQuestion $request, Questions $question)
     {
         if($question->update($request->all()))
         {
@@ -69,7 +69,7 @@ class QuestionController extends Controller
 
     public function destroy(Request $request)
     {
-        $questions = Question::where('id', $request->id)->first();
+        $questions = Questions::where('id', $request->id)->first();
         $questions->delete();
         return response(['message' => 'Question Deleted successfully', 'status' => 200], 200);
     }

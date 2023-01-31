@@ -3,13 +3,125 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Project;
 use App\Models\Setting;
+use App\Models\Service;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
     public function index()
     {
-        return view('Front.project');
+        $sliders = Slider::first();
+        $settings = Setting::first();
+        $projects = Project::latest()->take(6)->get();
+        $services = Service::get();
+        return view('Front.project',compact('settings', 'services', 'projects', 'sliders'));
+    }
+
+    public function oneProject($id)
+    {
+        $projects = Project::get();
+        $settings = Setting::first();
+        $oneProject = Project::findOrFail($id);
+        return view('Front.project-single', compact('settings', 'oneProject', 'projects'));
+    }
+
+    public function categorySort(Request $request)
+    {
+        if ($request->ajax()) {
+            if ($request->id && $request->id == 'all') {
+                $projects = Project::get();
+            } else{
+                    $id = $request->id;
+                    $projects = Project::where('service_id',$id)->get();
+                }
+            $output = '';
+
+            if ($projects->count() > 0) {
+                foreach ($projects as $key => $project) {
+                    $output .=
+                        '     <div class="col-12 col-md-6 col-lg-4 project-item filter-finance filter-supply">
+                        <div class="project-panel" data-hover="">
+                            <div class="project-panel-holder projects-all">
+
+                                <div class="project-img">
+                                    <a class="link" href="' .route('project', $project->id). '"></a
+                                    ><img
+                                        src="' . asset($project->image). '"
+                                        alt="project image"
+                                        class="w-100"
+                                    />
+                                </div>
+
+                                <div class="project-content">
+                                    <div class="project-title">
+                                        <h4>
+                                            <a href="' . route('project', $project->id) . '"
+                                            >' . $project->desc_en. '</a
+                                            >
+                                        </h4>
+                                    </div>
+                                    <div class="project-cat">
+                                        <a href="projects-standard.html">' . $project->service->title_en . '</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>';
+                }
+                return Response([$output]);
+            } else {
+                return response('no data', 404);
+            }
+        }
+    }
+
+    public function loadMore(Request $request)
+    {
+        if ($request->ajax()) {
+            if ($request->id && $request->id == 'load-project') {
+                $projects = Project::get();
+            }
+
+
+            $output = '';
+
+            if ($projects->count() > 0) {
+                foreach ($projects as $key => $project) {
+                    $output .= '<div class="project-panel-holder projects-all">
+
+                    <div class="project-img">
+                        <a class="link" href="' . route('project', $project->id) . '"></a
+                        ><img
+                            src="' . asset($project->image) . '"
+                            alt="project image"
+                            class="w-100"
+                        />
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-title">
+                            <h4>
+                                <a href="' . route('project', $project->id) . '"
+                                >' . $project->desc_en . '</a
+                                >
+                            </h4>
+                        </div>
+                        <div class="project-cat">
+                            <a href="projects-standard.html">' . $project->service->title_en . '</a>
+                        </div>
+                    </div>
+
+                </div>';
+                }
+                return Response([$output]);
+            } else {
+                return response('no data', 404);
+            }
+        }
     }
 }

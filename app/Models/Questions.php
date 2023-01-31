@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Question extends Model
+class Questions extends Model
 {
     use HasFactory;
 
@@ -17,6 +17,4 @@ class Question extends Model
         'desc_ar',
         'desc_en'
     ];
-
-    public $timestamps = false;
 }
