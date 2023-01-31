@@ -15,7 +15,7 @@ class ProjectController extends Controller
     {
         $sliders = Slider::first();
         $settings = Setting::first();
-        $projects = Project::get();
+        $projects = Project::latest()->get();
         $services = Service::get();
         return view('Front.project', compact('settings', 'services', 'projects', 'sliders'));
     }
@@ -59,18 +59,18 @@ class ProjectController extends Controller
                                     <div class="project-title">
                                         <h4>
                                             <a href="' . route('project', $project->id) . '"
-                                            >' . $project->desc_en . '</a
+                                            >' . trans_model($project,'title') . '</a
+
                                             >
                                         </h4>
                                     </div>
                                     <div class="project-cat">
-                                        <a href="projects-standard.html">' . $project->service->title_en . '</a>
+                                        <a href="projects-standard.html">' . trans_model($project,'desc') . '</a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
-
                     </div>';
                 }
                 return Response([$output]);
@@ -78,50 +78,5 @@ class ProjectController extends Controller
                 return response('no data', 404);
             }
         }
-    }
-
-    public function loadMore(Request $request)
-    {
-        if ($request->ajax()) {
-            if ($request->id && $request->id == 'load-project') {
-                $projects = Project::get();
-            }
-
-
-            $output = '';
-
-            if ($projects->count() > 0) {
-                foreach ($projects as $key => $project) {
-                    $output .= '<div class="project-panel-holder projects-all">
-
-                    <div class="project-img">
-                        <a class="link" href="' . route('project', $project->id) . '"></a
-                        ><img
-                            src="' . asset($project->image) . '"
-                            alt="project image"
-                            class="w-100"
-                        />
-                    </div>
-
-                    <div class="project-content">
-                        <div class="project-title">
-                            <h4>
-                                <a href="' . route('project', $project->id) . '"
-                                >' . $project->desc_en . '</a
-                                >
-                            </h4>
-                        </div>
-                        <div class="project-cat">
-                            <a href="projects-standard.html">' . $project->service->title_en . '</a>
-                        </div>
-                    </div>
-
-                </div>';
-                }
-                return Response([$output]);
-            } else {
-                return response('no data', 404);
-            }
-        }
-    }
+    } // end Category sorting
 }
