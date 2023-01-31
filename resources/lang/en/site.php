@@ -76,4 +76,18 @@ return [
 
 
 
+
+ //// eldapour
+'Projects' => 'Projects',
+'all' => 'all',
+'our office map' => 'our office map',
+'Emergency Line' => 'Emergency Line',
+'Location' => 'Location',
+'select your services' => 'select your services',
+'contact_desc' => 'We take great pride in everything that we do, control over
+                                    products allows us to ensure our customers receive the
+                                    best quality service.',
+'get in touch' => 'get in touch',
+'name' => 'Name',
+'additional information' => 'additional information',
 ];

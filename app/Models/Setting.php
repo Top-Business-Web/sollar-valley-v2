@@ -28,7 +28,8 @@ class Setting extends Model
         'terms_conditions',
         'shipping_policy',
         'returns',
-        'work_date'
+        'work_date',
+        'location',
     ];
 
     protected $casts = [

@@ -13,7 +13,7 @@ class Slider extends Model
 
     protected $fillable = [
         'image_about',
-        'image_service',
+        'image_services',
         'image_product',
         'image_faqs',
         'image_project'

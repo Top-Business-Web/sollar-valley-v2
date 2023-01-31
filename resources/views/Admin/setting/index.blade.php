@@ -81,6 +81,13 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
+                                <label for="">location</label>
+                                <textarea type="text" name="location" rows="4"
+                                       class="form-control">{{ $settings->location }}</textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
                                 <label for="">Linked In :</label>
                                 <input type="text" name="linked_in" value="{{ $settings->youtube }}"
                                     class="form-control" />

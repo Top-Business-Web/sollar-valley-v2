@@ -26,12 +26,12 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3 class="d-none">our office map</h3>
+                    <h3 class="d-none">@lang('site.our office map')</h3>
                 </div>
             </div>
         </div>
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27484.12527638175!2d30.99115536303867!3d30.562985431983233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7d68b68933ea3%3A0x77434af2db2fa06f!2sShebeen%20El-Kom%2C%20Qism%20Shebeen%20El-Kom%2C%20Shibin%20el%20Kom%2C%20Menofia%20Governorate!5e0!3m2!1sen!2seg!4v1674978308584!5m2!1sen!2seg"
+            src="{{ $settings->location }}"
             width="600"
             height="450"
             style="border: 0"
@@ -56,12 +56,12 @@
                             <div class="card-content">
                                 <div class="content-top">
                                     <p>
-                                        As a world wide distributor of solar supplies we
+                                       {{ lang() == 'ar' ? 'بصفتنا موزعًا عالميًا لإمدادات الطاقة الشمسية ، نسعى لتقديم خدمة سريعة ومعرفة ، يمكننا الحصول على جميع المواد التي تحتاجها عن طريق البحر أو الجو.' : ' As a world wide distributor of solar supplies we
                                         endeavor provide fast and knowledgeable service, we can
-                                        get all the materials you need by sea or air.
+                                        get all the materials you need by sea or air.' }}
                                     </p>
-                                    <a href="page-contact.html"
-                                    ><i class="energia-arrow-right"></i>global office map</a
+                                    <a href="{{ route('contact') }}"
+                                    ><i class="energia-arrow-right"></i>@lang('site.our office map')</a
                                     >
                                 </div>
                                 <div class="content-bottom">
@@ -69,27 +69,27 @@
                                         <li class="contact-info">
                                             <i class="energia-phone-Icon"></i>
                                             <p>
-                                                Emergency Line:
+                                                @lang('site.Emergency Line'):
                                                 <a href="tel:123-456-7890">(002) 01061245741</a>
                                             </p>
                                         </li>
                                         <li class="contact-info">
                                             <i class="energia-location-Icon"></i>
                                             <p>
-                                                Location:
+                                                @lang('site.location'):
                                                 <a
-                                                    href="../cdn-cgi/l/email-protection.html#147d7a727b54717a7166737d753a777b79"
-                                                >Brooklyn, New York, USA
+                                                    href="#"
+                                                >{{ trans_model($settings,'location') }}
                                                 </a>
                                             </p>
                                         </li>
                                         <li class="contact-info">
                                             <i class="energia-clock-Icon"></i>
-                                            <p>Mon - Fri: 8:00 am - 7:00 pm</p>
+                                            <p>{{ $settings->work_date }}</p>
                                         </li>
                                     </ul>
                                     <a class="btn btn--white" href="{{ route('about_us') }}"
-                                    >About us <i class="energia-arrow-right"></i
+                                    >@lang('site.about us') <i class="energia-arrow-right"></i
                                         ></a>
                                 </div>
                             </div>
@@ -98,11 +98,9 @@
                     <div class="col-12 col-lg-7">
                         <div class="contact-card">
                             <div class="contact-body">
-                                <h5 class="card-heading">get in touch</h5>
+                                <h5 class="card-heading">@lang('site.get in touch')</h5>
                                 <p class="card-desc">
-                                    We take great pride in everything that we do, control over
-                                    products allows us to ensure our customers receive the
-                                    best quality service.
+                                    @lang('site.contact_desc')
                                 </p>
                                 <form
                                     class="contactForm"
@@ -116,7 +114,7 @@
                                                 type="text"
                                                 id="contact-name"
                                                 name="name"
-                                                placeholder="Name"
+                                                placeholder="@lang('site.name')"
                                                 required=""
                                             />
                                         </div>
@@ -126,7 +124,7 @@
                                                 type="email"
                                                 id="contact-email"
                                                 name="email"
-                                                placeholder="Email"
+                                                placeholder="@lang('site.email')"
                                                 required=""
                                             />
                                         </div>
@@ -136,24 +134,25 @@
                                                 type="text"
                                                 id="contact-phone"
                                                 name="phone"
-                                                placeholder="Phone"
+                                                placeholder="@lang('site.phone')"
                                                 required=""
                                             />
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <select class="form-control" id="select-1" required name="services">
                                                 <option value="">
-                                                    select your services
+                                                    @lang('site.select your services')
                                                 </option>
-                                                <option value="s1">service 1</option>
-                                                <option value="s2">service 2</option>
+                                                @foreach($services as $service)
+                                                   <option value="{{ $service->id }}">{{ trans_model($service,'title') }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div class="col-12">
                           <textarea
                               class="form-control"
                               id="contact-infos"
-                              placeholder="additional information"
+                              placeholder="@lang('site.additional information')"
                               name="message"
                               cols="30"
                               rows="10"
@@ -161,7 +160,7 @@
                                         </div>
                                         <div class="col-12">
                                             <button type="button" class="btn btn--secondary" id="contact-btn">
-                                                submit request <i class="energia-arrow-right"></i>
+                                                @lang('site.send request') <i class="energia-arrow-right"></i>
                                             </button>
                                         </div>
                                         <div class="col-12">
