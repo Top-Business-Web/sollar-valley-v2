@@ -26,7 +26,7 @@ class StoreSlider extends FormRequest
         // dd(request()->all());
         return [
             'image_about' => 'nullable|image',
-            'image_service' => 'nullable|image',
+            'image_services' => 'nullable|image',
             'image_product' => 'nullable|image',
             'image_faqs' => 'nullable|image',
             'image_project' => 'nullable|image',

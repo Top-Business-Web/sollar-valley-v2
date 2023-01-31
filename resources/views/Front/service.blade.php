@@ -19,17 +19,14 @@
                                     <i class="flaticon-031-nuclear-plant"></i>
                                 </div>
                             </div>
-                            <h1 class="title-heading">our services</h1>
+                            <h1 class="title-heading">@lang('site.our services')</h1>
                             <p class="title-desc">
-                                We offer products, solutions, and services across the entire
-                                energy value chain. We support our customers on their way to
-                                a more sustainable future.
+                                @lang('site.We offer');
                             </p>
                             <div class="title-action">
                                 <a class="btn btn--primary btn--inversed" href="{{ route('contact') }}">
-                                    get started<i class="energia-arrow-right"></i></a><a
-                                    class="btn btn--bordered btn--white" href="{{ route('about_us') }}">explore our
-                                    plans</a>
+                                    @lang('site.get started')<i class="energia-arrow-right"></i></a><a
+                                    class="btn btn--bordered btn--white" href="{{ route('about_us') }}">@lang('site.explore_our_plans')</a>
                             </div>
                         </div>
                     </div>
@@ -56,11 +53,10 @@
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3">
                         <p class="heading-subtitle">
-                            Energize Society With Sustainable Energy!
+                            @lang('site.energize society with sustainable energy!')
                         </p>
                         <h2 class="heading-title">
-                            A Leading Supplier Of Solar Materials For Manufacturers,
-                            Installers & Contractors.
+                            @lang('site.a sleading supplier of solar materials for manufacturers,installers & contractors.')
                         </h2>
                     </div>
                 </div>
@@ -76,7 +72,7 @@
                             </div>
                             <div class="service-content">
                                 <h4>
-                                    <a href="{{ route('service') }}">{{ $service->title_en }}<br />services</a>
+                                    <a href="{{ route('service') }}">{{ trans_model($service,'title') }}<br />@lang('site.services')</a>
                                 </h4>
                                 <p>
                                     {{ $service->desc_en }}
@@ -99,33 +95,27 @@
                 <div class="row">
                     <div class="col-12 col-lg-5">
                         <p class="heading-subtitle">
-                            Sustainable, Reliable & Affordable Energy!
+                            @lang('site.sustainable, reliable & affordable energy!')
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-lg-5">
                         <h2 class="heading-title">
-                            Providing Value To Our ClientsThrough Ongoing Product &
-                            Innovation.
+                            @lang('site.providing value to our clientsThrough ongoing product & innovation.')
                         </h2>
                     </div>
                     <div class="col-12 col-lg-6 offset-lg-1">
                         <p class="heading-desc">
-                            While improving the yield and performance of solar energy
-                            products, our PV industry experience enables us to provide
-                            in-depth material sourcing, financing and supply chain
-                            expertise for every step.
+                            @lang('site.While improving the yield and performance of solar energy products, our PV industry experience enables us to provide in-depth material sourcing, financing and supply chain expertise for every step.')
                         </p>
                         <p class="heading-desc">
-                            Raw polycrystalline silicon for PV manufacturing. Offered in
-                            various grades and formats including chunks, chips, powder and
-                            ingot.
+                       @lang('site.Raw polycrystalline silicon for PV manufacturing. Offered invarious grades and formats including chunks, chips, powder and ingot.')
                         </p>
                         <div class="actions-holder">
                             <a class="btn btn--primary btn--inversed" href="{{ route('contact') }}">
-                                get started<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                                                                     href="{{ route('about_us') }}">explore our plans</a>
+                                @lang('site.get started')<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
+                                                                                     href="{{ route('about_us') }}">@lang('site.explore_our_plans')</a>
                         </div>
                     </div>
                 </div>
@@ -155,8 +145,8 @@
                 <div class="col-12">
                     <div class="more-features more-features-3">
                         <p>
-                            Sustainable, reliable & affordable energy systems,
-                            <a href="{{ route('service') }}">Find Your Solution Now! </a>
+                            @lang('site.sustainable, reliable & affordable energy!')
+                            <a href="{{ route('service') }}">@lang('site.Find Your Solution Now!')</a>
                         </p>
                     </div>
                 </div>
@@ -173,26 +163,23 @@
                             <div class="card-content">
                                 <div class="content-top">
                                     <p>
-                                        As a world wide distributor of solar supplies we
-                                        endeavor provide fast and knowledgeable service, we can
-                                        get all the materials you need by sea or air.
+                                        @lang('site.As a world wide distributor of solar supplies we endeavor provide fast and knowledgeable service, we can get all the materials you need by sea or air.')
                                     </p>
-                                    <a href="{{ route('contact') }}"><i class="energia-arrow-right"></i>global office
-                                        map</a>
+                                    <a href="{{ route('contact') }}"><i class="energia-arrow-right"></i>@lang('site.global offic map')</a>
                                 </div>
                                 <div class="content-bottom">
                                     <ul class="list-unstyled contact-infos">
                                         <li class="contact-info">
                                             <i class="energia-phone-Icon"></i>
                                             <p>
-                                                Emergency Line:
+                                                @lang('site.Emergency Line'):
                                                 <a href="tel:123-456-7890">(002) 01061245741</a>
                                             </p>
                                         </li>
                                         <li class="contact-info">
                                             <i class="energia-location-Icon"></i>
                                             <p>
-                                                Location:
+                                                @lang('site.Location')
                                                 <a
                                                     href="../cdn-cgi/l/email-protection.html#c5acaba3aa85a0aba0b7a2aca4eba6aaa8">Brooklyn,
                                                     New York, USA
@@ -204,7 +191,7 @@
                                             <p>Mon - Fri: 8:00 am - 7:00 pm</p>
                                         </li>
                                     </ul>
-                                    <a class="btn btn--white" href="{{ route('contact') }}">contact us <i
+                                    <a class="btn btn--white" href="{{ route('contact') }}">@lang('site.Contact Us') <i
                                             class="energia-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -213,16 +200,14 @@
                     <div class="col-12 col-lg-7">
                         <div class="contact-card">
                             <div class="contact-body">
-                                <h5 class="card-heading">Request A Quote</h5>
+                                <h5 class="card-heading">@lang('site.request a quote')</h5>
                                 <p class="card-desc">
-                                    We take great pride in everything that we do, control over
-                                    products allows us to ensure our customers receive the best
-                                    quality service.
+                                    @lang('site.quote_desc')
                                 </p>
                                 <div class="col-12">
                                     <a href="{{ route('quoteIndex') }}">
                                         <button class="btn btn--secondary w-100" type="submit">
-                                            Send Request <i class="energia-arrow-right"></i>
+                                            @lang('site.send request') <i class="energia-arrow-right"></i>
                                         </button></a>
                                 </div>
                                 <div class="col-12">

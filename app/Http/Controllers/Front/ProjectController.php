@@ -15,14 +15,14 @@ class ProjectController extends Controller
     {
         $sliders = Slider::first();
         $settings = Setting::first();
-        $projects = Project::latest()->take(6)->get();
+        $projects = Project::get();
         $services = Service::get();
-        return view('Front.project',compact('settings', 'services', 'projects', 'sliders'));
+        return view('Front.project', compact('settings', 'services', 'projects', 'sliders'));
     }
 
     public function oneProject($id)
     {
-        $projects = Project::get();
+        $projects = Project::latest()->take(6)->get();
         $settings = Setting::first();
         $oneProject = Project::findOrFail($id);
         return view('Front.project-single', compact('settings', 'oneProject', 'projects'));
@@ -33,10 +33,10 @@ class ProjectController extends Controller
         if ($request->ajax()) {
             if ($request->id && $request->id == 'all') {
                 $projects = Project::get();
-            } else{
-                    $id = $request->id;
-                    $projects = Project::where('service_id',$id)->get();
-                }
+            } else {
+                $id = $request->id;
+                $projects = Project::where('service_id', $id)->get();
+            }
             $output = '';
 
             if ($projects->count() > 0) {
@@ -47,9 +47,9 @@ class ProjectController extends Controller
                             <div class="project-panel-holder projects-all">
 
                                 <div class="project-img">
-                                    <a class="link" href="' .route('project', $project->id). '"></a
+                                    <a class="link" href="' . route('project', $project->id) . '"></a
                                     ><img
-                                        src="' . asset($project->image). '"
+                                        src="' . asset($project->image) . '"
                                         alt="project image"
                                         class="w-100"
                                     />
@@ -59,7 +59,7 @@ class ProjectController extends Controller
                                     <div class="project-title">
                                         <h4>
                                             <a href="' . route('project', $project->id) . '"
-                                            >' . $project->desc_en. '</a
+                                            >' . $project->desc_en . '</a
                                             >
                                         </h4>
                                     </div>

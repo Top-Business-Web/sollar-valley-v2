@@ -50,7 +50,7 @@
                     </p>
                   </div>
                   <div class="project-more">
-                    <a class="btn btn--primary" href="request-quote.html"
+                    <a class="btn btn--primary" href="{{ route('quoteIndex') }}"
                     >request a quote <i class="energia-arrow-right"></i
                     ></a>
                   </div>
@@ -107,8 +107,8 @@
                   </tbody>
                 </table>
               </div>
-              <a class="btn btn--secondary" href="page-contact.html"
-              >schedule an appintment <i class="energia-arrow-right"></i
+              <a class="btn btn--secondary" href="{{ route('contact') }}"
+              >Contact <i class="energia-arrow-right"></i
               ></a>
             </div>
           </div>
@@ -146,7 +146,7 @@
                       <i class="far fa-eye"></i
                       ><a
                             class="img-gallery-item"
-                            href="assets/images/projects/full/1.jpg"
+                            href="{{ asset('assets/front') }}/assets/images/projects/full/1.jpg"
                             title="wind generators item"
                     ></a>
                     </div>
@@ -157,130 +157,10 @@
           </div>
         </div>
         @endforeach
-        {{-- <div class=" ">
-          <div class="project-panel">
-            <div class="project-panel-holder">
-              <div class="project-img">
-                <img
-                        src="assets/images/projects/single/gallery/2.jpg"
-                        alt=" item"
-                />
-                <div class="project-hover">
-                  <div class="project-action">
-                    <div class="project-zoom">
-                      <i class="far fa-eye"></i
-                      ><a
-                            class="img-gallery-item"
-                            href="assets/images/projects/full/2.jpg"
-                            title="solar panels item"
-                    ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
-        {{-- <div>
-          <div class="project-panel">
-            <div class="project-panel-holder">
-              <div class="project-img">
-                <img
-                        src="assets/images/projects/single/gallery/3.jpg"
-                        alt=" item"
-                />
-                <div class="project-hover">
-                  <div class="project-action">
-                    <div class="project-zoom">
-                      <i class="far fa-eye"></i
-                      ><a
-                            class="img-gallery-item"
-                            href="assets/images/projects/full/3.jpg"
-                            title="battery materials item"
-                    ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
-        {{-- <div class=" ">
-          <div class="project-panel">
-            <div class="project-panel-holder">
-              <div class="project-img">
-                <img
-                        src="assets/images/projects/single/gallery/4.jpg"
-                        alt=" item"
-                />
-                <div class="project-hover">
-                  <div class="project-action">
-                    <div class="project-zoom">
-                      <i class="far fa-eye"></i
-                      ><a
-                            class="img-gallery-item"
-                            href="assets/images/projects/full/4.jpg"
-                            title="hydropower plants item"
-                    ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
-        {{-- <div class=" ">
-          <div class="project-panel">
-            <div class="project-panel-holder">
-              <div class="project-img">
-                <img
-                        src="assets/images/projects/single/gallery/5.jpg"
-                        alt=" item"
-                />
-                <div class="project-hover">
-                  <div class="project-action">
-                    <div class="project-zoom">
-                      <i class="far fa-eye"></i
-                      ><a
-                            class="img-gallery-item"
-                            href="assets/images/projects/full/5.jpg"
-                            title="fossil resoueces item"
-                    ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
-        {{-- <div>
-          <div class="project-panel">
-            <div class="project-panel-holder">
-              <div class="project-img">
-                <img
-                        src="assets/images/projects/single/gallery/6.jpg"
-                        alt=" item"
-                />
-                <div class="project-hover">
-                  <div class="project-action">
-                    <div class="project-zoom">
-                      <i class="far fa-eye"></i
-                      ><a
-                            class="img-gallery-item"
-                            href="assets/images/projects/full/6.jpg"
-                            title="charge controllers item"
-                    ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
       </div>
     </div>
 
-    <div class="project-overview project-overview-2">
+    {{-- <div class="project-overview project-overview-2">
       <div class="container">
         <div class="heading heading-20">
           <div class="row">
@@ -329,15 +209,15 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
-    <section
+    {{-- <section
             class="processes processes-1 bg-overlay bg-overlay-theme4"
             id="processes-1"
     >
       <div class="bg-section">
         <img
-                src="assets/images/background/wavy-pattern.png"
+                src="{{ asset('assets/front') }}/assets/images/background/wavy-pattern.png"
                 alt="Background"
         />
       </div>
@@ -358,7 +238,7 @@
                                 class="counting"
                                 data-counterup-nums="25"
                                 data-counterup-beginat="12"
-                        >25</span
+                        >{{ $settings->year_of_experince }}</span
                         >
                   </div>
                   <div class="counter-img">
@@ -454,12 +334,12 @@
                       data-speed="800"
               >
                 <img
-                        src="assets/images/processes/1.jpg"
+                        src="{{ asset('assets/front') }}/assets/images/processes/1.jpg"
                         alt="process"
                 /><img
-                      src="assets/images/processes/2.jpg"
+                      src="{{ asset('assets/front') }}/assets/images/processes/2.jpg"
                       alt="process"
-              /><img src="assets/images/processes/3.jpg" alt="process" />
+              /><img src="{{ asset('assets/front') }}/assets/images/processes/3.jpg" alt="process" />
               </div>
               <div class="processes-panel">
                 <h3 class="panel-title">
@@ -988,7 +868,7 @@
         ></a>
         </div>
       </div>
-    </div>
+    </div> --}}
 
     <section
             class="projects projects-standard projects-standard-2"
@@ -1012,16 +892,18 @@
                 data-nav="false"
                 data-dots="true"
                 data-space="30"
-                data-loop="true"
+                data-loop="false"
                 data-speed="800"
         >
+        @foreach ($projects as $project)
           <div>
             <div class="project-panel" data-hover="">
+
               <div class="project-panel-holder">
                 <div class="project-img">
                   <a class="link" href="projects-single.html"></a
                   ><img
-                        src="assets/images/projects/grid-carousel/1.jpg"
+                        src="{{ asset($project->image) }}"
                         alt="project image"
                         class="w-100"
                 />
@@ -1031,164 +913,24 @@
                   <div class="project-title">
                     <h4>
                       <a href="projects-single.html"
-                      >expanding The Solar Supply Finance Program</a
+                      >{{ $project->title_en }}</a
                       >
                     </h4>
                   </div>
                   <div class="project-cat">
-                    <a href="projects-standard.html">finance</a
-                    ><a href="projects-standard.html">supply chain</a>
+                    <a href="projects-standard.html">{{ $project->service->title_en }}</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div>
-            <div class="project-panel" data-hover="">
-              <div class="project-panel-holder">
-                <div class="project-img">
-                  <a class="link" href="projects-single.html"></a
-                  ><img
-                        src="assets/images/projects/grid-carousel/2.jpg"
-                        alt="project image"
-                        class="w-100"
-                />
-                </div>
-
-                <div class="project-content">
-                  <div class="project-title">
-                    <h4>
-                      <a href="projects-single.html"
-                      >Addressing Wind Energy Innovation Challenges</a
-                      >
-                    </h4>
-                  </div>
-                  <div class="project-cat">
-                    <a href="projects-standard.html">energy</a
-                    ><a href="projects-standard.html">green energy</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="project-panel" data-hover="">
-              <div class="project-panel-holder">
-                <div class="project-img">
-                  <a class="link" href="projects-single.html"></a
-                  ><img
-                        src="assets/images/projects/grid-carousel/3.jpg"
-                        alt="project image"
-                        class="w-100"
-                />
-                </div>
-
-                <div class="project-content">
-                  <div class="project-title">
-                    <h4>
-                      <a href="projects-single.html"
-                      >dangerous environment impact of gas</a
-                      >
-                    </h4>
-                  </div>
-                  <div class="project-cat">
-                    <a href="projects-standard.html">eco</a
-                    ><a href="projects-standard.html">green energy</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="project-panel" data-hover="">
-              <div class="project-panel-holder">
-                <div class="project-img">
-                  <a class="link" href="projects-single.html"></a
-                  ><img
-                        src="assets/images/projects/grid-carousel/4.jpg"
-                        alt="project image"
-                        class="w-100"
-                />
-                </div>
-
-                <div class="project-content">
-                  <div class="project-title">
-                    <h4>
-                      <a href="projects-single.html"
-                      >New Attitude Towards Renewable Energy</a
-                      >
-                    </h4>
-                  </div>
-                  <div class="project-cat">
-                    <a href="projects-standard.html">green energy</a
-                    ><a href="projects-standard.html">eCO</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="project-panel" data-hover="">
-              <div class="project-panel-holder">
-                <div class="project-img">
-                  <a class="link" href="projects-single.html"></a
-                  ><img
-                        src="assets/images/projects/grid-carousel/5.jpg"
-                        alt="project image"
-                        class="w-100"
-                />
-                </div>
-
-                <div class="project-content">
-                  <div class="project-title">
-                    <h4>
-                      <a href="projects-single.html"
-                      >Smarter Way to Manage Charging Infrastructures</a
-                      >
-                    </h4>
-                  </div>
-                  <div class="project-cat">
-                    <a href="projects-standard.html">elictrec vehicles</a
-                    ><a href="projects-standard.html">infrastructures</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="project-panel" data-hover="">
-              <div class="project-panel-holder">
-                <div class="project-img">
-                  <a class="link" href="projects-single.html"></a
-                  ><img
-                        src="assets/images/projects/grid-carousel/6.jpg"
-                        alt="project image"
-                        class="w-100"
-                />
-                </div>
-
-                <div class="project-content">
-                  <div class="project-title">
-                    <h4>
-                      <a href="projects-single.html"
-                      >Addressing Wind Energy Innovation Challenges</a
-                      >
-                    </h4>
-                  </div>
-                  <div class="project-cat">
-                    <a href="projects-standard.html">wind energy</a
-                    ><a href="projects-standard.html">innovations</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
 
         <div class="row">
           <div class="col-12">
             <div class="projects-load-more">
-              <a class="btn btn--secondary" href="projects-standard.html"
+              <a class="btn btn--secondary" href="{{ route('projects') }}"
               >explore all projects <i class="energia-arrow-right"></i
               ></a>
             </div>
