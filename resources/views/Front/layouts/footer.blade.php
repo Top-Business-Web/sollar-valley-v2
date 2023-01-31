@@ -5,7 +5,7 @@
                 <div class="col-12 col-sm-6 col-md-6 col-lg-2">
                     <div class="footer-widget widget-links">
                         <div class="footer-widget-title">
-                            <h5>company</h5>
+                            <h5>@lang('site.company')</h5>
                         </div>
                         <div class="widget-content">
                             <ul>
@@ -20,7 +20,7 @@
                 <div class="col-12 col-sm-6 col-md-6 col-lg-2">
                     <div class="footer-widget widget-links">
                         <div class="footer-widget-title">
-                            <h5>Services</h5>
+                            <h5>@lang('site.services')</h5>
                         </div>
                         <div class="widget-content">
                             <!-- Get 5 Latest for Model Services -->
@@ -30,7 +30,7 @@
                             @foreach ($services as $service)
 
                                 <ul>
-                                    <li><a href="{{ route('service') }}">{{ $service->title_en }}</a></li>
+                                    <li><a href="{{ route('service') }}">{{ trans_model($service,'title') }}</a></li>
                                 </ul>
 
                             @endforeach
@@ -41,16 +41,15 @@
                 <div class="col-12 col-sm-6 col-md-6 col-lg-5">
                     <div class="footer-widget widget-links widget-icon">
                         <div class="footer-widget-title">
-                            <h5>support</h5>
+                            <h5>@lang('site.support')</h5>
                         </div>
                         <div class="widget-content">
                             <ul>
-                                <li>
-                                    <a href="{{ route('faqs') }}">Terms & Conditions</a>
-                                </li>
-                                <li><a href="{{ route('faqs') }}">@lang('site.Shipping Policy')</a></li>
-                                <li><a href="{{ route('faqs') }}">@lang('site.Delivery Tips')</a></li>
-                                <li><a href="{{ route('faqs') }}">Returns</a></li>
+                                @foreach($questions as $question)
+                                    <li>
+                                        <a href="{{ route('faqs') }}">{{ trans_model($question,'title') }}</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -63,18 +62,16 @@
 
 
                                 <li class="phone">
+                                    @lang('site.phone')
                                     <a href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a>
                                 </li>
 
 
-
                                 <li class="email">
-
-
 
                                     @lang('site.Email'):
                                     <a
-                                        href="#"
+                                        href="mailto:{{ $settings->email }}"
                                     ><span
                                             class="__cf_email__"
                                             data-cfemail="e1888f878ea1848f8493868880cf828e8c"
@@ -84,9 +81,8 @@
                                 </li>
 
 
-
                                 <li class="address">
-
+                                    @lang('site.address')
                                     <p>{{ $settings->address_en }}</p>
 
 
@@ -112,8 +108,8 @@
                         <div class="copyright">
                 <span
                 >
-                  all rights reserved @lang('site.by')
-                  <a href="https://topbusiness.io/contact3.html"> Top business</a>.
+                  @lang('site.all rights reserved') @lang('site.by')
+                  <a href="https://topbusiness.io/contact3.html"> Top Business</a>.
                     &copy; {{ date('Y') }}
                 </span>
                             <ul class="list-unstyled social-icons">
@@ -133,7 +129,6 @@
                                     ><i class="energia-youtube"></i>youtube</a
                                     >
                                 </li> --}}
-
 
 
                             </ul>

@@ -37,7 +37,7 @@ return [
     'Email' => 'Email',
     'get directions' => 'get directions',
     'facebook' => 'Facebook',
-    'all rights reserved.' => 'All rights reserved.',
+    'all rights reserved' => 'All rights reserved.',
     'by' => 'By',
 
 
@@ -55,7 +55,7 @@ return [
     'certified_engineers' => 'certified engineers',
     'unbeatable_pricing' => 'unbeatable pricing',
     'Discover_of_solar' => 'Discover independence through the power of solar',
-    'explore_our_plane' => 'explore our plane',
+    'explore_our_plans' => 'explore our plans',
     'read_more' => 'Read More',
     'find_solution' => 'Find Your Solution',
     'based_on' => 'Based On',
@@ -65,6 +65,15 @@ return [
     'Latest Products And Energy Supplies' => 'Latest Products And Energy Supplies',
     'explore all products' => 'explore all products',
     'how it works!' => 'how it works!',
+    'Fueling The Transition To Renewable Power' => 'Fueling The Transition To Renewable Power .',
+    'we design & ship' => 'we design & ship',
+    'contact title 1' => 'Commercial, Residential And Industrial Solar Systems!',
+    'contact title 2' => 'Our presence ensures timeliness, cost efficiency & compliance adherence!',
+    'schedule A Visit' => 'schedule A Visit',
+    'quote_desc' => 'We take great pride in everything that we do, control over products allows us to ensure our customers receive the best quality service.',
+    'send request' => 'send request',
+    'address' => 'address',
+
 
 
 ];

@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                         <form class="form-search">
-                            <input class="form-control" type="text" placeholder="type words then enter" />
+                            <input class="form-control" type="text" placeholder="type words then enter"/>
                             <button></button>
                         </form>
                     </div>
@@ -24,7 +24,7 @@
                 @foreach ($settings->sliders as $slider)
                     <div class="slide bg-overlay bg-overlay-dark-slider-2">
                         <div class="bg-section">
-                            <img src="{{ asset($slider) }}" alt="Background" />
+                            <img src="{{ asset($slider) }}" alt="Background"/>
                         </div>
 
                         <div class="container">
@@ -39,9 +39,9 @@
                                         </p>
                                         <div class="slide-action">
                                             <a class="btn btn--primary" href="{{ route('service') }}">
-                                                <span>our services</span><i class="energia-arrow-right"></i></a><a
+                                                <span>@lang('site.our services')</span><i class="energia-arrow-right"></i></a><a
                                                 class="btn btn--white justify-content-center"
-                                                href="{{ route('about_us') }}">more about us!</a>
+                                                href="{{ route('about_us') }}">@lang('site.more_about_us')</a>
                                         </div>
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@
 
     <section class="features-bar bg-overlay bg-overlay-theme3" id="featuresBar-1">
         <div class="bg-section">
-            <img src="{{ asset('assets/front') }}/assets/images/background/3.jpg" alt="background" />
+            <img src="{{ asset('assets/front') }}/assets/images/background/3.jpg" alt="background"/>
         </div>
         <div class="container">
             <div class="row g-0 features-holder">
@@ -63,7 +63,7 @@
                     <div class="feature-panel">
                         <div class="feature-content">
                             <i class="flaticon-024-energy"></i>
-                            <h5>Save Your Money</h5>
+                            <h5>@lang('site.save_your_money')</h5>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                     <div class="feature-panel">
                         <div class="feature-content">
                             <i class="flaticon-009-ecology-1"></i>
-                            <h5>Five Stars Service</h5>
+                            <h5>@lang('site.five_stars_service')</h5>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                     <div class="feature-panel">
                         <div class="feature-content">
                             <i class="flaticon-028-greenhouse"></i>
-                            <h5>Home Is Energy</h5>
+                            <h5>@lang('site.home_is_energy')</h5>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                     <div class="feature-panel">
                         <div class="feature-content">
                             <i class="flaticon-026-world"></i>
-                            <h5>Consultation &amp; Planning</h5>
+                            <h5>@lang('site.consultation_planning')</h5>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                     <div class="feature-panel">
                         <div class="feature-content">
                             <i class="flaticon-038-ecology"></i>
-                            <h5>Certified Engineers</h5>
+                            <h5>@lang('site.certified_engineers')</h5>
                         </div>
                     </div>
                 </div>
@@ -103,15 +103,16 @@
                     <div class="feature-panel">
                         <div class="feature-content">
                             <i class="flaticon-003-fuel-1"></i>
-                            <h5>Unbeatable Pricing</h5>
+                            <h5>@lang('site.unbeatable_pricing')</h5>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="more-features more-features-2">
-                    <p>Discover independence through the power of solar</p>
-                    <a class="btn btn--bordered btn--white" href="{{ route('service') }}">explore our plans</a>
+                    <p>@lang('site.Discover_of_solar')</p>
+                    <a class="btn btn--bordered btn--white"
+                       href="{{ route('service') }}">@lang('site.explore_our_plans')</a>
                 </div>
             </div>
         </div>
@@ -123,22 +124,19 @@
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <h2 class="heading-title">
-                            A Leading Supplier Of Solar Materials For Manufacturers
-                            Installers & Contractors.
+                            {{ lang() == 'ar' ? 'مورد رائد لمواد الطاقة الشمسية للمصنعين والمقاولين.' : 'A Leading Supplier Of Solar Materials For Manufacturers
+                            Installers & Contractors.' }}
                         </h2>
                     </div>
                     <div class="col-12 col-lg-6">
                         <p class="heading-desc">
-                            Today, our company is one of the most important PV suppliers
-                            in the Middle East region, Africa. Our sales offices and
-                            warehouses include PV industry experience enables us to
-                            provide in-depth material sourcing and supply chain expertise
-                            for every step of production and installation process.
+                            {!! trans_model($about,'desc') !!}
                         </p>
                         <div class="actions-holder">
                             <a class="btn btn--primary" href="{{ route('about_us') }}">
-                                read more<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                                                                   href="{{ route('service') }}">find your solution</a>
+                                @lang('site.read_more')<i class="energia-arrow-right"></i></a><a
+                                class="btn btn--bordered btn--white"
+                                href="{{ route('service') }}">@lang('site.find_solution')</a>
                         </div>
                     </div>
                 </div>
@@ -146,13 +144,13 @@
             <div class="row">
                 <div class="col-12 col-lg-5 offset-lg-7">
                     <div class="more-services more-services-2">
-                        <div class="rating">
+                        <div class="rating" style="margin-left:30px">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                 class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                         <p>
-                            <a href="javascript:void(0)">99.9% customer satisfaction</a>
-                            based on 750+ reviews and 6,154 completed projects
+                            <a href="javascript:void(0)"></a>
+                            @lang('site.based_on') {{ \App\Models\Project::count() }} @lang('site.completed_projects')
                         </p>
                     </div>
                 </div>
@@ -165,7 +163,7 @@
             <div class="video-wrapper">
                 <div class="video video-2" id="video-2">
                     <div class="bg-section">
-                        <img src="{{ asset('assets/front') }}/assets/images/sliders/3.jpg" alt="background" />
+                        <img src="{{ asset('assets/front') }}/assets/images/sliders/3.jpg" alt="background"/>
                     </div>
                 </div>
             </div>
@@ -174,40 +172,39 @@
                 <div class="about-block">
                     <div class="heading heading-1">
                         <p class="heading-subtitle heading-subtitle-bg">
-                            Complete Commercial And Residential Solar Systems
+                            @lang('site.Complete_Solar_Systems')
                         </p>
                         <h2 class="heading-title">
-                            The Pioneers World Of Solar And Renewable Energy!
+                            @lang('site.The Pioneers World Of Solar And Renewable Energy!')
                         </h2>
                         <p class="heading-desc">
-                            Our solar programs encompass a broad range of material
-                            sourcing, trade financing and inventory management services to
-                            help customers become more profitable by optimizing working
-                            capital and increasing liquidity.
+                            {!! trans_model($about,'desc') !!}
                         </p>
                         <div class="signature-block">
-                            <a class="btn btn--secondary" href="{{ route('about_us') }}">read more <i
+                            <a class="btn btn--secondary" href="{{ route('about_us') }}">
+                                @lang('site.read_more')<i
                                     class="energia-arrow-right"></i></a>
                             <div class="signature-body">
                                 <h6>michael brian</h6>
                                 <p>co founder</p>
                                 <img class="signature-img"
-                                     src="{{ asset('assets/front') }}/assets/images/signature/1.png" alt="signature" />
+                                     src="{{ asset('assets/front') }}/assets/images/signature/1.png" alt="signature"/>
                             </div>
                         </div>
                         <div class="advantages-list-holder">
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <p>
-                                        How can we meet the growing demand for electricity while
-                                        protecting our climate?
+                                        {{ lang() == 'ar' ? 'كيف يمكننا تلبية الطلب المتزايد على الكهرباء في حين
+                                         حماية مناخنا؟' : 'How can we meet the growing demand for electricity while
+                                        protecting our climate?' }}
                                     </p>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <ul class="list-unstyled advantages-list">
-                                        <li>Reliabe and performance</li>
-                                        <li>In-time manufacturing</li>
-                                        <li>Solar material financing</li>
+                                        <li>{{ lang() == 'ar' ? 'موثوقة والأداء' : 'Reliabe and performance' }}</li>
+                                        <li>{{ lang() == 'ar' ? 'التصنيع في الوقت المناسب' : 'In-time manufacturing' }}</li>
+                                        <li>{{ lang() == 'ar' ? 'تمويل مواد الطاقة الشمسية' : 'Solar material financing' }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -239,7 +236,7 @@
                         <div class="project-panel-holder">
                             <div class="project-img">
                                 <a class="link" href="{{ route('get.product', $product->id) }}"></a><img
-                                    src="{{ asset($product->images[0]) }}" alt="project image" />
+                                    src="{{ asset($product->images[0]) }}" alt="project image"/>
                             </div>
                             <div class="project-content">
                                 <div class="project-title">
@@ -258,7 +255,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="projects-load-more">
-                        <a class="btn btn--secondary" href="{{ route('product') }}">@lang('site.explore all products') <i
+                        <a class="btn btn--secondary" href="{{ route('product') }}">@lang('site.explore all products')
+                            <i
                                 class="energia-arrow-right"></i></a>
                     </div>
                 </div>
@@ -268,15 +266,15 @@
 
     <section class="processes processes-1 bg-overlay bg-overlay-theme4" id="processes-1">
         <div class="bg-section">
-            <img src="{{ asset('assets/front') }}/assets/images/background/wavy-pattern.png" alt="Background" />
+            <img src="{{ asset('assets/front') }}/assets/images/background/wavy-pattern.png" alt="Background"/>
         </div>
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="block-right-holder">
                     <div class="heading heading-light heading-light2">
-                        <p class="heading-subtitle">how it works!</p>
+                        <p class="heading-subtitle">@lang('site.how it works!')</p>
                         <h2 class="heading-title">
-                            Fueling The Transition To Renewable Power.
+                            @lang('site.Fueling The Transition To Renewable Power')
                         </h2>
                     </div>
                     <div class="counters-holder">
@@ -294,13 +292,13 @@
                                 <div class="counter-img">
                                     <div class="bg-section">
                                         <img src="{{ asset('assets/front') }}/assets/images/counters/1.jpg"
-                                             alt="image" />
+                                             alt="image"/>
                                     </div>
                                     <i class="flaticon-020-factory"></i>
                                 </div>
                             </div>
                             <div class="counter-desc">
-                                <p>Years Of Experience In The Solar Industry</p>
+                                <p>@lang('site.years_of_experience')</p>
                             </div>
                         </div>
                     </div>
@@ -310,76 +308,42 @@
                 <div class="processes-holder">
                     <div class="carousel owl-carousel carousel-dots process-content-carousel" data-slide="1"
                          data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0"
-                         data-loop="false" data-speed="800">
-                        <div>
-                            <div class="process-panel">
-                                <p class="process-number">01.</p>
-                                <div class="process-body">
-                                    <div class="process-content">
-                                        <h5>we design &amp; ship</h5>
-                                        <p>
-                                            We collaborate with you to design and deliver a system
-                                            that meets your utility usage and needs, We also
-                                            selecting equipment from 66+ manufacturers so you do
-                                            not have to be worried or compromise with your money
-                                            or with your effort.
-                                        </p>
+                         data-loop="turw" data-speed="800">
+                        @foreach($questions as $question)
+                            <div>
+                                <div class="process-panel">
+                                    <p class="process-number">{{ $loop->iteration }}.</p>
+                                    <div class="process-body">
+                                        <div class="process-content">
+                                            <h5>
+                                                {{ trans_model($question,'title') }}
+                                            </h5>
+                                            <p>
+                                                {!!  trans_model($question,'desc')  !!}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="process-panel">
-                                <p class="process-number">02.</p>
-                                <div class="process-body">
-                                    <div class="process-content">
-                                        <h5>contract or install</h5>
-                                        <p>
-                                            Whether you want to install the system or hire local
-                                            contractors, managing installation yourself ensures
-                                            the fastest return on your solar investment.We deliver
-                                            a system that meets your utility usage and needs, We
-                                            also selecting equipment from.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="process-panel">
-                                <p class="process-number">03.</p>
-                                <div class="process-body">
-                                    <div class="process-content">
-                                        <h5>power your home</h5>
-                                        <p>
-                                            Even after your system is installed and operating, you
-                                            can always count on Wholesale Solar to provide the
-                                            support you need, just contact us at any time, and we
-                                            will be there for you. Whether you want to install the
-                                            system or hire local contractors.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="images-holder">
                         <div class="carousel owl-carousel process-image-carousel" data-slide="1" data-slide-rs="1"
                              data-autoplay="true" data-drag="false" data-nav="false" data-dots="false" data-space="0"
                              data-loop="false" data-speed="800">
-                            <img src="{{ asset('assets/front') }}/assets/images/processes/1.jpg" alt="process" /><img
-                                src="assets/images/processes/2.jpg" alt="process" /><img
-                                src="{{ asset('assets/front') }}/assets/images/processes/3.jpg" alt="process" />
+                            <img src="{{ asset('assets/front') }}/assets/images/processes/1.jpg" alt="process"/><img
+                                src="assets/images/processes/2.jpg" alt="process"/><img
+                                src="{{ asset('assets/front') }}/assets/images/processes/3.jpg" alt="process"/>
                         </div>
                         <div class="processes-panel">
                             <h3 class="panel-title">
-                                Commercial, Residential And Industrial Solar Systems!
+                                @lang('site.contact title 1')
                             </h3>
                             <p class="panel-desc">
-                                Our presence ensures timeliness, cost efficiency &
-                                compliance adherence!
+                                @lang('site.contact title 2')
                             </p>
-                            <a href="{{ route('contact') }}">schedule A Visit <i class="energia-arrow-right"></i></a>
+                            <a href="{{ route('contact') }}">@lang('site.schedule A Visit') <i
+                                    class="energia-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -390,39 +354,33 @@
     <section class="contact contact-2" style="margin-top: 250px" id="contact-2">
         <div class="contact-overlay bg-overlay bg-overlay-theme5" style="top: 25%;">
             <div class="bg-section">
-                <img src="{{ asset('assets/front') }}/assets/images/background/4.jpg" alt="background" />
+                <img src="{{ asset('assets/front') }}/assets/images/background/4.jpg" alt="background"/>
             </div>
         </div>
         <div class="container">
             <div class="contact-panel contact-panel-3">
                 <div class="heading heading-light heading-10">
                     <h2 class="heading-title">
-                        Provide Value To Our ClientsThrough Ongoing Product &
-                        Innovation.
+                        {{ trans_model($about,'title') }}
                     </h2>
                     <p class="heading-desc">
-                        We offer products, solutions, and services across the entire
-                        energy value chain. We support our customers on their way to a
-                        more sustainable future.
+                        {!!   Str::limit(trans_model($about,'desc'),200) !!}
                     </p>
                     <div class="contact-action contact-action-2">
-                        <a class="btn btn--white" href="{{ route('about_us') }}">learn more <i
+                        <a class="btn btn--white" href="{{ route('about_us') }}">@lang('site.read_more')<i
                                 class="energia-arrow-right"></i></a>
                     </div>
 
                 </div>
                 <div class="contact-card">
                     <div class="contact-body">
-                        <h5 class="card-heading">Request A Quote</h5>
+                        <h5 class="card-heading">@lang('site.request a quote')</h5>
                         <p class="card-desc">
-                            We take great pride in everything that we do, control over
-                            products allows us to ensure our customers receive the best
-                            quality service.
+                            @lang('site.quote_desc')
                         </p>
                         <div class="col-12">
                             <a href="{{ route('quoteIndex') }}">
-                                <button class="btn btn--secondary w-100" type="submit">
-                                    Send Request <i class="energia-arrow-right"></i>
+                                <button class="btn btn--secondary w-100" type="submit">@lang('site.send request')<i class="energia-arrow-right"></i>
                                 </button>
                             </a>
                         </div>

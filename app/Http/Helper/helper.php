@@ -62,14 +62,6 @@ if (!function_exists('trans_model')) {
 
 }
 
-if (!function_exists('transGo')) {
-
-    function transGo($word){;
-        return \Stichoza\GoogleTranslate\GoogleTranslate::trans($word,App::getLocale());
-    }
-
-}
-
 function get_font_icons(){
     $icons = array (
         0 => 'fab fa-500px',

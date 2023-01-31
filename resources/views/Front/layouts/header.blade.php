@@ -65,8 +65,7 @@
                     <img @if (lang() == 'en') src="{{ asset('assets/front/') }}/assets/images/module-language/en.png"
                          @else
                              src="{{ asset('assets/front/') }}/assets/images/module-language/ar.png" @endif
-                         alt="En Language" /><span>{{ lang() == 'en' ? 'english' : 'العربية' }}</span><i
-                        class="fas fa-chevron-down"></i>
+                         alt="En Language" /><span>{{ lang() == 'en' ? ' english ' : ' العربية ' }}</span>
                 </div>
                 <div class="lang-list">
                     <ul>
@@ -78,18 +77,6 @@
                                 </a>
                             </li>
                         @endforeach
-                        {{--          <li> --}}
-                        {{--            <img --}}
-                        {{--              src="{{ asset('assets/front/') }}/assets/images/module-language/en.png" --}}
-                        {{--              alt="En Language" --}}
-                        {{--            /><a href="#">english</a> --}}
-                        {{--          </li> --}}
-                        {{--          <li> --}}
-                        {{--            <img --}}
-                        {{--              src="{{ asset('assets/front/') }}/assets/images/module-language/ar.png" --}}
-                        {{--              alt="AR Language" --}}
-                        {{--            /><a href="#">arabic</a> --}}
-                        {{--          </li> --}}
                     </ul>
                 </div>
             </div>
@@ -130,21 +117,21 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'home') active @endif"
+                <li class="nav-item   @if (Route::currentRouteName() == 'home') active @endif" id="contact"
                     data-hover="">
-                    <a class="dropdown-toggle" href="{{ route('home') }}"><span>@lang('site.home')</span></a>
+                    <a    href="{{ route('home') }}"><span>@lang('site.home')</span></a>
                 </li>
-                <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'about_us') active @endif"
+                <li class="nav-item   @if (Route::currentRouteName() == 'about_us') active @endif" id="contact"
                     data-hover="">
-                    <a class="dropdown-toggle" href="{{ route('about_us') }}"><span>@lang('site.about us')</span></a>
+                    <a    href="{{ route('about_us') }}"><span>@lang('site.about us')</span></a>
                 </li>
-                <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'service') active @endif"
+                <li class="nav-item   @if (Route::currentRouteName() == 'service') active @endif" id="contact"
                     data-hover="">
-                    <a class="dropdown-toggle" href="{{ route('service') }}"><span>@lang('site.services')</span></a>
+                    <a    href="{{ route('service') }}"><span>@lang('site.services')</span></a>
                 </li>
-                <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'product') active @endif"
+                <li class="nav-item   @if (Route::currentRouteName() == 'product') active @endif" id="contact"
                     data-hover="">
-                    <a class="dropdown-toggle" href="{{ route('product') }}"><span>@lang('site.products')</span></a>
+                    <a href="{{ route('product') }}"><span>@lang('site.products')</span></a>
                 </li>
                 <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'product') active @endif"
                 data-hover="">
