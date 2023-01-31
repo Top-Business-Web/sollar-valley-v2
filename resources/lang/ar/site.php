@@ -41,11 +41,10 @@ return [
     'by' => 'بواسطة',
 
 
-
     // content
     'our services' => 'خدماتنا',
     'get started' => 'البدء',
-    'happy clients'=> 'عملاء سعداء',
+    'happy clients' => 'عملاء سعداء',
     'more_about_us' => 'المزيد عنا',
     'Our Clients' => 'عملائنا',
     'save_your_money' => 'وفر نقودك',
@@ -75,6 +74,21 @@ return [
     'send request' => 'ارسل طلب',
     'address' => 'العنوان',
 
+
+    /// ////  eldapour
+    'Projects' => 'المشاريع',
+    'all' => 'الكل',
+    'our office map' => 'خريطة مكتبنا',
+    'Emergency Line' => 'خط الطوارئ',
+    'Location' => 'موقع',
+    'contact_desc' => 'نحن نفخر في كل ما نقوم به ، والتحكم فيه
+                                     تسمح لنا المنتجات بضمان حصول عملائنا على
+                                     أفضل خدمة ذات جودة.',
+    'select your services' => 'حدد خدماتك',
+    'get in touch' => 'ابقى على تواصل',
+    'name' => 'اسم',
+    'additional information' => 'معلومة اضافية',
+
     // Service
     'We offer' => 'نحن نقدم المنتجات والحلول والخدمات في جميع أنحاء سلسلة قيمة الطاقة. نحن ندعم عملائنا في طريقهم إلىمستقبل أكثر استدامة.',
     'explore our plans' => 'اكتشف خططنا',
@@ -102,4 +116,5 @@ return [
     'All products' => 'جميع المنتجات',
     'search' => 'بحث',
     'recent products' => 'المنتجات الأخيرة',
+
 ];
