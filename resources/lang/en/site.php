@@ -76,4 +76,34 @@ return [
 
 
 
+
+    //
+    'We offer' => 'We Offer Products, Solutions, And Services Across The Entire Energy Value Chain. We Support Our Customers On Their Way To A More Sustainable Future.',
+    'energize society with sustainable energy!' => 'Energize Society With Sustainable Energy!',
+    'a sleading supplier of solar materials for manufacturers,installers & contractors.' => 'A Leading Supplier Of Solar Materials For Manufacturers,Installers & Contractors.',
+    'sustainable, reliable & affordable energy!' => 'Sustainable, Reliable & Affordable Energy!',
+    'providing value to our clientsThrough ongoing product & innovation.' => 'Providing Value To Our ClientsThrough Ongoing Product & Innovation.',
+    'While improving the yield and performance of solar energy products, our PV industry experience enables us to provide in-depth material sourcing, financing and supply chain expertise for every step.' => 'While improving the yield and performance of solar energy products, our PV industry experience enables us to provide in-depth material sourcing, financing and supply chain expertise for every step.',
+    'Raw polycrystalline silicon for PV manufacturing. Offered invarious grades and formats including chunks, chips, powder and ingot.' => 'Raw polycrystalline silicon for PV manufacturing. Offered invarious grades and formats including chunks, chips, powder and ingot.',
+    'Find Your Solution Now!' => 'Find Your Solution Now!',
+    'As a world wide distributor of solar supplies we endeavor provide fast and knowledgeable service, we can get all the materials you need by sea or air.' => 'As a world wide distributor of solar supplies we endeavor provide fast and knowledgeable service, we can get all the materials you need by sea or air.',
+    'global offic map' => 'global offic map',
+    'Emergency Line' => 'Emergency Line',
+    'Location' => 'Location',
+    'Contact Us' => 'Contact Us',
+    'shop' => 'shop',
+    'showing' => 'showing',
+    'of' => 'of',
+    'default' => 'default',
+    'Newest Products' => 'Newest Products',
+    'oldest Products' => 'oldest Products',
+    'filter' => 'filter',
+    'categories' => 'categories',
+    'All products' => 'All products',
+    'search' => 'search',
+    'recent products' => 'recent products',
+
+
+
+
 ];

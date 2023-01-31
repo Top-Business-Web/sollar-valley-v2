@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3">
                         <div class="title text-center">
-                            <h1 class="title-heading">products</h1>
+                            <h1 class="title-heading">@lang('site.products')</h1>
                         </div>
                     </div>
                 </div>
@@ -21,9 +21,9 @@
         <div class="breadcrumb-wrap">
             <div class="container">
                 <ol class="breadcrumb d-flex">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="">company</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                    <li class="breadcrumb-item"><a href="index.html">@lang('site.home')</a></li>
+                    <li class="breadcrumb-item"><a href="">@lang('site.company')</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@lang('site.shop')</li>
                 </ol>
             </div>
         </div>
@@ -37,18 +37,18 @@
                         <div class="col-12">
                             <div class="shop-options">
                                 <div class="products-show">
-                                    <p>showing {{ $products->count() }} of {{ \App\Models\Product::count() }}
-                                        products</p>
+                                    <p>@lang('site.showing') {{ $products->count() }} @lang('site.of') {{ \App\Models\Product::count() }}
+                                        @lang('site.products')</p>
                                 </div>
                                 <div class="products-sort">
                                     <div class="select-holder">
                                         <select class="product-sort" id="product-sort">
-                                            <option value="default" selected>default</option>
-                                            <option value="new">Newest Products</option>
-                                            <option value="old">oldest Products</option>
+                                            <option value="default" selected>@lang('site.default')</option>
+                                            <option value="new">@lang('site.Newest Products')</option>
+                                            <option value="old">@lang('site.oldest Products')</option>
                                         </select>
                                         <button style="width: 100px;height: 60px;" class="btn btn-sm btn-primary"
-                                                type="button" id="sort-btn">filter
+                                                type="button" id="sort-btn">@lang('site.filter')
                                         </button>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
 
                                     <div class="product-content">
                                         <div class="product-title">
-                                            <a href="{{ route('get.product', $product->id) }}">{{ $product->title_en }}</a>
+                                            <a href="{{ route('get.product', $product->id) }}">{{ trans_model($product,'title') }}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -81,13 +81,13 @@
                     <div class="sidebar sidebar-shop">
                         <div class="widget widget-categories">
                             <div class="widget-title">
-                                <h5>categories</h5>
+                                <h5>@lang('site.categories')</h5>
                             </div>
                             <div class="widget-content">
                                 <ul class="list-unstyled">
                                     <li>
                                         <a data-id="all" class="category-sort">
-                                            All products
+                                            @lang('site.All products')
                                         </a>
                                         <span>{{ $products->count() }}</span>
                                     </li>
@@ -109,7 +109,7 @@
 
                         <div class="widget widget-search">
                             <div class="widget-title">
-                                <h5>search</h5>
+                                <h5>@lang('site.search')</h5>
                             </div>
                             <div class="widget-content">
                                 <form class="form-search">
@@ -126,7 +126,7 @@
 
                         <div class="widget widget-recent-products">
                             <div class="widget-title">
-                                <h5>recent products</h5>
+                                <h5>@lang('site.recent products')</h5>
                                 <?php $recents = \App\Models\Product::latest()
                                     ->take(3)
                                     ->get(); ?>
