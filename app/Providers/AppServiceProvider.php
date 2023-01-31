@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Question;
 use App\Models\Setting;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
@@ -28,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         View::share('settings',Setting::first());
+        View::share('questions',Question::latest()->take(4)->get());
         Paginator::useBootstrap();
     }
 }

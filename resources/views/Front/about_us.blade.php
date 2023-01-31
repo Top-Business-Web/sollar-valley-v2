@@ -47,8 +47,7 @@
         <div class="breadcrumb-wrap">
             <div class="container">
                 <ol class="breadcrumb d-flex">
-                    <li class="breadcrumb-item"><a href="index.html">@lang('site.home')</a></li>
-                    <li class="breadcrumb-item"><a href="">@lang('site.company')</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}">@lang('site.home')</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
                         @lang('site.About Us')
                     </li>
@@ -89,7 +88,7 @@
                     <div class="heading heading-1">
 
                         <h2 class="heading-title">
-                            {{ $about_us->title_en }}
+                            {{ trans_model($about_us,'title') }}
                         </h2>
                     </div>
                     <div class="about-block">
@@ -167,7 +166,7 @@
                         <div class="actions-holder">
                             <a class="btn btn--primary btn--inversed" href="{{ route('contact') }}">
                                 @lang('site.get started')<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                                                                     href="{{ route('about_us') }}">@lang('site.explore_our_plane')</a>
+                                                                                     href="{{ route('about_us') }}">@lang('site.explore_our_plans')</a>
                         </div>
                     </div>
                 </div>
@@ -225,34 +224,29 @@
             <div class="contact-panel contact-panel-3">
                 <div class="heading heading-light heading-6">
                     <p class="heading-subtitle">
-                        Improving The Performance Of Solar Energy.
+                        {{ trans_model($about_us,'hash') }}
                     </p>
                     <h2 class="heading-title">
-                        Discover Independence Through Using The Power Of Solar Panels!
+                        {{ trans_model($about_us,'title') }}
                     </h2>
                     <p class="heading-desc">
-                        We offer products, solutions, and services across the entire
-                        energy value chain. We support our customers on their way to a
-                        more sustainable future – no matter how far along the journey to
-                        energize society with affordable energy systems.
+                        {!!  Str::limit(trans_model($about_us,'desc'),200)  !!}
                     </p>
                     <div class="contact-action">
-                        <a class="btn btn--white" href="{{ route('about_us') }}">learn more <i
+                        <a class="btn btn--white" href="{{ route('about_us') }}">@lang('site.read_more') <i
                                 class="energia-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="contact-card">
                     <div class="contact-body">
-                        <h5 class="card-heading">Request A Quote</h5>
+                        <h5 class="card-heading">@lang('site.request a quote')</h5>
                         <p class="card-desc">
-                            We take great pride in everything that we do, control over
-                            products allows us to ensure our customers receive the best
-                            quality service.
+                            @lang('site.quote_desc')
                         </p>
                         <div class="col-12">
                             <a href="{{ route('quoteIndex') }}">
                                 <button class="btn btn--secondary w-100" type="submit">
-                                    Send Request <i class="energia-arrow-right"></i>
+                                    @lang('site.send request') <i class="energia-arrow-right"></i>
                                 </button>
                             </a>
                         </div>
