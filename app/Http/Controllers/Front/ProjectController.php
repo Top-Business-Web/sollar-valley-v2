@@ -22,7 +22,7 @@ class ProjectController extends Controller
 
     public function oneProject($id)
     {
-        $projects = Project::get();
+        $projects = Project::latest()->take(6)->get();
         $settings = Setting::first();
         $oneProject = Project::findOrFail($id);
         return view('Front.project-single', compact('settings', 'oneProject', 'projects'));
@@ -60,6 +60,7 @@ class ProjectController extends Controller
                                         <h4>
                                             <a href="' . route('project', $project->id) . '"
                                             >' . trans_model($project,'title') . '</a
+
                                             >
                                         </h4>
                                     </div>

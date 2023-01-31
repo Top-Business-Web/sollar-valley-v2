@@ -16,7 +16,7 @@ class CreateSlidersTable extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             $table->text('image_about');
-            $table->text('image_service');
+            $table->text('image_services');
             $table->text('image_product');
             $table->text('image_faqs');
             $table->text('image_project');
