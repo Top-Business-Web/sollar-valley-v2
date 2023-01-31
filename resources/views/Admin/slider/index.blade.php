@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Image Service :</label>
+                                <label for="">Image About Us :</label>
                                 <input type="file" name="image_about" class="dropify"
                                     data-default-file="{{ asset($slider->image_about) }}" />
                             </div>
@@ -22,8 +22,16 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Image Service :</label>
-                                <input type="file" name="image_services" class="dropify"
-                                    data-default-file="{{ asset($slider->image_services) }}" />
+                                <input type="file" name="image_service" class="dropify"
+                                    data-default-file="{{ asset($slider->image_service) }}" />
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="">Image Project :</label>
+                                <input type="file" name="image_project" class="dropify"
+                                    data-default-file="{{ asset($slider->image_project) }}" />
                             </div>
 
                         </div>

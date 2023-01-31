@@ -21,7 +21,7 @@ class SliderController extends Controller
     public function sliderUpdate(StoreSlider $request)
     {
 
-        // dd($request->all());
+
         // $inputs = $request->all(); aadads
 
             $sliders = Slider::find($request->id);
@@ -34,11 +34,11 @@ class SliderController extends Controller
                     $inputs['image_about'] = $this->saveImage($request->image_about, 'assets/uploads/sliders', 'photo');
                 }
 
-                if ($request->has('image_services')) {
-                    if (file_exists($sliders->image_services)) {
-                        unlink($sliders->image_services);
+                if ($request->has('image_service')) {
+                    if (file_exists($sliders->image_service)) {
+                        unlink($sliders->image_service);
                     }
-                    $inputs['image_services'] = $this->saveImage($request->image_services, 'assets/uploads/sliders', 'photo');
+                    $inputs['image_service'] = $this->saveImage($request->image_service, 'assets/uploads/sliders', 'photo');
                 }
 
                 if ($request->has('image_product')) {
@@ -53,6 +53,13 @@ class SliderController extends Controller
                         unlink($sliders->image_faqs);
                     }
                     $inputs['image_faqs'] = $this->saveImage($request->image_faqs, 'assets/uploads/sliders', 'photo');
+                }
+
+                if ($request->has('image_project')) {
+                    if (file_exists($sliders->image_project)) {
+                        unlink($sliders->image_project);
+                    }
+                    $inputs['image_project'] = $this->saveImage($request->image_project, 'assets/uploads/sliders', 'photo');
                 }
 
 

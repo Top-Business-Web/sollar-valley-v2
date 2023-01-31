@@ -42,6 +42,12 @@ Route::group(
         Route::get('/filter', 'ProductController@filter')->name('product-filter');
         Route::get('/categorySort', 'ProductController@categorySort')->name('categorySort');
 
+        #### Project ####
+        Route::get('/projects', 'ProjectController@index')->name('projects');
+        Route::get('/project/{id}', 'ProjectController@oneProject')->name('project');
+        Route::get('/categoryProject', 'ProjectController@categorySort')->name('category_Sort');
+        Route::get('/loadMore', 'ProjectController@loadMore')->name('loadMore');
+
         #### Single ####
         Route::get('/product/{id}', 'SingleController@getProduct')->name('get.product');
 
@@ -54,8 +60,7 @@ Route::group(
         #### Faqs ####
         Route::get('/faqs', 'QuestionController@index')->name('faqs');
 
-        #### Projects ####
-        Route::get('/projects','ProjectController@index')->name('projects');
+
 
     }
 );

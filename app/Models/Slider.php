@@ -13,9 +13,10 @@ class Slider extends Model
 
     protected $fillable = [
         'image_about',
-        'image_services',
+        'image_service',
         'image_product',
-        'image_faqs'
+        'image_faqs',
+        'image_project'
     ];
-     public $timestamps = false;
 }
+

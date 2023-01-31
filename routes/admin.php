@@ -37,6 +37,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     #### Product ####
     Route::resource('/product', 'ProductController');
 
+    #### Project ####
+    Route::resource('/project', 'ProjectController');
+
     #### Settings ####
     Route::resource('/settings', 'SettingController');
 

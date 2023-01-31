@@ -188,7 +188,7 @@
                         <div class="product-item" data-hover="">
                             <div class="product-img-wrap">
                                 <div class="product-img">
-                                    <img src="{{ asset($item->images[0]) }}" alt="Product" />
+                                    <img src="{{ asset($item->image) }}" alt="Product" />
                                 </div>
                             </div>
                             <div class="product-content">
