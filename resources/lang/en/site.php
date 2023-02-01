@@ -118,7 +118,7 @@ return [
     'search' => 'search',
     'recent products' => 'recent products',
     'project' => 'project',
-    
+
 
 
 
@@ -127,4 +127,25 @@ return [
     'client' => 'client',
     'related Projects' => 'related Projects',
     'explore all projects' => 'explore all projects',
+
+
+
+    'Improving The Performance Of Solar Energy.' => 'Improving The Performance Of Solar Energy.',
+    'Discover Independence Through Using The Power Of Solar Panels!' => 'Discover Independence Through Using The Power Of Solar Panels!',
+    'Reliabe and performance' => 'Reliabe and performance',
+    'Solar material financing' => 'Solar material financing',
+    'In-time manufacturing' => 'In-time manufacturing',
+    '50% more energy output' => '50% more energy output',
+    'Built using ntype mono' => 'Built using ntype mono',
+    'Receive an accurate' => 'Receive an accurate quote within 3-5 days when you fill out this form. Or, give us a call:',
+    'We take great pride' => 'We take great pride in everything that we do, control over products allows us to ensure our customers receive the best quality service.',
+    'First name' => 'First name',
+    'Last name' => 'Last name',
+    'write street address' => 'write street address',
+    'Phone' => 'Phone',
+    'select product' => 'select product',
+    'submit request' => 'submit request',
+    'Street address' => 'Street address',
+    'learn more' => 'learn more',
+    'our core values' => 'our core values',
 ];
