@@ -10,7 +10,7 @@
     <title>
         Solar Valley
     </title>
-    <link href="assets/images/favicon/favicon.png" rel="icon"/>
+    <link href="{{ asset($settings->logo) }}" rel="icon"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link

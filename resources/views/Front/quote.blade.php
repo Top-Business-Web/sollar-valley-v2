@@ -148,7 +148,7 @@
                                                 <h5>@lang('site.select product')</h5>
                                             </div>
                                             <div class="widget-content">
-                                                <select class="form-control" name="product_id" id="select-product">
+                                                <select class="form-control" name="product_id">
                                                    @foreach($products as $product)
                                                        <option value="{{ $product->id }}">
                                                            <div>
