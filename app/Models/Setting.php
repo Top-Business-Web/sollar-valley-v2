@@ -25,6 +25,7 @@ class Setting extends Model
         'youtube',
         'facebook',
         'twitter',
+        'liked_in',
         'terms_conditions',
         'shipping_policy',
         'returns',

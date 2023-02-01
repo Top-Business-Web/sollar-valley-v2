@@ -92,10 +92,10 @@
                     if (data.status === 200) {
                         $("#dismiss_delete_modal")[0].click();
                         $('#dataTable').DataTable().ajax.reload();
-                        toastr.success(data.message)
+                        toastr.success('Deleted Successfully')
                     } else {
                         $("#dismiss_delete_modal")[0].click();
-                        toastr.error(data.message)
+                        toastr.error('Something went wrong ..');
                     }
                 }
             });
@@ -124,23 +124,23 @@
                 data: formData,
                 beforeSend: function () {
                     $('#addButton').html('<span class="spinner-border spinner-border-sm mr-2" ' +
-                        ' ></span> <span style="margin-left: 4px;">انتظر ..</span>').attr('disabled', true);
+                        ' ></span> <span style="margin-left: 4px;"></span>Wait..</span>').attr('disabled', true);
                 },
                 success: function (data) {
                     if (data.status === 200) {
                         $('#dataTable').DataTable().ajax.reload();
-                        toastr.success('تم الاضافة بنجاح');
+                        toastr.success('Added Successfully');
                     } else if(data.status === 405){
                         toastr.error(data.mymessage);
                     }
                     else
-                        toastr.error('هناك خطأ ما ..');
+                        toastr.error('Something went wrong ..');
                     $('#addButton').html(`اضافة`).attr('disabled', false);
                     $('#editOrCreate').modal('hide')
                 },
                 error: function (data) {
                     if (data.status === 500) {
-                        toastr.error('هناك خطأ ما ..');
+                        toastr.error('Something went wrong ..');
                     } else if (data.status === 422) {
                         var errors = $.parseJSON(data.responseText);
                         $.each(errors, function (key, value) {
@@ -153,7 +153,7 @@
                             }
                         });
                     } else
-                        toastr.error('هناك خطأ ما ..');
+                        toastr.error('Something went wrong ..');
                     $('#addButton').html(`اضافة`).attr('disabled', false);
                 },//end error method
 
@@ -189,21 +189,21 @@
                 data: formData,
                 beforeSend: function () {
                     $('#updateButton').html('<span class="spinner-border spinner-border-sm mr-2" ' +
-                        ' ></span> <span style="margin-left: 4px;">انتظر ..</span>').attr('disabled', true);
+                        ' ></span> <span style="margin-left: 4px;">Wait ..</span>').attr('disabled', true);
                 },
                 success: function (data) {
                     $('#updateButton').html(`تعديل`).attr('disabled', false);
-                    if (data.status == 200) {
+                    if (data.status === 200) {
                         $('#dataTable').DataTable().ajax.reload();
-                        toastr.success('تم التعديل بنجاح');
+                        toastr.success('Updated Successfully');
                     } else
-                        toastr.error('هناك خطأ ما ..');
+                        toastr.error('Something went wrong ..');
 
                     $('#editOrCreate').modal('hide')
                 },
                 error: function (data) {
                     if (data.status === 500) {
-                        toastr.error('هناك خطأ ما ..');
+                        toastr.error('Something went wrong ..');
                     } else if (data.status === 422) {
                         var errors = $.parseJSON(data.responseText);
                         $.each(errors, function (key, value) {
@@ -216,7 +216,7 @@
                             }
                         });
                     } else
-                        toastr.error('هناك خطأ ما ..');
+                        toastr.error('Something went wrong ..');
                     $('#updateButton').html(`تعديل`).attr('disabled', false);
                 },//end error method
 
@@ -252,10 +252,10 @@
                     if (data.status === 200) {
                         $("#dismiss_delete_modal")[0].click();
                         $('#dataTable').DataTable().ajax.reload();
-                        toastr.success(data.message)
+                        toastr.success('Deleted Successfully')
                     } else {
                         $("#dismiss_delete_modal")[0].click();
-                        toastr.error(data.message)
+                        toastr.error('Something went wrong ..');
                     }
                 }
             });

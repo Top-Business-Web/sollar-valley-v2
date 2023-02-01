@@ -88,15 +88,15 @@
                         $('#updateButton').html(`تعديل`).attr('disabled', false);
                         if (data.status == 200) {
                             $('#dataTable').DataTable().ajax.reload();
-                            toastr.success('تم التعديل بنجاح');
+                            toastr.success('Updatde Successfully');
                         } else
-                            toastr.error('هناك خطأ ما ..');
+                            toastr.error('Something Went Wrong ..');
 
                         $('#editOrCreate').modal('hide')
                     },
                     error: function(data) {
                         if (data.status === 500) {
-                            toastr.error('هناك خطأ ما ..');
+                            toastr.error('Something Went Wrong ..');
                         } else if (data.status === 422) {
                             var errors = $.parseJSON(data.responseText);
                             $.each(errors, function(key, value) {
@@ -109,7 +109,7 @@
                                 }
                             });
                         } else
-                            toastr.error('هناك خطأ ما ..');
+                            toastr.error('Something Went Wrong ..');
                         $('#updateButton').html(`تعديل`).attr('disabled', false);
                     }, //end error method
 
