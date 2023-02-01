@@ -25,25 +25,18 @@
 
 </main>
 
-
-{{--<div style="position: absolute;right: 14px !important;top: 100px;">--}}
-{{--    <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="dangerToast"--}}
-{{--         aria-atomic="true">--}}
-{{--        <div class="toast-header border-0">--}}
-{{--            <i class="ni ni-notification-70 text-danger me-2"></i>--}}
-{{--            <span class="me-auto text-gradient text-danger font-weight-bold"></span>--}}
-
-{{--            <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>--}}
-{{--        </div>--}}
-{{--        <hr class="horizontal dark m-0">--}}
-{{--        <div class="toast-body">--}}
-{{--            theres something wrong--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-
 @toastr_js
 @toastr_render
+@if((Route::currentRouteName() == 'adminHome'))
+<div class="row">
+    <div class="col-12">
+        <div id="globe" class="position-absolute end-0 top-10 mt-sm-3 mt-7 me-lg-7">
+            <canvas width="700" height="600" class="w-lg-100 h-lg-100 w-75 h-75 me-lg-0 me-n10 mt-lg-5"></canvas>
+        </div>
+    </div>
+</div>
+@endif
+
 <!--  script   -->
 @include('Admin.layouts.script')
 <!--  script   -->
