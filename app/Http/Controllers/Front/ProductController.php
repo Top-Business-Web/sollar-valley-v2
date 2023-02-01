@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
@@ -107,8 +108,8 @@ class ProductController extends Controller
         if ($request->ajax()) {
             if ($request->id && $request->id !== 'all') {
                 $id = $request->id;
-                $products = Product::where('category_id','=',$id)->get();
-            }else if ($request->id && $request->id == 'all') {
+                $products = Product::where('category_id', '=', $id)->get();
+            } else if ($request->id && $request->id == 'all') {
                 $products = Product::get();
             }
             $output = '';
@@ -140,5 +141,5 @@ class ProductController extends Controller
                 return response('no data', 404);
             }
         }
-    }
+    } // end Category sorts
 }

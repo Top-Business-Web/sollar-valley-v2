@@ -69,16 +69,16 @@
                         </div>
                     </div>
                     <div class="contact-action">
-                        <a class="btn btn--primary" href="page-about.html">learn more <i
+                        <a class="btn btn--primary" href="{{ route('about_us') }}">learn more <i
                                 class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                                                       href="page-faqs.html">our core values</a>
+                                                                       href="{{ route('faqs') }}">our core values</a>
                     </div>
                     <div class="contact-quote contact-quote-3">
                         <img src="{{ asset('assets/front') }}/assets/images/icons/noteicon-2.png" alt="icon"/>
                         <p>
                             Receive an accurate quote within 3-5 days when you fill out
                             this form. Or, give us a call:
-                            <a href="tel:01061245741">(002) 01061245741</a>
+                            <a href="{{ $settings->phone }}">{{ $settings->phone }}</a>
                         </p>
                     </div>
                 </div>

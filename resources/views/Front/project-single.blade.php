@@ -11,12 +11,12 @@
           </h3>
           <div class="breadcrumb-wrap">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('home') }}">@lang('site.home')</a></li>
               <li class="breadcrumb-item">
-                <a href="projects-modern.html">projects</a>
+                <a href="projects-modern.html">@lang('site.Projects')</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Expanding The Solar Supply Chain Finance Program
+                  {{ trans_model($oneProject,'title') }}
               </li>
             </ol>
           </div>
@@ -35,23 +35,23 @@
               <div class="project-panel-holder">
                 <div class="project-content">
                   <div class="project-cat">
-                    <a href="{{ route('service') }}">About Services</a>
+                    <a href="{{ route('service') }}">@lang('site.our services')</a>
                   </div>
                   <div class="project-title">
                     <h4>
-                      <a href="projects-standard.html"
-                      >{{ $oneProject->service->title_en }}</a
+                      <a href="{{ route('service') }}"
+                      >{{ trans_model($oneProject->service,'title') }}</a
                       >
                     </h4>
                   </div>
                   <div class="project-desc">
                     <p>
-                      {{ $oneProject->desc_en }}
+                      {{ trans_model($oneProject,'desc') }}
                     </p>
                   </div>
                   <div class="project-more">
                     <a class="btn btn--primary" href="{{ route('quoteIndex') }}"
-                    >request a quote <i class="energia-arrow-right"></i
+                    >@lang('site.request a quote') <i class="energia-arrow-right"></i
                     ></a>
                   </div>
                 </div>
@@ -67,16 +67,16 @@
         <div class="heading heading-20">
           <div class="row">
             <div class="col-12 col-lg-5">
-              <p class="heading-subtitle">the overview!</p>
+              <p class="heading-subtitle">@lang('site.the overview')</p>
               <h2 class="heading-title">
-                {{ $oneProject->title_en }}
+                {{ trans_model($oneProject,'title') }}
               </h2>
             </div>
           </div>
           <div class="row">
             <div class="col-12 col-lg-6">
               <p class="heading-desc">
-            {{ $oneProject->desc_en }}
+            {{ trans_model($oneProject,'desc') }}
               </p>
               {{-- <p class="heading-desc">
                 Our high-efficiency PV cells are suitable for a broad range
@@ -91,24 +91,24 @@
                 <table class="table">
                   <tbody>
                   <tr>
-                    <td class="name">client:</td>
+                    <td class="name">@lang('site.client'):</td>
                     <td class="value">{{ $oneProject->client }}</td>
                   </tr>
                   <tr>
-                    <td class="name">location:</td>
+                    <td class="name">@lang('site.Location'):</td>
                     <td class="value">{{ $oneProject->location }}</td>
                   </tr>
                   <tr>
-                    <td class="name">services:</td>
+                    <td class="name">@lang('site.services'):</td>
                     <td class="value">
-                      {{ $oneProject->service->title_en }}
+                      {{ trans_model($oneProject->service,'title') }}
                     </td>
                   </tr>
                   </tbody>
                 </table>
               </div>
               <a class="btn btn--secondary" href="{{ route('contact') }}"
-              >Contact <i class="energia-arrow-right"></i
+              >@lang('site.contact') <i class="energia-arrow-right"></i
               ></a>
             </div>
           </div>
@@ -878,7 +878,7 @@
         <div class="heading heading-21 text-center">
           <div class="row">
             <div class="col-12 col-lg-6 offset-lg-3">
-              <h2 class="heading-title">related Projects</h2>
+              <h2 class="heading-title">@lang('site.related Projects')</h2>
             </div>
           </div>
         </div>
@@ -913,12 +913,12 @@
                   <div class="project-title">
                     <h4>
                       <a href="projects-single.html"
-                      >{{ $project->title_en }}</a
+                      >{{ trans_model($project,'title') }}</a
                       >
                     </h4>
                   </div>
                   <div class="project-cat">
-                    <a href="projects-standard.html">{{ $project->service->title_en }}</a>
+                    <a href="projects-standard.html">{{ trans_model($project->service,'title') }}</a>
                   </div>
                 </div>
               </div>
@@ -931,7 +931,7 @@
           <div class="col-12">
             <div class="projects-load-more">
               <a class="btn btn--secondary" href="{{ route('projects') }}"
-              >explore all projects <i class="energia-arrow-right"></i
+              >@lang('site.explore all projects') <i class="energia-arrow-right"></i
               ></a>
             </div>
           </div>

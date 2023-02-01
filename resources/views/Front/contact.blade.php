@@ -76,10 +76,10 @@
                                         <li class="contact-info">
                                             <i class="energia-location-Icon"></i>
                                             <p>
-                                                @lang('site.location'):
+                                                @lang('site.Location'):
                                                 <a
                                                     href="#"
-                                                >{{ trans_model($settings,'location') }}
+                                                >{{ trans_model($settings,'address') }}
                                                 </a>
                                             </p>
                                         </li>
