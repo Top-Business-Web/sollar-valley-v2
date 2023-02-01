@@ -17,12 +17,12 @@
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap"
         rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <!-- slick plugin -->
     <link href="{{ asset('assets/front/') }}/assets/css/slick-theme.css" rel="stylesheet"/>
     <link href="{{ asset('assets/front/') }}/assets/css/slick.css" rel="stylesheet"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link href="{{ asset('dist/css/select2.min.css') }}" rel="stylesheet"/>
+{{--    <link href="{{ asset('dist/css/select2.min.css') }}" rel="stylesheet"/>--}}
     <link href="{{ asset('assets/front/') }}/assets/css/vendor.min.css" rel="stylesheet"/>
 
 @if(@lang() == 'en')
