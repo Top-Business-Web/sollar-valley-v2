@@ -51,6 +51,8 @@
                                 <a class="img-popup" src="{{ asset($image) }}" alt="product image"></a>
                             </div>
                         @endforeach
+
+
                     </div>
                     <div class="small-slider">
                         @foreach ($product->images as $image)
@@ -202,4 +204,5 @@
             </div>
         </div>
     </section>
+
 @endsection

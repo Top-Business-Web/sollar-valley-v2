@@ -117,6 +117,8 @@ return [
     'All products' => 'All products',
     'search' => 'search',
     'recent products' => 'recent products',
+    'project' => 'project',
+    
 
 
 

@@ -116,5 +116,5 @@ return [
     'All products' => 'جميع المنتجات',
     'search' => 'بحث',
     'recent products' => 'المنتجات الأخيرة',
-
+    'project' => 'مشروع',
 ];

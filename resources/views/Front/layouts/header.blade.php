@@ -133,9 +133,9 @@
                     data-hover="">
                     <a href="{{ route('product') }}"><span>@lang('site.products')</span></a>
                 </li>
-                <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'product') active @endif"
+                <li class="nav-item has-dropdown drop-edit @if (Route::currentRouteName() == 'project') active @endif"
                 data-hover="">
-                <a class="dropdown-toggle" href="{{ route('projects') }}"><span>@lang('site.Projects')</span></a>
+                <a class="dropdown-toggle" href="{{ route('projects') }}"><span>@lang('site.project')</span></a>
             </li>
                 <li class="nav-item @if (Route::currentRouteName() == 'contact') active @endif" id="contact" data-hover="">
                     <a href="{{ route('contact') }}"><span>@lang('site.contact')</span></a>
