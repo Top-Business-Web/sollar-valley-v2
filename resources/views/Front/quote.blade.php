@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <div class="title">
-                            <h1 class="title-heading">Request quote</h1>
+                            <h1 class="title-heading">@lang('site.requesta quote')</h1>
                         </div>
                     </div>
                 </div>
@@ -40,55 +40,49 @@
             <div class="contact-panel contact-panel-3">
                 <div class="heading heading-6">
                     <p class="heading-subtitle">
-                        Improving The Performance Of Solar Energy.
+                        @lang('site.Improving The Performance Of Solar Energy.')
                     </p>
                     <h2 class="heading-title">
-                        Discover Independence Through Using The Power Of Solar Panels!
+                        @lang('site.Discover Independence Through Using The Power Of Solar Panels!')
                     </h2>
                     <p class="heading-desc">
-                        We offer products, solutions, and services across the entire
-                        energy value chain. We support our customers on their way to a
-                        more sustainable future – no matter how far along the journey to
-                        energize society with affordable energy systems.
+                        @lang('site.We offer')
                     </p>
                     <div class="advantages-list-holder">
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <ul class="list-unstyled advantages-list advantages-list-3">
-                                    <li>Reliabe and performance</li>
-                                    <li>Solar material financing</li>
-                                    <li>In-time manufacturing</li>
+                                    <li>@lang('site.Reliabe and performance')</li>
+                                    <li>@lang('site.Solar material financing')</li>
+                                    <li>@lang('site.In-time manufacturing')</li>
                                 </ul>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <ul class="list-unstyled advantages-list advantages-list-3">
-                                    <li>50% more energy output</li>
-                                    <li>Built using ntype mono</li>
+                                    <li>@lang('site.50% more energy output')</li>
+                                    <li>@lang('site.Built using ntype mono')</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="contact-action">
-                        <a class="btn btn--primary" href="{{ route('about_us') }}">learn more <i
+                        <a class="btn btn--primary" href="{{ route('about_us') }}">@lang('site.learn more') <i
                                 class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                                                       href="{{ route('faqs') }}">our core values</a>
+                                                                       href="{{ route('faqs') }}">@lang('site.our core values')</a>
                     </div>
                     <div class="contact-quote contact-quote-3">
                         <img src="{{ asset('assets/front') }}/assets/images/icons/noteicon-2.png" alt="icon"/>
                         <p>
-                            Receive an accurate quote within 3-5 days when you fill out
-                            this form. Or, give us a call:
+                            @lang('site.Receive an accurate')
                             <a href="{{ $settings->phone }}">{{ $settings->phone }}</a>
                         </p>
                     </div>
                 </div>
                 <div class="contact-card">
                     <div class="contact-body">
-                        <h5 class="card-heading">Request A Quote</h5>
+                        <h5 class="card-heading">@lang('site.request a quote')</h5>
                         <p class="card-desc">
-                            We take great pride in everything that we do, control over
-                            products allows us to ensure our customers receive the best
-                            quality service.
+                            @lang('site.We take great pride')
                         </p>
                         <form id="quoteForm" class="form-qoute" method="post">
                             @csrf
@@ -97,33 +91,33 @@
                                     <div class="mb-20">
                                         <div class="row">
                                             <div class="col-12 col-md-6">
-                                                <label class="form-label" for="contact-first-name">First name</label>
+                                                <label class="form-label" for="contact-first-name">@lang('site.First name')</label>
                                                 <input class="form-control" type="text" id="contact-first-name"
-                                                       name="first_name" placeholder="Mahmoud" required=""/>
+                                                       name="first_name" placeholder="@lang('site.First name')" required=""/>
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                <label class="form-label" for="contact-last-name">Last name</label>
+                                                <label class="form-label" for="contact-last-name">@lang('site.Last name')</label>
                                                 <input class="form-control" type="text" id="contact-last-name"
-                                                       name="last_name" placeholder="Adel" required=""/>
+                                                       name="last_name" placeholder="@lang('site.Last name')" required=""/>
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                <label class="form-label" for="contact-phone">Phone</label>
+                                                <label class="form-label" for="contact-phone">@lang('site.Phone')</label>
                                                 <input class="form-control" type="text" id="contact-phone" name="phone"
-                                                       placeholder="Phone" required=""/>
+                                                       placeholder="@lang('site.Phone')" required=""/>
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                <label class="form-label" for="contact-email">Email</label>
+                                                <label class="form-label" for="contact-email">@lang('site.Email')</label>
                                                 <input class="form-control" type="email" id="contact-email" name="email"
-                                                       placeholder="Email" required=""/>
+                                                       placeholder="@lang('site.Email')" required=""/>
                                             </div>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="row">
                                             <div class="col-12">
-                                                <label class="form-label" for="contact-address">Street address</label>
+                                                <label class="form-label" for="contact-address">@lang('site.Street address')</label>
                                                 <input class="form-control" type="text" id="contact-address"
-                                                       name="address" placeholder="write street address" required=""/>
+                                                       name="address" placeholder="@lang('site.write street address')" required=""/>
                                             </div>
                                         </div>
                                     </div>
@@ -151,7 +145,7 @@
                                     <div>
                                         <div class="row">
                                             <div class="widget-title">
-                                                <h5>select product</h5>
+                                                <h5>@lang('site.select product')</h5>
                                             </div>
                                             <div class="widget-content">
                                                 <select class="form-control" name="product_id" id="select-product">
@@ -186,7 +180,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <button class="btn btn--secondary w-100" id="quote-btn" type="button">
-                                                submit request <i class="energia-arrow-right"></i>
+                                                @lang('site.submit request') <i class="energia-arrow-right"></i>
                                             </button>
                                         </div>
                                         <div class="col-12">

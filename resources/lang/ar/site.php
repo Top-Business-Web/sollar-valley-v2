@@ -23,7 +23,7 @@ return [
     'faqs' => 'الأسئلة الشائعة',
     'english' => 'إنجليزي',
     'arabic' => 'عربي',
-    'request a quote' => 'اطلب اقتباس',
+    'requesta quote' => 'اطلب اقتباس',
 
     // footer
     'About Us' => 'معلومات عنا',
@@ -129,5 +129,25 @@ return [
     'explore all projects' => 'استكشاف جميع المشاريع',
 
     'project' => 'مشروع',
+
+    'Improving The Performance Of Solar Energy.' => 'تحسين أداء الطاقة الشمسية.',
+    'Discover Independence Through Using The Power Of Solar Panels!' => 'اكتشف الاستقلال من خلال استخدام قوة الألواح الشمسية!',
+    'Reliabe and performance' => 'موثوقة والأداء',
+    'Solar material financing' => 'تمويل مواد الطاقة الشمسية',
+    'In-time manufacturing' => 'التصنيع في الوقت المناسب',
+    '50% more energy output' => '50٪ إنتاج طاقة أكثر',
+    'Built using ntype mono' => 'بنيت باستخدام ntype mono',
+    'Receive an accurate' => 'احصل على عرض أسعار دقيق في غضون 3-5 أيام عند ملء هذا النموذج. أو يقدم لنا دعوة:',
+    'We take great pride' => 'نحن نفخر بكل ما نقوم به ، التحكم في المنتجات يسمح لنا بضمان حصول عملائنا على أفضل خدمة ذات جودة.',
+    'First name' => 'الاسم الاول',
+    'Last name' => 'الأسم الأخير',
+    'Phone' => 'هاتف',
+    'write street address' => 'اكتب عنوان الشارع',
+    'select product' => 'حدد المنتج',
+    'submit request' => 'حدد المنتج',
+    'request a quote' => 'اطلب اقتباس',
+    'Street address' => '.عنوان الشارع',
+    'learn more' => 'يتعلم أكثر',
+    'our core values' => 'قيمنا الأساسية',
 
 ];
