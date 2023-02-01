@@ -1,5 +1,5 @@
 <!-- Start Form -->
-<form id="updateForm" class="updateForm" method="POST" action="{{ route('category.update', $service->id) }}">
+<form id="updateForm" class="updateForm" method="POST" action="{{ route('service.update', $service->id) }}">
     @csrf
     @method('PUT')
     <input type="hidden" name="id" value="{{ $service->id }}">

@@ -59,11 +59,11 @@ class ServiceController extends Controller
     {
         if($service->update($request->all()))
         {
-            return response()->json(['code' => 200]);
+            return response()->json(['status' => 200]);
         }
         else
         {
-            return response()->json(['code' => 405]);
+            return response()->json(['status' => 405]);
         }
     }
 

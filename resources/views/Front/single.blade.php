@@ -51,6 +51,8 @@
                                 <a href="{{ asset($image) }}" class="img-popup" alt="product image"></a>
                             </div>
                         @endforeach
+
+
                     </div>
                     <div class="small-slider">
                         @foreach ($product->images as $image)
@@ -209,7 +211,6 @@
 
 
 
-
     <div class="" id="details-print" hidden>
         <div class="">
             <img style="width: 165px;margin: 12px" src="{{ asset($settings->logo) }}"/>
@@ -250,4 +251,5 @@
         // WinPrint.close();
         })
     </script>
+
 @endsection

@@ -119,11 +119,15 @@ return [
 
 
 
-    //// lol
+
+
 
 
     'the overview' => 'نظرة عامة!',
     'client' => 'عميل',
     'related Projects' => 'مشاريع ذات صلة',
     'explore all projects' => 'استكشاف جميع المشاريع',
+
+    'project' => 'مشروع',
+
 ];

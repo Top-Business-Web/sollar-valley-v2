@@ -28,14 +28,4 @@ class StoreCategory extends FormRequest
             'title_en' => 'required'
         ];
     }
-
-    public function messages()
-    {
-        return [
-            'title_ar.required'          => 'يجب ادخال العنوان باللغة العربية',
-            'title_en.required'          => 'يجب ادخال العنوان باللغة الانجليزية',
-
-        ];
-
-    }
 }
