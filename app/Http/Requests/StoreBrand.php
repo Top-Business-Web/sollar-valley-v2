@@ -25,7 +25,7 @@ class StoreBrand extends FormRequest
     {
         return [
             'name' => 'required',
-            'image' => 'nullable|image'
+            'image' => 'nullable|image|dimensions:max_width=2048,max_height=2048',
         ];
     }
 
