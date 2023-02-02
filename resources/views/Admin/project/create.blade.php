@@ -80,6 +80,8 @@
                 <label for="">Image :</label>
                 <input type="file" name="image" class="dropify"
                     data-default-file="" />
+                    <span class="form-text text-danger text-center"> Recomended : 2048 X 1365 Px <br> Extension : png, gif, jpeg,
+                        jpg,webp</span>
             </div>
         </div>
     </div>

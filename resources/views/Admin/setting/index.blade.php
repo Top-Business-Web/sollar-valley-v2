@@ -19,6 +19,7 @@
                                 <label for="">Logo :</label>
                                 <input type="file" name="logo" class="dropify"
                                     data-default-file="{{ asset($settings->logo) }}" />
+                                    <span class="form-text text-danger text-center"> Recomended : 1720 X 1150 Px <br> Extension : png</span>
                             </div>
                         </div>
                         <div class="col-md-4">

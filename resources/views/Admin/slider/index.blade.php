@@ -16,6 +16,8 @@
                                 <label for="">Image About Us :</label>
                                 <input type="file" name="image_about" class="dropify"
                                     data-default-file="{{ asset($slider->image_about) }}" />
+                                    <span class="form-text text-danger text-center"> Recomended : 2048 X 1200 to up Px <br> Extension : png, gif, jpeg,
+                                        jpg,webp</span>
                             </div>
 
                         </div>
@@ -24,6 +26,8 @@
                                 <label for="">Image Service :</label>
                                 <input type="file" name="image_services" class="dropify"
                                     data-default-file="{{ asset($slider->image_services) }}" />
+                                    <span class="form-text text-danger text-center"> Recomended : 2048 X 1200 to up Px <br> Extension : png, gif, jpeg,
+                                        jpg,webp</span>
                             </div>
 
                         </div>
@@ -32,6 +36,8 @@
                                 <label for="">Image Project :</label>
                                 <input type="file" name="image_project" class="dropify"
                                     data-default-file="{{ asset($slider->image_project) }}" />
+                                    <span class="form-text text-danger text-center"> Recomended : 2048 X 1200 to up Px <br> Extension : png, gif, jpeg,
+                                        jpg,webp</span>
                             </div>
 
                         </div>
@@ -42,6 +48,8 @@
                                 <label for="">Image Product :</label>
                                 <input type="file" name="image_product" class="dropify"
                                     data-default-file="{{ asset($slider->image_product) }}" />
+                                    <span class="form-text text-danger text-center"> Recomended : 2048 X 1200 to up Px <br> Extension : png, gif, jpeg,
+                                        jpg,webp</span>
                             </div>
 
                         </div>
@@ -50,6 +58,8 @@
                                 <label for="">Image Faqs :</label>
                                 <input type="file" name="image_faqs" class="dropify"
                                     data-default-file="{{ asset($slider->image_faqs) }}" />
+                                    <span class="form-text text-danger text-center"> Recomended : 2048 X 1200 to up Px <br> Extension : png, gif, jpeg,
+                                        jpg,webp</span>
                             </div>
 
                         </div>
