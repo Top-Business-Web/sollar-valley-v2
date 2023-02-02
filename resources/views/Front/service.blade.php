@@ -34,10 +34,10 @@
                         <div class="breadcrumb-wrap">
                             <ol class="breadcrumb breadcrumb-light d-flex">
                                 <li class="breadcrumb-item">
-                                    <a href="{{ route('home') }}">Home</a>
+                                    <a href="{{ route('home') }}">@lang('site.home')</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Services
+                                    @lang('site.services')
                                 </li>
                             </ol>
                         </div>
@@ -72,11 +72,11 @@
                             </div>
                             <div class="service-content">
                                 <h4>
-                                    <a href="{{ route('service') }}">{{ trans_model($service,'title') }}<br />@lang('site.services')</a>
+                                    <a href="{{ route('serviceProject',$service->id) }}">{{ trans_model($service,'title') }}</a>
                                 </h4>
-                                <p>
-                                    {{ $service->desc_en }}
-                                </p>
+                                <h6>
+                                    {{ trans_model($service,'desc') }}
+                                </h6>
                             </div>
                         </div>
                     </div>

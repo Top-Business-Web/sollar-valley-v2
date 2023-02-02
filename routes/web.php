@@ -35,6 +35,7 @@ Route::group(
 
         #### Service ####
         Route::get('/service', 'ServiceController@index')->name('service');
+        Route::get('/serviceProject/{id}', 'ServiceController@serviceProject')->name('serviceProject');
 
         #### Product ####
         Route::get('/products', 'ProductController@index')->name('product');
