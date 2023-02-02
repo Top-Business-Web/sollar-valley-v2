@@ -13,7 +13,7 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="{{ route('home') }}">@lang('site.home')</a></li>
               <li class="breadcrumb-item">
-                <a href="projects-modern.html">@lang('site.Projects')</a>
+                <a href="{{ route('projects') }}">@lang('site.Projects')</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                   {{ trans_model($oneProject,'title') }}
@@ -39,14 +39,14 @@
                   </div>
                   <div class="project-title">
                     <h4>
-                      <a href="{{ route('service') }}"
+                      <a href="{{ route('serviceProject',$oneProject->service->id) }}"
                       >{{ trans_model($oneProject->service,'title') }}</a
                       >
                     </h4>
                   </div>
                   <div class="project-desc">
                     <p>
-                      {{ trans_model($oneProject,'desc') }}
+                      {{ trans_model($oneProject->service,'desc') }}
                     </p>
                   </div>
                   <div class="project-more">

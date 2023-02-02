@@ -28,6 +28,7 @@
 @if(@lang() == 'en')
     {{--  en  --}}
     <link href="{{ asset('assets/front/') }}/assets/css/style.css" rel="stylesheet"/>
+    <link href="{{ asset('assets/front/assets/css/edit.css') }}" rel="stylesheet"/>
     {{--  en  --}}
     @else
     {{-- ar  --}}

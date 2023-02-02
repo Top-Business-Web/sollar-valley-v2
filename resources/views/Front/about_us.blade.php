@@ -18,7 +18,7 @@
     </div>
 
     <section class="page-title page-title-1" id="page-title">
-        <div class="page-title-wrap bg-overlay bg-overlay-dark-2">
+        <div  style="background-position-y: center;" class="page-title-wrap bg-overlay bg-overlay-dark-2">
             <div class="bg-section">
                 <img src="{{ asset($slider->image_about) }}" />
             </div>
