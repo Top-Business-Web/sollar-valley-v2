@@ -24,8 +24,8 @@ class StoreProduct extends FormRequest
     public function rules()
     {
         return [
-            'images' => 'nullable|array',
-            'images*' => 'nullable|image',
+            'images' => 'nullable|array|dimensions:max_width:700,max_height=700',
+            'images*' => 'nullable|image|dimensions:max_width:700,max_height=700',
             'title_ar' => 'required',
             'title_en' => 'required',
             'sub_title_ar' => 'required',

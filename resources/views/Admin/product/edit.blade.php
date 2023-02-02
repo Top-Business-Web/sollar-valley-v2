@@ -112,6 +112,8 @@
             <div class="form-group">
                 <label class="control-label">Image</label>
                 <input type="file" name="files[]" multiple class="form-control" id="exampleFormControlInput1">
+                <span class="form-text text-danger text-center"> Recomended : 700 X 700 Px <br> Extension : png, gif, jpeg,
+                    jpg,webp</span>
             </div>
         </div>
     </div>

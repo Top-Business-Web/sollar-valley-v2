@@ -106,7 +106,7 @@
                 <label class="control-label">Image</label>
                 <input type="file" name="files[]" class="form-control" id="exampleFormControlInput1"
                     multiple="multiple">
-                <span class="form-text text-danger text-center">مسموح فقط بالصيغ التالية : png, gif, jpeg,
+                <span class="form-text text-danger text-center"> Recomended : 700 X 700 Px <br> Extension : png, gif, jpeg,
                     jpg,webp</span>
             </div>
         </div>

@@ -68,6 +68,8 @@
                                 <label for="">Image :</label>
                                 <input type="file" name="image" class="dropify"
                                     data-default-file="{{ asset($about_us->image) }}" />
+                                    <span class="form-text text-danger text-center">  Recomended : 370 x 370 <br> Extension : png, gif, jpeg,
+                                        jpg,webp</span>
                             </div>
                         </div>
                     </div>
