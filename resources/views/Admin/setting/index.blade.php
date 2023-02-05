@@ -90,7 +90,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Linked In :</label>
-                                <input type="text" name="linked_in" value="{{ $settings->youtube }}"
+                                <input type="text" name="linked_in" value="{{ $settings->linked_in }}"
                                     class="form-control" />
                             </div>
                         </div>
