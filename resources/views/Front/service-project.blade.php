@@ -37,6 +37,7 @@
         class="projects projects-standard projects-standard-1"
         id="projects-standard-1"
     >
+        @if($projects->count() > 0)
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -85,6 +86,9 @@
 
                     </div>
                 @endforeach
+                @else
+                    <h1 style="text-align: center">{{ lang() == 'ar' ? 'لا يوجد مشاريع' : 'NO PROJECT FOUND' }}</h1>
+                @endif
             </div>
 
         </div>
@@ -105,7 +109,7 @@
                     'id': id
                 },
                 beforeSend: function (data) {
-                    $('.product-search').html('<h4 class="error">{{ lang() == 'ar' ? 'جاري التحميل' : 'LOADING...' }}</h4>');
+                    $('.product-search').html('<div class="loader"></div>');
                 },
                 success: function (data) {
                     // alert(data)
