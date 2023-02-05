@@ -21,7 +21,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label class="control-label">Description Ar</label>
-                <input type="text" name="desc_ar" class="form-control" id="exampleFormControlInput1">
+                <textarea class="form-control" id="mytextarea" name="desc_ar" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label class="control-label">Description En</label>
-                <input type="text" name="desc_en" class="form-control" id="exampleFormControlInput1">
+                <textarea class="form-control" id="mytextarea1" name="desc_en" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
         </div>
     </div>
@@ -38,4 +38,7 @@
         <button type="submit" class="btn bg-gradient-primary" id="addButton">create</button>
     </div>
 </form>
+<script>
+     $('.dropify').dropify();
+</script>
 <!-- End Form -->

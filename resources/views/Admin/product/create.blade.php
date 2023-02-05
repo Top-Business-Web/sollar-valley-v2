@@ -76,14 +76,14 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Part Number</label>
-                <input type="number" name="part_number" class="form-control" id="exampleFormControlInput1">
+                <input type="text" name="part_number" class="form-control" id="exampleFormControlInput1">
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Weight</label>
-                <input type="number" name="weight" class="form-control" id="exampleFormControlInput1">
+                <input type="text" name="weight" class="form-control" id="exampleFormControlInput1">
             </div>
         </div>
     </div>
@@ -91,14 +91,14 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Dimensions</label>
-                <input type="number" name="dimensions" class="form-control" id="exampleFormControlInput1">
+                <input type="text" name="dimensions" class="form-control" id="exampleFormControlInput1">
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Model Number</label>
-                <input type="number" name="model_number" class="form-control" id="exampleFormControlInput1">
+                <input type="text" name="model_number" class="form-control" id="exampleFormControlInput1">
             </div>
         </div>
         <div class="col-md-4">
@@ -123,6 +123,12 @@
             <div class="form-group">
                 <label class="control-label">Description En</label>
                 <textarea name="desc_en" class="form-control" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label">PDF</label>
+                <input type="file" name="pdf" class="form-control" id="exampleFormControlInput1">
             </div>
         </div>
     </div>

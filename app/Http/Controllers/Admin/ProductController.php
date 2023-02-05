@@ -59,8 +59,10 @@ class ProductController extends Controller
                 $inputs['images'][] = $this->saveImage($file,'assets/uploads/products','photo');
             }
         }
-//        unset($inputs['files']);
-//        dd($inputs);
+      if($request->has('pdf'))
+      {
+            $inputs['pdf'] = $this->saveImage($request->pdf, 'assets/uploads/pdf', 'pdf');
+      }
 
         if ($request->has('tags') && $request->tags != null) {
             $tags_array = explode(' ',$inputs['tags']);
@@ -94,6 +96,10 @@ class ProductController extends Controller
                 $inputs['images'][] = $this->saveImage($file,'assets/uploads/products','photo');
             }
         }
+        if($request->has('pdf'))
+      {
+            $inputs['pdf'] = $this->saveImage($request->pdf, 'assets/uploads/pdf', 'pdf');
+      }
 
         if ($request->has('tags') && $request->tags != null) {
             $tags_array = explode(' ',$inputs['tags']);

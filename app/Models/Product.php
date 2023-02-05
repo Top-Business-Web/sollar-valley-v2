@@ -22,6 +22,7 @@ class Product extends Model
         'tags',
         'desc_ar',
         'desc_en',
+        'pdf',
         'part_number',
         'weight',
         'dimensions',

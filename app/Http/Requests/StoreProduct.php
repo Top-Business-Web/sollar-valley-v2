@@ -35,6 +35,7 @@ class StoreProduct extends FormRequest
             'tags' => 'nullable',
             'desc_ar' => 'required',
             'desc_en' => 'required',
+            'pdf' => 'required',
             'part_number' => 'required',
             'weight' => 'required',
             'dimensions' => 'required',

@@ -27,11 +27,12 @@ class CreateProductsTable extends Migration
 
             $table->text('desc_ar');
             $table->text('desc_en');
+            $table->string('pdf');
 
             $table->bigInteger('part_number');
-            $table->bigInteger('weight');
-            $table->bigInteger('dimensions');
-            $table->bigInteger('model_number');
+            $table->string('weight');
+            $table->string('dimensions');
+            $table->string('model_number');
 
 
             $table->foreign('category_id')->references('id')->on('categories')->cascadeOnDelete()->cascadeOnUpdate();
