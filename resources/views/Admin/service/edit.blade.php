@@ -25,8 +25,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label class="control-label">Desciption Ar</label>
-                <input type="text" name="desc_ar" value="{{ $service->desc_ar }}" class="form-control"
-                    id="exampleFormControlInput1">
+                <textarea class="form-control" id="mytextarea1" name="desc_ar" id="exampleFormControlTextarea1" rows="3">{{ $service->desc_ar }}</textarea>
             </div>
         </div>
     </div>
@@ -34,8 +33,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label class="control-label">Desciption EN</label>
-                <input type="text" name="desc_en" value="{{ $service->desc_en }}" class="form-control"
-                    id="exampleFormControlInput1">
+                <textarea class="form-control" id="mytextarea1" name="desc_en" id="exampleFormControlTextarea1" rows="3">{{ $service->desc_en }}</textarea>
             </div>
         </div>
     </div>

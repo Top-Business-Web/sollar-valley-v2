@@ -31,7 +31,7 @@
                                 <a href="{{ route('product') }}">@lang('site.products')</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                {{ trans_model($product,'title') }}
+                                {{ trans_model($product, 'title') }}
                             </li>
                         </ol>
                     </div>
@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="main-slider slider-right">
-                            @foreach ($product->images as $image)
+                        @foreach ($product->images as $image)
                             <div class="product-img">
                                 <img class="img-fluid" src="{{ asset($image) }}" alt="product image" />
                                 <a href="{{ asset($image) }}" class="img-popup" alt="product image"></a>
@@ -56,7 +56,8 @@
                     </div>
                     <div class="small-slider">
                         @foreach ($product->images as $image)
-                            <img style="width: 179px;height: 120px;padding: 15px" class="img-fluid" src="{{ asset($image) }}" alt="product image" />
+                            <img style="width: 179px;height: 120px;padding: 15px" class="img-fluid"
+                                src="{{ asset($image) }}" alt="product image" />
                         @endforeach
                     </div>
                 </div>
@@ -67,13 +68,13 @@
                         </div>
 
                         <div class="product-review">
-{{--                            <div class="product-rating">--}}
-{{--                                <i class="fas fa-star active"></i><i class="fas fa-star active"></i><i--}}
-{{--                                    class="fas fa-star active"></i><i class="fas fa-star active"></i><i--}}
-{{--                                    class="fas fa-star"></i>--}}
-{{--                            </div>--}}
+                            {{--                            <div class="product-rating"> --}}
+                            {{--                                <i class="fas fa-star active"></i><i class="fas fa-star active"></i><i --}}
+                            {{--                                    class="fas fa-star active"></i><i class="fas fa-star active"></i><i --}}
+                            {{--                                    class="fas fa-star"></i> --}}
+                            {{--                            </div> --}}
                             <!-- <span>5 Review(s)</span
-                                    ><span><a href="#">Add Review</a></span> -->
+                                        ><span><a href="#">Add Review</a></span> -->
                         </div>
 
                         <!-- <div class="product-price"><span>$15.00</span></div> -->
@@ -87,7 +88,7 @@
                             <table class="table">
                                 <tbody>
                                     <tr>
-                                        <td class="name">{{lang() == 'ar' ? 'كود التخزين التعريفي':'SKU'}}:</td>
+                                        <td class="name">{{ lang() == 'ar' ? 'كود التخزين التعريفي' : 'SKU' }}:</td>
                                         <td class="value">{{ $product->sku }}</td>
                                     </tr>
                                     <tr>
@@ -97,7 +98,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="name">{{lang() == 'ar' ? 'العلامات' : 'tags'}}:</td>
+                                        <td class="name">{{ lang() == 'ar' ? 'العلامات' : 'tags' }}:</td>
                                         <td class="value">{{ implode(' , ', $product->tags) }}</td>
                                     </tr>
                                 </tbody>
@@ -115,7 +116,8 @@
                         <form action="{{ route('quoteIndex') }}" method="get">
                             @csrf
                             <input type="hidden" name="id" value="{{ $product->id }}">
-                            <button type="submit" class="btn btn-primary">{{ lang() == 'ar' ? 'اطلب الان' : 'Order Now' }}</button>
+                            <button type="submit"
+                                class="btn btn-primary">{{ lang() == 'ar' ? 'اطلب الان' : 'Order Now' }}</button>
                         </form>
                     </div>
                 </div>
@@ -129,7 +131,8 @@
                             </li>
                             <li role="presentation">
                                 <a href="#details" data-bs-target="#details" aria-controls="details" role="tab"
-                                    data-bs-toggle="tab" aria-selected="false">{{ lang() == 'ar' ? 'معلومات المواصفات' : 'specification information' }}</a>
+                                    data-bs-toggle="tab"
+                                    aria-selected="false">{{ lang() == 'ar' ? 'معلومات المواصفات' : 'specification information' }}</a>
                             </li>
                         </ul>
 
@@ -166,10 +169,12 @@
                                 </div>
                                 <div>
                                     <a href="">
-                                    <button class="pdf" id="product-print">
+                                        <button>
 
-                                        {{ lang() == 'ar' ? 'تحميل PDF' : 'download pdf' }}
-                                    </button>
+                                            <a href="{{ asset($product->pdf) }}"
+                                                download="product pdf-{{ $product->id }}">{{ lang() == 'ar' ? 'تحميل PDF' : 'download pdf' }}</a>
+
+                                        </button>
                                     </a>
                                 </div>
                             </div>
@@ -213,25 +218,25 @@
 
     <div class="" id="details-print" hidden>
         <div class="">
-            <img style="width: 165px;margin: 12px" src="{{ asset($settings->logo) }}"/>
-            <h2 style="text-align: center;margin-bottom: 20px">{{ trans_model($product,'title') }}</h2>
+            <img style="width: 165px;margin: 12px" src="{{ asset($settings->logo) }}" />
+            <h2 style="text-align: center;margin-bottom: 20px">{{ trans_model($product, 'title') }}</h2>
             <hr>
             <h3 style="margin-bottom: 30px">{{ lang() == 'ar' ? 'تفاصيل تقنية' : 'Technical Details' }}</h3>
 
             <table class="table table-bordered center">
                 <thead>
-                <th>{{ lang() == 'ar' ? 'رقم القطعة' : 'Part Number' }}</th>
-                <th>{{ lang() == 'ar' ? 'وزن السلعة' : 'Item Weight' }}</th>
-                <th>{{ lang() == 'ar' ? 'ابعاد المنتج' : 'Product Dimensions' }}</th>
-                <th>{{ lang() == 'ar' ? 'رقم موديل السلعة' : 'Item model number' }}</th>
+                    <th>{{ lang() == 'ar' ? 'رقم القطعة' : 'Part Number' }}</th>
+                    <th>{{ lang() == 'ar' ? 'وزن السلعة' : 'Item Weight' }}</th>
+                    <th>{{ lang() == 'ar' ? 'ابعاد المنتج' : 'Product Dimensions' }}</th>
+                    <th>{{ lang() == 'ar' ? 'رقم موديل السلعة' : 'Item model number' }}</th>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>{{ $product->part_number }} </td>
-                    <td>{{ $product->weight }} pounds </td>
-                    <td>{{ $product->dimensions }} inches </td>
-                    <td>{{ $product->model_number }}</td>
-                </tr>
+                    <tr>
+                        <td>{{ $product->part_number }} </td>
+                        <td>{{ $product->weight }} pounds </td>
+                        <td>{{ $product->dimensions }} inches </td>
+                        <td>{{ $product->model_number }}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -239,17 +244,18 @@
 
 
     <script type="text/javascript">
-        $('#product-print').on('click',function (e){
-          e.preventDefault();
+        $('#product-print').on('click', function(e) {
+            e.preventDefault();
 
-        var prtContent = document.getElementById("details-print");
-        var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
-        WinPrint.document.write('<html><head> <title>{{ trans_model($product,'title') }}</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"></head><body>'+prtContent.innerHTML+'</body></html>');
-        WinPrint.document.close();
-        WinPrint.focus();
-        WinPrint.print();
-        // WinPrint.close();
+            var prtContent = document.getElementById("details-print");
+            var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+            WinPrint.document.write(
+                '<html><head> <title>{{ trans_model($product, 'title') }}</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"></head><body>' +
+                prtContent.innerHTML + '</body></html>');
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+            // WinPrint.close();
         })
     </script>
-
 @endsection

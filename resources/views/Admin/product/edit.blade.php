@@ -38,7 +38,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Title En</label>
-                <input type="text" name="title_en" value="{{ $product->title_ar }}" class="form-control"
+                <input type="text" name="title_en" value="{{ $product->title_en }}" class="form-control"
                     id="exampleFormControlInput1">
             </div>
         </div>
@@ -85,7 +85,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Weight</label>
-                <input type="number" name="weight" value="{{ $product->weight }}" class="form-control"
+                <input type="text" name="weight" value="{{ $product->weight }}" class="form-control"
                     id="exampleFormControlInput1">
             </div>
         </div>
@@ -96,7 +96,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Dimensions</label>
-                <input type="number" name="dimensions" value="{{ $product->dimensions }}" class="form-control"
+                <input type="text" name="dimensions" value="{{ $product->dimensions }}" class="form-control"
                     id="exampleFormControlInput1">
             </div>
         </div>
@@ -104,7 +104,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Model Number</label>
-                <input type="number" name="model_number" value="{{ $product->model_number }}" class="form-control"
+                <input type="text" name="model_number" value="{{ $product->model_number }}" class="form-control"
                     id="exampleFormControlInput1">
             </div>
         </div>
@@ -131,6 +131,12 @@
             <div class="form-group">
                 <label class="control-label">Description En</label>
                 <textarea name="desc_en" class="form-control" id="" cols="30" rows="10">{{ $product->desc_en }}</textarea>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label">PDF</label>
+                <input type="file" name="pdf" class="form-control" id="exampleFormControlInput1">
             </div>
         </div>
     </div>
