@@ -117,7 +117,7 @@
                     'id': id
                 },
                 beforeSend: function (data) {
-                    $('.product-search').html('<h4 class="error">{{ lang() == 'ar' ? 'جاري التحميل' : 'LOADING...' }}</h4>');
+                    $('.product-search').html('<div class="loader"></div>');
                 },
                 success: function (data) {
                     // alert(data)
