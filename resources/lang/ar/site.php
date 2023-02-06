@@ -23,7 +23,7 @@ return [
     'faqs' => 'الأسئلة الشائعة',
     'english' => 'إنجليزي',
     'arabic' => 'عربي',
-    'requesta quote' => 'اطلب اقتباس',
+    'request a quote' => 'اطلب اقتباس',
 
     // footer
     'About Us' => 'معلومات عنا',
@@ -145,7 +145,6 @@ return [
     'write street address' => 'اكتب عنوان الشارع',
     'select product' => 'حدد المنتج',
     'submit request' => 'حدد المنتج',
-    'request a quote' => 'اطلب اقتباس',
     'Street address' => '.عنوان الشارع',
     'learn more' => 'يتعلم أكثر',
     'our core values' => 'قيمنا الأساسية',

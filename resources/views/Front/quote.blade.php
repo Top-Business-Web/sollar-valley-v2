@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <div class="title">
-                            <h1 class="title-heading">@lang('site.requesta quote')</h1>
+                            <h1 class="title-heading">@lang('site.request a quote')</h1>
                         </div>
                     </div>
                 </div>

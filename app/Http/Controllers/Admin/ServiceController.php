@@ -27,7 +27,7 @@ class ServiceController extends Controller
                 ->escapeColumns([])
                 ->make(true);
         }else{
-            return view('Admin.Service.index');
+            return view('Admin.service.index');
         }
     }
 
