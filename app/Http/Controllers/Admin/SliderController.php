@@ -15,7 +15,7 @@ class SliderController extends Controller
     {
         $sliders = Slider::find(1);
         $slider = Slider::first();
-        return view('admin.slider.index', compact('sliders', 'slider'));
+        return view('Admin.slider.index', compact('sliders', 'slider'));
     }
 
     public function sliderUpdate(StoreSlider $request)
