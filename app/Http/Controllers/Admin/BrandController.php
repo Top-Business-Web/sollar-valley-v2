@@ -21,7 +21,7 @@ class BrandController extends Controller
                     return '
                             <button type="button" data-id="' . $brands->id . '" class="btn btn-pill btn-warning editBtn"><i class="fa fa-edit"></i></button>
                             <button class="btn btn-pill btn-danger" data-toggle="modal" data-target="#delete_modal"
-                                    data-id="' . $brands->id . '" data-title="' . $brands->title_en . '">
+                                    data-id="' . $brands->id . '" data-title="' . $brands->name . '">
                                     <i class="fas fa-trash"></i>
                             </button>
                        ';
@@ -79,10 +79,17 @@ class BrandController extends Controller
         }
     } // end update
 
-    public function delete(Request $request)
+//    public function delete(Request $request)
+//    {
+//        $brands = Brand::where('id', $request->id)->first();
+//        $brands->delete();
+//        return response(['message' => 'تم الحذف بنجاح', 'status' => 200], 200);
+//    } // end delete
+
+    public function destroy(Request $request)
     {
         $brands = Brand::where('id', $request->id)->first();
         $brands->delete();
         return response(['message' => 'تم الحذف بنجاح', 'status' => 200], 200);
-    } // end delete
+    }
 }
