@@ -49,7 +49,7 @@
 
             <!--  delete Modal -->
             <div class="modal fade" id="delete_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -64,9 +64,9 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal"
-                                id="dismiss_delete_modal">Close</button>
+                                    id="dismiss_delete_modal">Close</button>
                             <button type="button" class="btn bg-gradient-primary dismiss_delete_modal"
-                                id="delete_btn">Delete</button>
+                                    id="delete_btn">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
         showAddModal('{{ route('brands.create') }}');
         addScript();
         // deleteModel
-        deleteScript('{{ route('delete_brands') }}');
+        destroyScript('{{ route('category.destroy', ':id') }}');
 
         showEditModal('{{ route('brands.edit', ':id') }}');
         editScript();

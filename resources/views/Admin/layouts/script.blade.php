@@ -5,6 +5,7 @@
 <script src="{{ asset('assets/admin/assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
 <script src="{{ asset('assets/admin/assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
 <!-- Kanban scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="{{ asset('assets/admin/assets/js/plugins/dragula/dragula.min.js') }}"></script>
 <script src="{{ asset('assets/admin/assets/js/plugins/jkanban/jkanban.js') }}"></script>
 <script src="{{ asset('assets/admin/assets/js/plugins/chartjs.min.js') }}"></script>
@@ -12,7 +13,7 @@
 <script src="{{ asset('assets/admin/assets/js/plugins/orbit-controls.js') }}"></script>
 <script src="{{ asset('assets/admin/assets/js/plugins/datatables.js') }}"></script>
 <script src="{{ asset('assets/admin/assets/js/plugins/orbit-controls.js') }}"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 
@@ -173,71 +174,72 @@
 
 
 <script>
-    var ctx = document.getElementById("chart-bars").getContext("2d");
+        var ctx = document.getElementById("chart-bars").getContext("2d");
 
-    new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            datasets: [{
-                label: "Sales",
-                tension: 0.4,
-                borderWidth: 0,
-                borderRadius: 4,
-                borderSkipped: false,
-                backgroundColor: "#fff",
-                data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
-                maxBarThickness: 6
-            },],
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: false,
-                }
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Sales",
+                    tension: 0.4,
+                    borderWidth: 0,
+                    borderRadius: 4,
+                    borderSkipped: false,
+                    backgroundColor: "#fff",
+                    data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
+                    maxBarThickness: 6
+                },],
             },
-            interaction: {
-                intersect: false,
-                mode: 'index',
-            },
-            scales: {
-                y: {
-                    grid: {
-                        drawBorder: false,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
                         display: false,
-                        drawOnChartArea: false,
-                        drawTicks: false,
-                    },
-                    ticks: {
-                        suggestedMin: 0,
-                        suggestedMax: 500,
-                        beginAtZero: true,
-                        padding: 15,
-                        font: {
-                            size: 14,
-                            family: "Open Sans",
-                            style: 'normal',
-                            lineHeight: 2
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
                         },
-                        color: "#fff"
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 500,
+                            beginAtZero: true,
+                            padding: 15,
+                            font: {
+                                size: 14,
+                                family: "Open Sans",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                            color: "#fff"
+                        },
                     },
-                },
-                x: {
-                    grid: {
-                        drawBorder: false,
-                        display: false,
-                        drawOnChartArea: false,
-                        drawTicks: false
-                    },
-                    ticks: {
-                        display: false
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false
+                        },
+                        ticks: {
+                            display: false
+                        },
                     },
                 },
             },
-        },
-    });
+        });
+
 
 
     var ctx2 = document.getElementById("chart-line").getContext("2d");
