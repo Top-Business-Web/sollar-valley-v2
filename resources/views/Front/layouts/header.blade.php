@@ -88,7 +88,7 @@
 
 
             <img class="logo logo-dark" src="{{ asset($settings->logo) }}" alt="Energia Logo" /><img
-                class="logo logo-mobile" src="assets/images/logo/logo-mobile.png" alt="Energia Logo" />
+                class="logo logo-mobile" src="{{ asset($settings->logo) }}" alt="Energia Logo" />
 
 
 
@@ -99,15 +99,23 @@
             {{--                    <i class="energia-search-Icon"></i></div> --}}
             {{--            </div> --}}
             <div class="module module-language">
-                <div class="selected"><img src="{{ asset('assets/front/') }}/assets/images/module-language/en.png"
-                                           alt="En Language" /><span>@lang('site.english')</span><i class="fas fa-chevron-down"></i>
+                <div class="selected"><img @if (lang() == 'en') src="{{ asset('assets/front/') }}/assets/images/module-language/en.png"
+                                           @else
+                                               src="{{ asset('assets/front/') }}/assets/images/module-language/ar.png" @endif
+                                           alt="En Language" /><span>{{ lang() == 'en' ? ' english ' : ' العربية ' }}</span>
                 </div>
                 <div class="lang-list">
                     <ul>
-                        <li><img src="{{ asset('assets/front/') }}/assets/images/module-language/en.png"
-                                 alt="En Language" /><a href="#">@lang('site.english')</a></li>
-                        <li><img src="{{ asset('assets/front/') }}/assets/images/module-language/ar.png"
-                                 alt="AR Language" /><a href="#">@lang('site.arabic')</a></li>
+
+
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li>
+                                <a rel="alternate" hreflang="{{ $localeCode }}"
+                                   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -136,9 +144,9 @@
 
                 <li class="nav-item  @if (Route::currentRouteName() == 'projects') active @endif" id="contact"
 
-                data-hover="">
-                <a href="{{ route('projects') }}"><span>@lang('site.Projects')</span></a>
-            </li>
+                    data-hover="">
+                    <a href="{{ route('projects') }}"><span>@lang('site.Projects')</span></a>
+                </li>
                 <li class="nav-item @if (Route::currentRouteName() == 'contact') active @endif" id="contact" data-hover="">
                     <a href="{{ route('contact') }}"><span>@lang('site.contact')</span></a>
                 </li>
