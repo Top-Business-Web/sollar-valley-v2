@@ -70,7 +70,7 @@
                                             <i class="energia-phone-Icon"></i>
                                             <p>
                                                 @lang('site.Emergency Line'):
-                                                <a href="tel:123-456-7890">(002) 01061245741</a>
+                                                <a href="{{ $settings->phone }}">{{ $settings->phone }}</a>
                                             </p>
                                         </li>
                                         <li class="contact-info">
