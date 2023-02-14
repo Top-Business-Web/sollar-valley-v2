@@ -110,12 +110,12 @@
                             @lang('site.While improving the yield and performance of solar energy products, our PV industry experience enables us to provide in-depth material sourcing, financing and supply chain expertise for every step.')
                         </p>
                         <p class="heading-desc">
-                       @lang('site.Raw polycrystalline silicon for PV manufacturing. Offered invarious grades and formats including chunks, chips, powder and ingot.')
+                            @lang('site.Raw polycrystalline silicon for PV manufacturing. Offered invarious grades and formats including chunks, chips, powder and ingot.')
                         </p>
                         <div class="actions-holder">
                             <a class="btn btn--primary btn--inversed" href="{{ route('contact') }}">
                                 @lang('site.get started')<i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                                                                     href="{{ route('about_us') }}">@lang('site.explore_our_plans')</a>
+                                                                                                   href="{{ route('about_us') }}">@lang('site.explore_our_plans')</a>
                         </div>
                     </div>
                 </div>
@@ -173,7 +173,7 @@
                                             <i class="energia-phone-Icon"></i>
                                             <p>
                                                 @lang('site.Emergency Line'):
-                                                <a href="tel:123-456-7890">(002) 01061245741</a>
+                                                <a href="{{ $settings->phone }}">{{ $settings->phone }}</a>
                                             </p>
                                         </li>
                                         <li class="contact-info">
@@ -181,8 +181,8 @@
                                             <p>
                                                 @lang('site.Location')
                                                 <a
-                                                    href="../cdn-cgi/l/email-protection.html#c5acaba3aa85a0aba0b7a2aca4eba6aaa8">Brooklyn,
-                                                    New York, USA
+                                                    href="{{ trans_model($settings,'address') }}"> :
+                                                    {{ trans_model($settings,'address') }}
                                                 </a>
                                             </p>
                                         </li>
